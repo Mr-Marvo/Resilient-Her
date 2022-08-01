@@ -14,10 +14,14 @@
 }
 .desc-item{
     background: rgb(89,6,80);
-background: linear-gradient(312deg, rgba(89,6,80,1) 4%, rgba(160,40,167,1) 23%, rgba(173,25,169,1) 34%, rgba(189,44,184,1) 78%, rgba(98,9,94,1) 95%); 
+    background: linear-gradient(312deg, rgba(89,6,80,1) 4%, rgba(160,40,167,1) 23%, rgba(173,25,169,1) 34%, rgba(189,44,184,1) 78%, rgba(98,9,94,1) 95%); 
 }
 
-.desc-title{
+.desc-title1{
     -webkit-text-stroke: 2px white;
+    
+}
+.desc-title2{
+    -webkit-text-stroke: 2px black;
     
 }
