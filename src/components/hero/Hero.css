@@ -1,0 +1,12 @@
+.hero{
+    background: rgb(187,27,115);
+    background: linear-gradient(158deg, rgba(187,27,115,1) 8%, rgba(217,64,226,1) 16%, rgba(166,20,137,1) 44%, rgba(222,55,183,1) 77%, rgba(218,54,213,1) 91%, rgba(150,36,105,1) 95%, rgba(155,10,156,1) 98%); 
+}
+
+.hero_title{
+
+background: linear-gradient(to top, #efefffb2 45%, #ffffff 30%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
