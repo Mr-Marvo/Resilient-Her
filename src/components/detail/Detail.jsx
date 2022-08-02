@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import demo from "../../assets/images/1.svg"
+import Team from '../team/Team'
 import "./Detail.css"
 
 
@@ -688,13 +689,13 @@ window.addEventListener('touchend', e => {
       }, []);
       
   return (
-    <div>
-    <canvas className=' w-full h-full  absolute z-30' ref={ref}>
+    <div className=' flex flex-col w-full h-auto'>
+        <canvas className=' w-full h-[250vh]  absolute z-30' ref={ref}>
     
-    </canvas>
-    <div className=' flex-wrap flex flex-col w-full z-40 h-auto container mx-auto relative hero mb-[500px]' >
+        </canvas>
+        <div className=' flex-wrap flex flex-col w-full z-40 h-auto container mx-auto relative hero' >
             <div className=' flex flex-col flex-wrap w-full h-auto '>
-                <div className=' flex flex-row justify-start my-10 items-center mx-40  py-3  border-t-[2px]  border-l-[2px]'>
+                <div className=' bg-xx flex flex-row justify-start my-10 items-center mx-40  py-3  border-t-[2px]  border-l-[2px]'>
                     <img src={demo}alt='slide' className=' w-[250px] h-[300px]'/>
                     <div className='flex flex-col w-auto h-auto pl-4'>
                         <h3 className=' text-white text-3xl font-bold font-sourceCode'>Laid Back Llamas Benefits</h3>
@@ -707,9 +708,9 @@ window.addEventListener('touchend', e => {
                         </ul>
                     </div>
                 </div>
-                <div className=' flex flex-row justify-end my-10 items-center mx-40    border-b-[2px] border-r-[2px]'>
+                <div className=' bg-zinc-900 flex flex-row justify-end my-10 items-center mx-40    border-b-[2px] border-r-[2px]'>
                     
-                    <div className='flex flex-col w-auto h-auto pl-4'>
+                    <div className='flex flex-col w-auto h-auto pl-4 '>
                         <h3 className=' text-white text-3xl font-bold font-sourceCode'>Laid Back Llamas Benefits</h3>
                         <ul className=' cursor-pointer text-xl text-white  mt-4    marker list-disc'>
                             <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
@@ -721,11 +722,13 @@ window.addEventListener('touchend', e => {
                     </div>
                     <img src={demo}alt='slide' className=' w-[250px] h-[300px]'/>
                 </div>
+             
             </div>
-            <div>
-
+            <div className=' flex w-full h-full '>
+                <Team/>
             </div>
         </div>
+     
     </div>
   )
 }
