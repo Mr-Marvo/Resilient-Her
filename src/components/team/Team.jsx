@@ -17,7 +17,7 @@ const Team = () => {
                 <TeamMember/>
                 <TeamMember/>
                 <TeamMember/>
-                <TeamMember/>
+               
             </div>
         </div>
     </div>
