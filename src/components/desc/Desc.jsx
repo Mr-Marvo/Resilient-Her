@@ -4,7 +4,7 @@ const Desc = () => {
   return (
     <div className=' flex flex-col  flex-wrap w-full h-auto relative desc'>
         <div className=' flex flex-wrap flex-col w-full h-auto  justify-end items-end '>
-            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start  bg-dark_1'>
+            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-sta hero'>
                 <h2 className='text-[120px] mx-1  mt-10 tracking-tighter text-transparent  font-extrabold  font-sourceCode desc-title1  uppercase'>About Us</h2>
                 <h2 className=' text-6xl mx-2 font-sourceCode  relative -top-9 font-extrabold text-white'>resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
@@ -24,7 +24,7 @@ const Desc = () => {
             </div>
         </div>
         <div className=' flex flex-wrap flex-col w-full h-auto  justify-start items-start'>
-            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start  bg-light_1'>
+            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start hero'>
                 <h2 className='text-[150px] mx-1  mt-10 tracking-tighter text-transparent  font-extrabold font-sourceCode desc-title2 uppercase '>Sample</h2>
                 <h2 className=' text-6xl mx-2 font-sourceCode  font-extrabold relative -top-14 text-black'>resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
