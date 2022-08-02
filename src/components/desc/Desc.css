@@ -1,7 +1,7 @@
 .desc:before{
      content: "";
      position:  absolute;
-     background-image: url("../../assets/images/plant.jpg");
+     background-image: url("../../assets/images/background.jpg");
      background-size: cover;
      z-index: -1;
      top: 0;
