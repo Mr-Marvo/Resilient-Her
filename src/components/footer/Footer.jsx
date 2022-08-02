@@ -10,7 +10,7 @@ const Footer = () => {
     <div className='flex flex-col flex-wrap relative  w-full h-auto mt-16 justify-center items-center'>
         <div className='w-full h-auto  container mx-auto  flex flex-col flex-wrap justify-center items-center'>
             <div className='text-white w-full h-auto flex flex-col  justify-center items-center '>
-                <p className=' text-md text-center mb-4 w-1/2'>Laid Back Llamas are a collection of 7,000 uniquely generated llamas, while the Boss Llamas are 100 manually created llamas, all living on the Ethereum Blockchain.</p>
+                <p className=' text-md text-center mb-4 w-1/2'>Laid Back Resilient Her are a collection of 7,000 uniquely generated Resilient Her, while the Boss Resilient Her are 100 manually created Resilient Her, all living on the Ethereum Blockchain.</p>
                 <div className=' flex flex-row '>
                    <input type="email" className=' w-[300px] h-[40px] outline-hidden border-none  rounded-full mr-4 px-4' placeholder='Enter email...'/>
                    <button className=' uppercase border-[1px] px-4 h-[40px] font-sourceCode font-bold text-xl  rounded-3xl'>Join</button>

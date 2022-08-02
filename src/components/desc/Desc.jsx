@@ -18,7 +18,7 @@ const Desc = () => {
                         We stand together with one heart and one fight.</p>
                         <strong className=' text-white uppercase text-xl'>THE FUTURE IS FEMALE!</strong>
                     <div className=' flex flex-col w-full h-full justify-center items-center  '>
-                        <button className=' py-4 px-4 text-white  border-white border-[2px] font-chakra text-xl  relative z-0 about-btn-1'>Buy a Laid Back Llama</button>
+                        <button className=' py-4 px-4 text-white  border-white border-[2px] font-chakra text-xl  relative z-0 about-btn-1'>Buy a Laid Back Resilient Her</button>
                     </div>
                 </div>    
             </div>
@@ -30,7 +30,7 @@ const Desc = () => {
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
                     <p className=' text-2xl text-black  font-chakra '>Deep in the digital mountains of the Metaverse lies a herd of 7,000 exceptional llamas. They represent confidence, tranquility, and different personalities that boast style with every stride. These fresh-looking llamas have been exploring the rolling hills of the digital landscape in search of good vibes and good vibes only. They got the swag, the funk, the jazz, with each llama more laid back than the next. This exquisite herd only breeds the finest of llamas with the fluffiest fur and the sickest drip!  Every llama is unique, with different fur colors, hairstyles, laid-back expressions, clothes, hats, shades, and more. These are the Laid Back Llamas.</p>
                     <div className=' flex flex-col w-full h-full justify-center items-center'>
-                        <button className=' border-[2px] border-black  py-4 px-10 text-black  font-chakra text-xl about-btn-2 relative z-0'>Buy a  Boss Llama</button>
+                        <button className=' border-[2px] border-black  py-4 px-10 text-black  font-chakra text-xl about-btn-2 relative z-0'>Buy a  Boss Resilient Her</button>
                     </div>
                 </div>    
             </div>

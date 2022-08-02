@@ -12,8 +12,8 @@ module.exports = {
       },
       colors:{
           puprpule_1:"#9e0084",
-          dark_1:"rgba(0,0,0,.9)",
-          light_1:"rgba(255,255,255,0.8)",
+          dark_1:"rgba(0,0,0,1)",
+          light_1:"rgba(255,255,255,1)",
           xx:"#161922"
       }
     },
