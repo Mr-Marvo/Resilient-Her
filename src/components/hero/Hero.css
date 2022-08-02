@@ -11,3 +11,25 @@ background: linear-gradient(to top, #efefffb2 45%, #ffffff 30%);
 -webkit-text-fill-color: transparent;
 
 }
+
+.btn-main:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    box-shadow: inset 2px 2px 28px 23px rgba(99, 4, 86, 0.815);
+
+}
+.btn-main:hover:before{
+   z-index: 0;
+  
+    
+}
+.btn-main:hover{
+    border-color: transparent;
+    font-weight: bold;
+}

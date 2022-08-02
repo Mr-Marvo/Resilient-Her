@@ -10,8 +10,8 @@ const Navbar = () => {
     <div className=' flex flex-col  fixed z-[999] flex-wrap w-full h-[10vh]  justify-center items-center  text-white'>
         <nav className=' flex flex-row flex-wrap w-full h-auto container mx-auto justify-between items-center'>
             <div className='flex flex-wrap w-1/5 '>
-                {/* <img src={require("../../assets/images/logo.webp")} alt='logo' className=' bg-cover cursor-pointer'/> */}
-                <h2 className=' flex flex-col text-2xl'>Resilient Her</h2>
+                <img src={require("../../assets/images/logo.png")} alt='logo' className=' bg-cover cursor-pointer h-[240px] pt-4 w-[400px]'/>
+            
             </div>
             <div className=' flex flex-row  w-4/5   h-auto  justify-around items-center'>
                 <ul className=' flex flex-row flex-wrap font-sourceCode font-bold text-base'>

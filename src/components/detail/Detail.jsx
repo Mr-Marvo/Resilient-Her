@@ -692,20 +692,34 @@ window.addEventListener('touchend', e => {
     <canvas className=' w-full h-full  absolute z-30' ref={ref}>
     
     </canvas>
-    <div className=' flex-wrap flex flex-col w-full z-40 h-auto container mx-auto relative hero' >
+    <div className=' flex-wrap flex flex-col w-full z-40 h-auto container mx-auto relative hero mb-[500px]' >
             <div className=' flex flex-col flex-wrap w-full h-auto '>
-                <div className=' flex flex-row justify-center items-center mx-10 my-10  p-10 border-[1px]'>
-                    <img src={demo}alt='slide' className=' w-[200px] h-[200px]'/>
-                    <div className='flex flex-col w-auto h-auto'>
-                        <h3 className=' text-white text-3xl'>Laid Back Llamas Benefits</h3>
-                        <ul className=' text-xl text-white mt-10'>
-                            <li>7,000 provably-rare Laid Back Llamas</li>
-                            <li>7,000 provably-rare Laid Back Llamas</li>
-                            <li>7,000 provably-rare Laid Back Llamas</li>
-                            <li>7,000 provably-rare Laid Back Llamas</li>
-                            <li>7,000 provably-rare Laid Back Llamas</li>
+                <div className=' flex flex-row justify-start my-10 items-center mx-40  py-3  border-t-[2px]  border-l-[2px]'>
+                    <img src={demo}alt='slide' className=' w-[250px] h-[300px]'/>
+                    <div className='flex flex-col w-auto h-auto pl-4'>
+                        <h3 className=' text-white text-3xl font-bold font-sourceCode'>Laid Back Llamas Benefits</h3>
+                        <ul className=' cursor-pointer text-xl text-white  mt-4  marker list-disc'>
+                            <li className=' li-iteam '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className=' li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
                         </ul>
                     </div>
+                </div>
+                <div className=' flex flex-row justify-end my-10 items-center mx-40    border-b-[2px] border-r-[2px]'>
+                    
+                    <div className='flex flex-col w-auto h-auto pl-4'>
+                        <h3 className=' text-white text-3xl font-bold font-sourceCode'>Laid Back Llamas Benefits</h3>
+                        <ul className=' cursor-pointer text-xl text-white  mt-4    marker list-disc'>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                        </ul>
+                    </div>
+                    <img src={demo}alt='slide' className=' w-[250px] h-[300px]'/>
                 </div>
             </div>
             <div>
