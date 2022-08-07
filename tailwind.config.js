@@ -11,7 +11,7 @@ module.exports = {
         chakra:['Chakra Petch', "sans-serif"]
       },
       colors:{
-          puprpule_1:"#9e0084",
+          puprpule_1:"rgb(213, 184, 255)",
           dark_1:"rgba(0,0,0,1)",
           light_1:"rgba(255,255,255,1)",
           xx:"#161922"
