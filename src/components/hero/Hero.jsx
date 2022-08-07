@@ -697,7 +697,7 @@ const Hero = () => {
                 <button className='  border-[1px] border-white text-xl text-white w-[50%] font-bold mt-10 font-chakra py-5 btn-main relative z-40 uppercase'>Buy a Resilient Her</button>
             </div>
             <div className=' flex flex-col w-2/3  justify-center items-center'>
-                <img src ={require("../../assets/images/hero.png")} className='w-[130%]     bottom-3 bg-cover h-fit z-20 ' alt="hero"/>
+                <img src ={require("../../assets/images/hero.png")} className='w-[130%] hero-img    bottom-3 bg-cover h-fit z-20 ' alt="hero"/>
             </div>
         </div>
     </div>

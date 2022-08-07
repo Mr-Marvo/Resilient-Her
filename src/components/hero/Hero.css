@@ -6,9 +6,8 @@
 
 .hero_title{
 
-background: linear-gradient(to top, #efefffb2 45%, #ffffff 30%);
+background: linear-gradient(to top, #ffffff 30%, #ffffff 100%);
 -webkit-background-clip: text;
--webkit-text-fill-color: transparent;
 
 }
 
@@ -34,3 +33,7 @@ background: linear-gradient(to top, #efefffb2 45%, #ffffff 30%);
     font-weight: bold;
 }
 
+.hero-img{
+    opacity: 4;
+    filter: brightness(200%);
+}
