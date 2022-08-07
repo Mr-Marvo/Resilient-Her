@@ -703,12 +703,12 @@ window.addEventListener('touchend', e => {
                     <img src={demo}alt='slide' className=' w-[250px] h-[300px] z-40' />
                     <div className='flex flex-col w-auto h-auto pl-4'>
                         <h3 className=' text-white text-3xl font-bold font-sourceCode z-40'>Laid Back Resilient Her Benefits</h3>
-                        <ul className=' cursor-pointer text-xl text-white  mt-4  marker list-disc'>
-                            <li className='z-40 li-iteam '>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='z-40 li-iteam'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='z-40 li-iteam'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='z-40 li-iteam '>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='z-40 li-iteam'>7,000 provably-rare Laid Back Llamas</li>
+                        <ul className='  text-xl text-white z-40  mt-4  marker list-disc'>
+                            <li className='z-40 li-iteam cursor-pointer '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='z-40 li-iteam cursor-pointer'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='z-40 li-iteam cursor-pointer'>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='z-40 li-iteam cursor-pointer '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='z-40 li-iteam cursor-pointer'>7,000 provably-rare Laid Back Llamas</li>
                         </ul>
                     </div>
                 </div>
@@ -716,12 +716,12 @@ window.addEventListener('touchend', e => {
                     
                     <div className='flex flex-col w-auto h-auto pl-4 '>
                         <h3 className=' text-white text-3xl font-bold font-sourceCode z-40'>Laid Back Resilient Her Benefits</h3>
-                        <ul className=' cursor-pointer text-xl text-white  mt-4    marker list-disc'>
-                            <li className='li-iteam z-40'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='li-iteam z-40'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='li-iteam z-40'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='li-iteam z-40'>7,000 provably-rare Laid Back Llamas</li>
-                            <li className='li-iteam z-40'>7,000 provably-rare Laid Back Llamas</li>
+                        <ul className=' cursor-pointer text-xl text-white  z-40 mt-4    marker list-disc'>
+                            <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
+                            <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
                         </ul>
                     </div>
                     <img src={demo}alt='slide' className=' w-[250px] h-[300px] z-40'/>
