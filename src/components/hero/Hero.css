@@ -1,7 +1,10 @@
 .hero{
-
-    background: rgb(187,27,115);
-    background: linear-gradient(78deg, rgba(89,6,80,1) 4%, rgba(160,40,167,1) 23%, rgba(173,25,169,1) 34%, rgba(189,44,184,1) 78%, rgba(98,9,94,1) 95%); 
+  
+    /* background: rgb(187,27,115);
+    background: linear-gradient(78deg, rgba(89,6,80,1) 4%, rgba(160,40,167,1) 23%, rgba(173,25,169,1) 34%, rgba(189,44,184,1) 78%, rgba(98,9,94,1) 95%);  */
+    background: url("../../assets/images/bg.jpg") no-repeat ;
+    background-size: cover;
+    background-position: 100%;
 }
 
 .hero_title{
@@ -34,6 +37,16 @@ background: linear-gradient(to top, #ffffff 30%, #ffffff 100%);
 }
 
 .hero-img{
-    opacity: 4;
-    filter: brightness(200%);
+    opacity: 100%;
+    
+}
+/* .hero-img:hover{
+    opacity: 1;
+   filter: brightness(200%);
+    z-index: 20;
+} */
+
+canvas{
+    opacity:40%;
+   
 }

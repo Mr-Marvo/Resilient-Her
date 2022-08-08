@@ -8,10 +8,10 @@ const FaqItem = ({question,answer}) => {
   const expandCls = expand ? 'flex' : 'hidden';
   const answer1 = `${expandCls} px-4 py-1 relative` 
   
-  const continerHeight = expand? `h-[190px] `:` h-[70px] `
+  const continerHeight = expand? `h-[100px] `:` h-[70px] `
 
   return (
-    <div className={` ${continerHeight}  overflow-y-auto  anim xs:w-[500px] md:w-[1100px] relative   bg-transparent text-white flex flex-col border-b-[1px] border-opacity-10 z-40`}>
+    <div className={` ${continerHeight}  overflow-y-auto  anim xs:w-[500px] md:w-[1100px] relative    bg-transparent text-white flex flex-col border-b-[1px] border-opacity-10 z-40`}>
         <div className=' w-full  relative h-[65px] flex flex-row  justify-between items-center px-4'>
             <h3 className='xs:text-lg md:text-xl  pt-2 font-bold font-mono'>{question}</h3>
             <div className='flex flex-row ml-10 text-2xl '> 
