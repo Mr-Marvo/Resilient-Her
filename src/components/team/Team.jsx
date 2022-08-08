@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Navbar from '../navbar/Navbar'
 import TeamMember from './TeamMember'
 
 const Team = () => {
@@ -683,15 +684,16 @@ const Team = () => {
   
 //     }, []);
   return (
-    <div className='  w-full h-auto relative flex flex-col  flex-wrap justify-center items-center z-0 hero'>
+    <div className='  w-full  h-screen relative flex flex-col   overflow-hidden z-0 hero'>
        {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
       </canvas> */}
-        <div className=' flex flex-col flex-wrap w-full h-auto pt-10 container mx-auto justify-center items-center'>
+      <Navbar/>
+        <div className=' flex flex-col flex-wrap w-full h-auto pt-4 container mx-auto justify-center items-center'>
             <div className=' flex flex-col w-full h-auto justify-center items-center'>
-                <h2 className=' uppercase text-white text-6xl  font-chakra z-40'>Resilient Her TEAM</h2>
+                <h2 className=' uppercase text-white text-6xl   font-custome z-40'>Resilient Her TEAM</h2>
             </div>
-            <div className=' w-auto h-auto mt-20 grid  grid-cols-3 gap-x-20  gap-y-12  justify-items-center justify-self-center'>
+            <div className=' w-auto h-auto mt-20 grid  grid-cols-3 gap-x-20  gap-y-1  justify-items-center justify-self-center'>
                 <TeamMember className="z-40" name ="Athena" position="Founder and Project Leader"/>
                 <TeamMember className="z-40" name ="Aphrodite" position="Head of Philanthropy"/>
                 <TeamMember className="z-40"name ="Selene" position="Social Media Manager"/>

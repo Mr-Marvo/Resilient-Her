@@ -38,11 +38,11 @@
                 width 0.2s linear 0.2s;
             
 }
-.nav-item:hover{
+/* .nav-item:hover{
     
     transform: translateY(-12px);
     transition: all .5s  ease-in-out;
-}
+} */
 
 
 .nav-icon:hover{

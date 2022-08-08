@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Navbar from '../navbar/Navbar'
 
 import "./Desc.css"
 const Desc = () => {
@@ -683,14 +684,15 @@ const Desc = () => {
     
 //       }, []);
   return (
-    <div className=' flex flex-col  flex-wrap w-full h-auto   relative desc  z-0'>
+    <div className=' flex flex-col   w-full h-auto   relative desc  z-0'>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
+        <Navbar/>
         <div className=' flex flex-wrap flex-col w-full h-auto  justify-end items-end  '>
-            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-sta hero'>
-                <h2 className='text-[120px] mx-1  mt-10 tracking-tighter text-transparent  font-extrabold  font-sourceCode desc-title1  uppercase z-40'>About Us</h2>
-                <h2 className=' text-6xl mx-2 font-sourceCode  relative -top-9 font-extrabold text-white z-40'>resilient Her</h2>
+            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start hero'>
+                <h2 className='text-[120px] mx-1  mt-10 tracking-tighter text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
+                <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40'>resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
                     <p className=' text-2xl text-white  font-chakra  z-40'>
                         We are a group of four strong independent activists with an ambitious goal to
@@ -709,8 +711,8 @@ const Desc = () => {
         </div>
         <div className=' flex flex-wrap flex-col w-full h-auto  justify-start items-start '>
             <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start hero  z-40'>
-                <h2 className='text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1] font-extrabold font-sourceCode desc-title1 uppercase z-40'>Resilient Her</h2>
-                <h2 className=' text-6xl mx-2 font-sourceCode  font-extrabold relative text-white z-40'> Project Focus</h2>
+                <h2 className='text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1] font-extrabold font-custome desc-title1 uppercase z-40'>Resilient Her</h2>
+                <h2 className=' text-6xl mx-2   font-custome relative text-white z-40'> Project Focus</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
                     <p className=' text-2xl text-white  font-chakra z-40'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
                       This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.

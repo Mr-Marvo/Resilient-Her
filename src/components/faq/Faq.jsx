@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Navbar from '../navbar/Navbar'
 import FaqItem from './FaqItem'
 
 const Faq = () => {
@@ -683,13 +684,14 @@ const Faq = () => {
     
 //       }, []);
   return (
-    <div className=' flex flex-col flex-wrap w-full h-auto relative hero  z-0'>
+    <div className=' flex flex-col flex-wrap w-full  h-screen relative  hero  z-0 hero'>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
+        <Navbar/>
         <div className=' w-full h-auto flex flex-wrap flex-col pt-16'>
             <div className=' flex flex-col w-full h-auto justify-center items-center'>
-                <h2 className=' uppercase text-white text-6xl  font-chakra z-40'>FAQ</h2>
+                <h2 className=' uppercase text-white text-6xl  font-custome z-40'>FAQ</h2>
             </div>
             <div className=' flex flex-col w-full h-auto relative justify-center items-center mt-6 '>
                 <FaqItem question="How can I buy a Resilient Her?" answer="After sales start you can buy on the mint page."/>

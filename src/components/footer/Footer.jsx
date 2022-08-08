@@ -687,7 +687,7 @@ const Footer = () => {
     
 //       }, []);
   return (
-    <div className='flex flex-col flex-wrap relative  w-full h-auto  justify-center items-center  hero'>
+    <div className='flex flex-col flex-wrap relative  w-full h-auto  justify-center items-center hero '>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}

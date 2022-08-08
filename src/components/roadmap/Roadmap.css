@@ -1,4 +1,18 @@
 .roadmap{
     background: url("../../assets/images/bg3.jpg") no-repeat;
-    background-size: cover;
+   
+}
+
+.spring{
+    animation: spring 1s linear infinite;
+    transition: all ease-in-out
+}
+
+@keyframes spring {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(12px);
+    }
 }

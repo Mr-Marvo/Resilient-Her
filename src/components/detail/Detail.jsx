@@ -692,7 +692,7 @@ const Detail = () => {
 //       }, []);
       
   return (
-    <div className=' flex flex-col w-full h-auto relative  z-0'>
+    <div className=' flex flex-col w-full h-auto relative  z-0  '>
         
         <div className=' flex-wrap flex flex-col w-full  h-auto relative ' >
           
@@ -703,7 +703,7 @@ const Detail = () => {
                 <div className=' container    flex flex-row justify-start mt-20 items-center mx-40  pt-3  border-t-[2px]   border-l-[1px] border-r-[1px] '>
                     <img src={demo}alt='slide' className=' w-[250px] h-[300px] z-40' />
                     <div className='flex flex-col w-auto h-auto pl-4'>
-                        <h3 className=' text-white text-3xl font-bold font-sourceCode z-40'>Resilient Her Benefits</h3>
+                        <h3 className=' text-white text-3xl font-bold font-custome z-40'>Resilient Her Benefits</h3>
                         <ul className='  text-xl text-white z-40  mt-4  marker list-disc'>
                             <li className='z-40 li-iteam cursor-pointer '>7,000 provably-rare Laid Back Llamas</li>
                             <li className='z-40 li-iteam cursor-pointer'>7,000 provably-rare Laid Back Llamas</li>
@@ -716,7 +716,7 @@ const Detail = () => {
                 <div className=' flex flex-row justify-end mb-10 items-center mx-40    border-b-[1px] border-r-[1px] border-l-[1px]'>
                     
                     <div className='flex flex-col w-auto h-auto pl-4 '>
-                        <h3 className=' text-white text-3xl font-bold font-sourceCode z-40'> Resilient Her Benefits</h3>
+                        <h3 className=' text-white text-3xl font-bold font-custome z-40'> Resilient Her Benefits</h3>
                         <ul className=' cursor-pointer text-xl text-white  z-40 mt-4    marker list-disc'>
                             <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
                             <li className='li-iteam z-40 '>7,000 provably-rare Laid Back Llamas</li>
@@ -730,10 +730,10 @@ const Detail = () => {
              
             </div>
             <div className=' flex flex-col w-full h-full '>
-                <Roadmap/>
+                {/* <Roadmap/>
                 <Team/>
                 <Faq/>
-                <Footer/>
+                <Footer/> */}
             </div>
         </div>
      
