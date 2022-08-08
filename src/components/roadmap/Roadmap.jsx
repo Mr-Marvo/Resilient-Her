@@ -1,9 +1,10 @@
 import React from 'react'
+import "./Roadmap.css"
 
 const Roadmap = () => {
   return (
-    <div className=' flex flex-col relative w-full h-auto pb-40 overflow-hidden hero'>
-        <div className='flex flex-col  mx-auto w-full  h-auto'>
+    <div className=' flex flex-col relative w-full h-auto pb-40 overflow-hidden roadmap'>
+        <div className='flex flex-col  mx-auto w-full  h-auto '>
             <div className=' flex flex-col w-full h-auto justify-center items-center mt-20 mb-20'>
                 <h2 className=' uppercase text-white text-6xl  font-chakra z-40'>Resilient Her ROADMAP</h2>
             </div>
@@ -25,7 +26,7 @@ const Roadmap = () => {
                     </div>
                 </div>
             </div>
-            <div className=' flex flex-row w-full relative justify-between  mt-36'>
+            <div className=' flex flex-row w-full relative justify-between  mt-36 '>
                 <div className=' flex flex-row w-[48%] h-[300px] relative order-2'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
@@ -46,7 +47,7 @@ const Roadmap = () => {
                     </div>
                 </div>
             </div>
-            <div className=' flex flex-row w-full relative justify-between mt-36 '>
+            <div className=' flex flex-row w-full relative justify-between mt-36  '>
                 <div className=' flex flex-row w-[48%] h-[300px] relative'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
@@ -65,7 +66,7 @@ const Roadmap = () => {
                     </div>
                 </div>
             </div>
-            <div className=' flex flex-row w-full relative justify-between  mt-36'>
+            <div className=' flex flex-row w-full relative justify-between  mt-36 '>
                 <div className=' flex flex-row w-[48%] h-[300px] relative order-2'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
@@ -105,7 +106,7 @@ const Roadmap = () => {
                     </div>
                 </div>
             </div>
-            <div className=' flex flex-row w-full relative justify-between  mt-36'>
+            <div className=' flex flex-row w-full relative justify-between  mt-36 '>
                 <div className=' flex flex-row w-[48%] h-[300px] relative order-2'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
