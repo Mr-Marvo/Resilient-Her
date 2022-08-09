@@ -692,7 +692,7 @@ window.addEventListener('touchend', e => {
         <div className=' flex flex-wrap flex-col w-full  h-auto items-center  mt-10 mb-16  '>
             <div className=' flex flex-col  w-1/2  h-auto justify-center items-center '>
                 <h2 className='text-[120px] mx-1  tracking-tighter text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
-                <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40 '>resilient Her</h2>
+                <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40 '>Resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
                     <p className=' text-2xl text-white  font-chakra  z-40 text-center'>
                         We are a group of four strong independent activists with an ambitious goal to

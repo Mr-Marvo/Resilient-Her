@@ -688,9 +688,8 @@ const Roadmap3 = () => {
         </canvas>
         <div className=' flex flex-row w-full relative justify-between   '>
                 <div className=' flex flex-row w-[49%] h-[300px] relative order-2 z-40'>
-                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s3.png")} alt='slide' className=' bg-cover w-auto'/>
+                    <img src={require("../../assets/images/4.png")} alt='slide' className=' bg-cover w-auto'/>
+                   
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] left-2  top-44 absolute spring'/>
                 </div>
                 <div className=' flex flex-row w-[49%] h-auto order-1 border-t-[1px] border-r-[1px]  pr-10 pt-4'>
@@ -706,9 +705,8 @@ const Roadmap3 = () => {
             </div>
             <div className=' flex flex-row w-full relative justify-between mt-36 '>
                 <div className=' flex flex-row w-[48%] h-[300px] relative z-40'>
-                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s3.png")} alt='slide' className=' bg-cover w-auto'/>
+                    <img src={require("../../assets/images/5.png")} alt='slide' className=' bg-cover w-auto'/>
+                 
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className='  bg-cover w-[150px] h-[200px] right-2  top-44 absolute spring'/>
                 </div>
                 <div className=' flex flex-row w-[48%] h-auto border-t-[1px] border-l-[1px] pl-10 '>

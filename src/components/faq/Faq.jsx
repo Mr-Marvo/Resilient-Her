@@ -685,12 +685,12 @@ window.addEventListener('touchend', e => {
     
       }, []);
   return (
-    <div className=' flex flex-col flex-wrap w-full  h-screen relative  hero  z-0 hero'>
+    <div className=' flex flex-col  w-full  h-screen relative  hero  z-0 hero overflow-x-hidden'>
         <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas>
         <Navbar/>
-        <div className=' w-full h-auto flex flex-wrap flex-col pt-16  mb-32'>
+        <div className=' w-full h-auto flex flex-col pt-16  mb-32'>
             <div className=' flex flex-col w-full h-auto justify-center items-center'>
                 <h2 className=' uppercase text-white text-6xl  font-custome z-40'>FAQ</h2>
             </div>

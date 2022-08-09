@@ -697,9 +697,8 @@ const Roadmap = () => {
             </div>
             <div className=' flex flex-row w-full relative justify-between  pb-20'>
                 <div className=' flex flex-row w-[48%] h-[300px] relative z-40'>
-                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/s3.png")} alt='slide' className=' bg-cover w-auto'/>
+                    <img src={require("../../assets/images/1.png")} alt='slide' className=' bg-cover w-auto'/>
+                   
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] right-2  top-44 absolute spring z-40'/>
                 </div>
                 <div className=' flex flex-row w-[48%] h-auto border-t-[1px] border-l-[1px] pl-10 pt-4'>

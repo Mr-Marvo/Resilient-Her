@@ -7,7 +7,7 @@ const TeamMember = (props) => {
     <div className=' flex flex-col w-[210px] h-[330px]   relative'>
         <div className=' flex w-full flex-col h-auto container mx-auto'>
             <div className=' flex flex-col w-[210px] h-[190px]  bg-blue-700 border-[2px] border-white relative'>
-                <img src={require("../../assets/images/slide.webp")} alt='team' className=' -top-10  absolute bg-cover flex  w-full h-[225px] z-40'/>
+                <img src={props.image} alt='team' className=' -top-4  absolute bg-cover flex  w-full h-[200px] z-40'/>
             </div>
             <div className=' flex flex-col w-full h-auto justify-center items-center mt-1'>
                 <h3 className=' text-white text-2xl  font-bold  font-sourceCode z-40'>{props.name}</h3>

@@ -695,12 +695,12 @@ pointers[j].down = false;
                 <h2 className=' uppercase text-white text-6xl   font-custome z-40'>Resilient Her TEAM</h2>
             </div>
             <div className=' w-auto h-auto mt-16 grid  grid-cols-3 gap-x-28  gap-y-1   justify-items-center justify-self-center'>
-                <TeamMember className="z-40" name ="Athena" position="Founder and Project Leader"/>
-                <TeamMember className="z-40" name ="Aphrodite" position="Head of Philanthropy"/>
-                <TeamMember className="z-40"name ="Selene" position="Social Media Manager"/>
-                <TeamMember className="z-40"name ="Hera" position="Lead Programmer and Developer"/>
-                <TeamMember className="z-40"name ="Hestia" position="Lead Artist and Creative Director"/>
-                <TeamMember className="z-40"name ="Nemesis" position="Director of Communications"/>
+                <TeamMember className="z-40" name ="Athena" position="Founder and Project Leader" image={require("../../assets/images/s1.png")}/>
+                <TeamMember className="z-40" name ="Aphrodite" position="Head of Philanthropy"image={require("../../assets/images/s2.png")}/>
+                <TeamMember className="z-40"name ="Selene" position="Social Media Manager"image={require("../../assets/images/s3.png")}/>
+                <TeamMember className="z-40"name ="Hera" position="Lead Programmer and Developer"image={require("../../assets/images/s4.png")}/>
+                <TeamMember className="z-40"name ="Hestia" position="Lead Artist and Creative Director"image={require("../../assets/images/s5.png")}/>
+                <TeamMember className="z-40"name ="Nemesis" position="Director of Communications"image={require("../../assets/images/s6.png")}/>
               </div>
         </div>
         <Footer/>
