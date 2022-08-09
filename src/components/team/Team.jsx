@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Footer from '../footer/Footer'
 import Navbar from '../navbar/Navbar'
 import TeamMember from './TeamMember'
 
@@ -689,11 +690,11 @@ const Team = () => {
     
       </canvas> */}
       <Navbar/>
-        <div className=' flex flex-col flex-wrap w-full h-auto pt-4 container mx-auto justify-center items-center'>
+        <div className=' flex flex-col flex-wrap w-full h-auto  mt-16  container mx-auto justify-center items-center'>
             <div className=' flex flex-col w-full h-auto justify-center items-center'>
                 <h2 className=' uppercase text-white text-6xl   font-custome z-40'>Resilient Her TEAM</h2>
             </div>
-            <div className=' w-auto h-auto mt-20 grid  grid-cols-3 gap-x-20  gap-y-1  justify-items-center justify-self-center'>
+            <div className=' w-auto h-auto mt-16 grid  grid-cols-3 gap-x-28  gap-y-1   justify-items-center justify-self-center'>
                 <TeamMember className="z-40" name ="Athena" position="Founder and Project Leader"/>
                 <TeamMember className="z-40" name ="Aphrodite" position="Head of Philanthropy"/>
                 <TeamMember className="z-40"name ="Selene" position="Social Media Manager"/>
@@ -702,6 +703,7 @@ const Team = () => {
                 <TeamMember className="z-40"name ="Nemesis" position="Director of Communications"/>
               </div>
         </div>
+        <Footer/>
     </div>
   )
 }

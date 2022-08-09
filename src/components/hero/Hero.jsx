@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import Navbar from "../navbar/Navbar"
 import "./Hero.css"
+import Footer from "../footer/Footer"
 const Hero = () => {
   //   const ref = useRef(null);
 
@@ -702,11 +703,7 @@ const Hero = () => {
                 <img src ={require("../../assets/images/logo-bg.png")} className=' bg-cover top-0 left-0' alt="hero"/>
             </div>
         </div>
-        <div className=' flex flex-row w-full h-auto container mx-auto bg-dark_1 py-4   text-white text-xl justify-center items-center mb-4 z-40 '>
-                <p className=' mr-2'>Resilient Rer |</p>
-                <p className=' text-base mr-2'>2022 All rights reserved </p>
-               
-        </div>
+        <Footer/>
     </div>
   )
 }

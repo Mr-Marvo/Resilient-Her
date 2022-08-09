@@ -50,7 +50,7 @@
   
 }
 .about-btn-1:hover{
-    border: none;
+    border: transparent;
 }
 
 .about-btn-2:before{
@@ -76,6 +76,6 @@
   
 }
 .about-btn-2:hover{
-    border: none;
+    border: transparent;
     background-color: transparent;
 }

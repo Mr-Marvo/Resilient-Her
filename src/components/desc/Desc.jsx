@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Navbar from '../navbar/Navbar'
-
+import Footer from "../footer/Footer"
 import "./Desc.css"
 const Desc = () => {
 //     const ref = useRef(null);
@@ -684,17 +684,17 @@ const Desc = () => {
     
 //       }, []);
   return (
-    <div className=' flex flex-col   w-full h-auto   relative desc  z-0'>
+    <div className=' flex flex-col   w-full  h-screen   relative hero  z-0   overflow-hidden'>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
         <Navbar/>
-        <div className=' flex flex-wrap flex-col w-full h-auto  justify-end items-end  '>
-            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start hero'>
-                <h2 className='text-[120px] mx-1  mt-10 tracking-tighter text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
-                <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40'>resilient Her</h2>
+        <div className=' flex flex-wrap flex-col w-full  h-auto items-center  mt-10 mb-16  '>
+            <div className=' flex flex-col  w-1/2  h-auto justify-center items-center '>
+                <h2 className='text-[120px] mx-1  tracking-tighter text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
+                <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40 '>resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
-                    <p className=' text-2xl text-white  font-chakra  z-40'>
+                    <p className=' text-2xl text-white  font-chakra  z-40 text-center'>
                         We are a group of four strong independent activists with an ambitious goal to
                         improve the future for females around the world through tackling every day
                         problems that women face.
@@ -703,26 +703,16 @@ const Desc = () => {
                         We are positive that together as a community we can make a difference.
                         We stand together with one heart and one fight.</p>
                         <strong className=' text-white uppercase text-xl z-40'>THE FUTURE IS FEMALE!</strong>
-                    <div className=' flex flex-col w-full h-full justify-center items-center  '>
+                    <div className=' flex flex-col w-full h-full justify-center items-center  mt-10 '>
                         <button className=' py-4 px-4 text-white  border-white border-[2px] font-chakra text-xl  relative  about-btn-1 z-40'>Buy a Laid Back Resilient Her</button>
                     </div>
                 </div>    
             </div>
         </div>
-        <div className=' flex flex-wrap flex-col w-full h-auto  justify-start items-start '>
-            <div className=' flex flex-col  w-1/2 h-[80vh] justify-center items-start hero  z-40'>
-                <h2 className='text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1] font-extrabold font-custome desc-title1 uppercase z-40'>Resilient Her</h2>
-                <h2 className=' text-6xl mx-2   font-custome relative text-white z-40'> Project Focus</h2>
-                <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
-                    <p className=' text-2xl text-white  font-chakra z-40'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
-                      This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.
-                      At the same time, we have developed a financial model by means of an NFT whereby an Investor can get superb value for money. By being a Resilient-Her NFT holder, VIP access will be granted to members and various regular perks will be offered which will be constantly refreshed and updated to keep up with current trends.</p>
-                    <div className=' flex flex-col w-full h-full justify-center items-center'>
-                        <button className=' border-[2px] border-white  py-4 px-10 text-white  font-chakra text-xl about-btn-2 relative z-40'>Buy a  Boss Resilient Her</button>
-                    </div>
-                </div>    
-            </div>
+        <div className=' flex flex-col   absolute bottom-0  w-full left-0'>
+            <Footer/>
         </div>
+
        
     </div>
   )

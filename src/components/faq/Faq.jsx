@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import Footer from '../footer/Footer'
 import Navbar from '../navbar/Navbar'
 import FaqItem from './FaqItem'
 
@@ -689,7 +690,7 @@ const Faq = () => {
     
         </canvas> */}
         <Navbar/>
-        <div className=' w-full h-auto flex flex-wrap flex-col pt-16'>
+        <div className=' w-full h-auto flex flex-wrap flex-col pt-16  mb-32'>
             <div className=' flex flex-col w-full h-auto justify-center items-center'>
                 <h2 className=' uppercase text-white text-6xl  font-custome z-40'>FAQ</h2>
             </div>
@@ -704,6 +705,7 @@ const Faq = () => {
                 
             </div>
         </div>
+        <Footer/>
     </div>
   )
 }

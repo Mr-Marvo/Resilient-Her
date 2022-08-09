@@ -687,11 +687,11 @@ const Footer = () => {
     
 //       }, []);
   return (
-    <div className='flex flex-col flex-wrap relative  w-full h-auto  justify-center items-center hero '>
+    <div className='flex flex-col flex-wrap  fixed  bottom-0  w-full h-auto   '>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
-        <div className='w-full h-auto  container mx-auto pt-10  flex flex-col flex-wrap justify-center items-center'>
+        {/* <div className='w-full h-auto  container mx-auto pt-10  flex flex-col flex-wrap justify-center items-center'>
             <div className='text-white w-full h-auto flex flex-col  justify-center items-center '>
                 <p className=' text-md text-center mb-4 w-1/2 z-40'>Laid Back Resilient Her are a collection of 7,000 uniquely generated Resilient Her, while the Boss Resilient Her are 100 manually created Resilient Her, all living on the Ethereum Blockchain.</p>
                 <div className=' flex flex-row '>
@@ -718,6 +718,12 @@ const Footer = () => {
               
             </div>
  
+        </div> */}
+        <div className=' flex flex-row w-full h-auto container mx-auto bg-dark_1 py-4   text-white text-sm justify-end px-4 items-end mb-4 z-40 '>
+                <p>© 2022 Resilient Her</p>
+                <a href='/' className=' hover:underline'>/ NFT LICENSE /</a>
+                <a  href='/' className=' hover:underline'>TERMS & CONDITIONS</a>
+               
         </div>
     </div>
   )
