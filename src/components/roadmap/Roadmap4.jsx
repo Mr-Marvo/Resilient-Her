@@ -8,7 +8,7 @@ const Roadmap4 = () => {
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s3.png")} alt='slide' className=' bg-cover w-auto'/>
-                    <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] left-2  top-44 absolute spring'/>
+                 
                 </div>
                 <div className=' flex flex-row w-[49%] h-auto order-1 border-t-[1px] border-r-[1px]  pr-10 pt-4'>
                     <div className='flex flex-col w-full h-auto justify-center items-end   '>
