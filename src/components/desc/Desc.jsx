@@ -709,6 +709,14 @@ const Desc = () => {
                 </div>    
             </div>
         </div>
+        <div className=' flex flex-col w-[20%] top-[400px] absolute left-20  text-4xl opacity-10 -rotate-3'>
+        <figure className='  text-white'>
+            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p className=' uppercase'>"A Really strong women accepts the war she went through ND IS ENNOBLED BY HER SCARS"</p>
+            </blockquote>
+            <figcaption>—carly simon <cite>musical artist</cite></figcaption>
+        </figure>
+        </div>
         <div className=' flex flex-col   absolute bottom-0  w-full left-0'>
             <Footer/>
         </div>

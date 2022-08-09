@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Footer from "../footer/Footer"
 const Roadmap4 = () => {
   return (
-    <div className=' flex flex-col w-full h-auto relative   hero pb-32 '>
-        <div className=' flex flex-row w-full relative justify-between  mt-36 '>
+    <div className=' flex flex-col w-full h-auto relative   hero pb-32'>
+        <div className=' flex flex-row w-full relative justify-between  mt-36  '>
                 <div className=' flex flex-row w-[49%] h-[300px] relative order-2'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
@@ -21,6 +21,7 @@ const Roadmap4 = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
     </div>
   )
 }
