@@ -687,7 +687,7 @@ const Footer = () => {
     
 //       }, []);
   return (
-    <div className='flex flex-col flex-wrap  fixed  bottom-0  w-full h-auto   '>
+    <div className='flex flex-col flex-wrap  fixed  bottom-0  w-full h-auto  z-40  '>
         {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
@@ -720,9 +720,9 @@ const Footer = () => {
  
         </div> */}
         <div className=' flex flex-row w-full h-auto container mx-auto bg-dark_1 py-4   text-white text-sm justify-end px-4 items-end mb-4 z-40 '>
-                <p>© 2022 Resilient Her</p>
-                <a href='/' className=' hover:underline'>/ NFT LICENSE /</a>
-                <a  href='/' className=' hover:underline'>TERMS & CONDITIONS</a>
+                <p className='z-40'>© 2022 Resilient Her</p>
+                <a href='/' className='z-40 hover:underline'>/ NFT LICENSE /</a>
+                <a  href='/' className='z-40 hover:underline'>TERMS & CONDITIONS</a>
                
         </div>
     </div>
