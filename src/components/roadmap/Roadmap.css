@@ -1,7 +1,4 @@
-.roadmap{
-    background: url("../../assets/images/bg3.jpg") no-repeat;
-   
-}
+
 
 .spring{
     animation: spring 1s linear infinite;
@@ -16,3 +13,4 @@
         transform: translateY(12px);
     }
 }
+

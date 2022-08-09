@@ -6,7 +6,7 @@ import Roadmap2 from './Roadmap2'
 const Roadmap = () => {
   return (
     <>  
-    <div className=' flex flex-col relative w-full h-auto  overflow-hidden hero '>
+    <div className=' flex flex-col relative w-full h-auto  overflow-x-hidden hero'>
         <Navbar/>
         <div className='flex flex-col  mx-auto w-full  h-auto '>
             <div className=' flex flex-col w-full h-auto justify-center items-center mt-20 mb-20'>

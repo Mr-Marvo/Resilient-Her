@@ -3,15 +3,15 @@ import Roadmap3 from "../roadmap/Roadmap3"
 const Roadmap2 = () => {
   return (
     <>
-    <div className=' flex flex-col w-full h-[100vh] hero'>
+    <div className=' flex flex-col w-full h-[100vh] hero '>
         <div className=' flex flex-row w-full relative justify-between  mt-36 '>
-                <div className=' flex flex-row w-[48%] h-[300px] relative order-2'>
+                <div className=' flex flex-row w-[49%] h-[300px] relative order-2'>
                     <img src={require("../../assets/images/s1.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s2.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/s3.png")} alt='slide' className=' bg-cover w-auto'/>
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] left-2  top-44 absolute spring'/>
                 </div>
-                <div className=' flex flex-row w-[48%] h-auto order-1 border-t-[1px] border-r-[1px]  pr-10 pt-4'>
+                <div className=' flex flex-row w-[49%] h-auto order-1 border-t-[1px] border-r-[1px]  pr-10 pt-4'>
                     <div className='flex flex-col w-full h-auto justify-center items-end   '>
                         <div className=' flex flex-row w-full  leading-[1]  justify-end items-center'>
                             <h2 className=' text-[100px] font-mono font-bold text-white ml-8 order-2 text-end'>20%</h2>
