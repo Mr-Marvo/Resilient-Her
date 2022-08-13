@@ -13,7 +13,7 @@ const FaqItem = ({question,answer}) => {
   return (
     <div className={` ${continerHeight}  overflow-y-auto  anim xs:w-[500px] md:w-[1100px] relative    bg-transparent text-white flex flex-col border-b-[1px] border-opacity-10 `}>
         <div className=' w-full  relative h-[65px] flex flex-row  justify-between items-center px-4 z-40'>
-            <h3 className='xs:text-lg md:text-xl  pt-2 font-bold font-mono'>{question}</h3>
+            <h3 className='xs:text-lg md:text-xl  pt-2 font-bold font-custome'>{question}</h3>
             <div className='flex flex-row ml-10 text-2xl z-40'> 
             {
               (expand)?  <AiOutlineMinus onClick={()=>setExpand(!expand)} className='btn cursor-pointer'/>:<AiOutlinePlus onClick={()=>setExpand(!expand)} className=' cursor-pointer'/>
@@ -21,7 +21,7 @@ const FaqItem = ({question,answer}) => {
             
             </div>
         </div>
-        <div className={`${answer1} text-gray-400 font-mono z-40`}>
+        <div className={`${answer1} text-gray-400 font-custome z-40`}>
             <sapn>
              {answer}
             </sapn>

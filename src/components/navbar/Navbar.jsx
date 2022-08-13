@@ -699,7 +699,7 @@ const Navbar = () => {
             </div>
             <div className=' flex flex-row  w-4/5   h-auto  justify-between mx-4 items-center   '>
        
-                    <ul className=' flex flex-row flex-wrap font-sourceCode font-bold text-base pl-40'>
+                    <ul className=' flex flex-row flex-wrap  font-custome font-bold text-base pl-40'>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/" >Home</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/about">About us</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/aboutNFT">About the NFT</Link></li>

@@ -698,7 +698,7 @@ const Roadmap4 = () => {
                             <img src={require("../../assets/images/tik.png")} alt='tik' className=' w-[100px] h-[100px] order-1'/>
                         </div>
                         <h4 className=' text-white text-[40px] font-custome leading-[1] z-40'>The metaverse</h4>
-                        <h4 className=' text-white text-[25px]   leading-[1] text-end mt-2 z-40'>Expansion into the metaverse with the ambitious goal to create a virtual reality platform for people in need to attend virtual therapy sessions anywhere in the world with our trained professionals</h4>
+                        <h4 className=' text-white text-[18px] font-custome  leading-[1] text-end mt-2 z-40'>Expansion into the metaverse with the ambitious goal to create a virtual reality platform for people in need to attend virtual therapy sessions anywhere in the world with our trained professionals</h4>
                     </div>
                 </div>
             </div>

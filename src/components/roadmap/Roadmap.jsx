@@ -708,8 +708,8 @@ const Roadmap = () => {
                             <img src={require("../../assets/images/tik.png")} alt='tik' className=' w-[100px] h-[100px] z-40'/>
                         </div>
                         <h4 className=' text-white text-[40px] font-custome leading-[1] z-40'>LFG</h4>
-                        <h4 className=' text-white text-[25px] leading-[1] mt-2 z-40'>20% of mint + 20% of all future royalties will be added to the community wallet and used for project growth and expansion</h4>
-                        <button className=' text-white  text-xl bg-orange-400 rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
+                        <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>20% of mint + 20% of all future royalties will be added to the community wallet and used for project growth and expansion</h4>
+                        <button className=' text-white font-custome text-xl bg-orange-400 rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
                     </div>
                 </div>
             </div>

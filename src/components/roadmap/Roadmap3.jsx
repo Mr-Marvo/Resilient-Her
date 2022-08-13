@@ -699,7 +699,7 @@ const Roadmap3 = () => {
                             <img src={require("../../assets/images/tik.png")} alt='tik' className=' w-[100px] h-[100px] order-1 z-40'/>
                         </div>
                         <h4 className=' text-white text-[40px] font-custome leading-[1] z-40'>Boot Camp</h4>
-                        <h4 className=' text-white text-[25px]   leading-[1] mt-2 text-end z-40'>Members of HER will have access to individual one-on-one virtual therapy sessions with trained professionals to get the help they need and deserve.</h4>
+                        <h4 className=' text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40'>Members of HER will have access to individual one-on-one virtual therapy sessions with trained professionals to get the help they need and deserve.</h4>
                     </div>
                 </div>
             </div>
@@ -716,8 +716,8 @@ const Roadmap3 = () => {
                             <img src={require("../../assets/images/tik.png")} alt='tik' className=' w-[100px] h-[100px] z-40'/>
                         </div>
                         <h4 className=' text-white text-[40px]  font-custome leading-[1] z-40'>Collabs</h4>
-                        <h4 className=' text-white text-[25px] leading-[1] mt-2 z-40'>Attempt to collab with other ambitious projects targeting global outreach programmes.EG: -WOW –World of Women -Women Ride -Psychadelics Anonymous -Etc</h4>
-                        <button className=' text-white  text-xl bg-orange-400 rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
+                        <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>Attempt to collab with other ambitious projects targeting global outreach programmes.EG: -WOW –World of Women -Women Ride -Psychadelics Anonymous -Etc</h4>
+                        <button className=' text-white font-custome text-xl bg-orange-400 rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
                     </div>
                 </div>
             </div>

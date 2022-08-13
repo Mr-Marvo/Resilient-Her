@@ -694,7 +694,7 @@ window.addEventListener('touchend', e => {
                 <h2 className='text-[120px] mx-1  tracking-tighter text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
                 <h2 className=' text-6xl mx-2  relative -top-9 font-custome text-white z-40 '>Resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
-                    <p className=' text-2xl text-white  font-chakra  z-40 text-center'>
+                    <p className=' text-xl text-white   font-custome  z-40 text-center'>
                         We are a group of four strong independent activists with an ambitious goal to
                         improve the future for females around the world through tackling every day
                         problems that women face.
@@ -704,7 +704,7 @@ window.addEventListener('touchend', e => {
                         We stand together with one heart and one fight.</p>
                         <strong className=' text-white uppercase text-xl z-40'>THE FUTURE IS FEMALE!</strong>
                     <div className=' flex flex-col w-full h-full justify-center items-center  mt-10 '>
-                        <button className=' py-4 px-4 text-white  border-white border-[2px] font-chakra text-xl  relative  about-btn-1 z-40'>Buy a Laid Back Resilient Her</button>
+                        <button className=' py-4 px-4 text-white  border-white border-[2px] font-custome text-xl  relative  about-btn-1 z-40'>Buy a Laid Back Resilient Her</button>
                     </div>
                 </div>    
             </div>
