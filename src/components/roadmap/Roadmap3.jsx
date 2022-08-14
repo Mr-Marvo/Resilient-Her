@@ -687,8 +687,8 @@ const Roadmap3 = () => {
     
         </canvas> */}
         <div className=' flex flex-row w-full relative justify-between   '>
-                <div className=' flex flex-row w-[49%] h-[300px] relative order-2 z-40'>
-                    <img src={require("../../assets/images/4.png")} alt='slide' className=' bg-cover w-auto'/>
+                <div className=' flex flex-row w-[49%] h-[300px] relative order-2 z-40 justify-center'>
+                     <img src={require("../../assets/images/s4.png")} alt='slide' className=' absolute  w-[350px] h-[350px]'/>
                    
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] left-2  top-44 absolute spring'/>
                 </div>
@@ -704,8 +704,8 @@ const Roadmap3 = () => {
                 </div>
             </div>
             <div className=' flex flex-row w-full relative justify-between mt-36 '>
-                <div className=' flex flex-row w-[48%] h-[300px] relative z-40'>
-                    <img src={require("../../assets/images/5.png")} alt='slide' className=' bg-cover w-auto'/>
+                <div className=' flex flex-row w-[48%] h-[300px] relative z-40 justify-center'>
+                    <img src={require("../../assets/images/s5.png")} alt='slide' className=' absolute  w-[350px] h-[350px]'/>
                  
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className='  bg-cover w-[150px] h-[200px] right-2  top-44 absolute spring'/>
                 </div>

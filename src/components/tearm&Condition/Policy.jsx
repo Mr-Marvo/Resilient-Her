@@ -6,7 +6,8 @@ const Policy = () => {
     <div className=' w-full h-screen flex flex-col relative'>
         <Navbar/>
         <div className=' w-full h-auto flex flex-col container mx-auto mt-10 pb-20'>
-            <h3 className='mb-10'>This privacy policy was last modified on 4th December 2021.</h3>
+            <h2 className=' text-xl font-bold w-full text-center uppercase'>privacy policy</h2>
+            <h3 className='mb-10 mt-10'>This privacy policy was last modified on 4th December 2021.</h3>
             <strong>1.About our Privacy Policy</strong>
             <div  className=' ml-4 my-4'>
                 <ul>

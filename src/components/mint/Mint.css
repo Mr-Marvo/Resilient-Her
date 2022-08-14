@@ -1,0 +1,9 @@
+.mint{
+    border: 4px solid transparent;
+    border-image:linear-gradient(50deg,#ff0,#f0f);
+    border-image-slice: 1;
+    border-radius: 20px;
+  
+    box-shadow: -1px 46px 54px 20px rgba(0,0,0,0.68);
+   
+}

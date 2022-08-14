@@ -704,6 +704,7 @@ const Navbar = () => {
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/about">About us</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/aboutNFT">About the NFT</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/roadmap" >Roadmap</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/mint" >Mint</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/ask" >FAQ</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/team" >Team</Link></li>
                     </ul>

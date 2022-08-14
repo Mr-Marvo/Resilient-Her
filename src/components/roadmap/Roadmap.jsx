@@ -696,8 +696,8 @@ const Roadmap = () => {
                 <h2 className=' uppercase text-white text-6xl   font-custome z-40'>Resilient Her ROADMAP</h2>
             </div>
             <div className=' flex flex-row w-full relative justify-between  pb-20'>
-                <div className=' flex flex-row w-[48%] h-[300px] relative z-40'>
-                    <img src={require("../../assets/images/1.png")} alt='slide' className=' bg-cover w-auto'/>
+                <div className=' flex flex-row w-[48%] h-[300px] relative z-40  justify-center'>
+                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' absolute  w-[350px] h-[350px]'/>
                    
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover w-[150px] h-[200px] right-2  top-44 absolute spring z-40'/>
                 </div>

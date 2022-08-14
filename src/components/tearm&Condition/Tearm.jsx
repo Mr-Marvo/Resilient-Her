@@ -7,7 +7,8 @@ const Tearm = () => {
     <div className=' w-full h-screen flex flex-col relative'>
         <Navbar/>
         <div className=' w-full h-auto flex flex-col container mx-auto mt-10 pb-20'>
-            <h3 className='mb-10'>By accessing or continuing to use our Website and related services, you agree to abide by these terms and conditions, including our Privacy Policy. If you do not agree with any of these terms, or the terms of our privacy policy you should cease using our Website.</h3>
+        <h2 className=' text-xl font-bold w-full text-center uppercase'>TERMS & CONDITIONS </h2>
+            <h3 className='mb-10 mt-10'>By accessing or continuing to use our Website and related services, you agree to abide by these terms and conditions, including our Privacy Policy. If you do not agree with any of these terms, or the terms of our privacy policy you should cease using our Website.</h3>
             <strong>1.General</strong>
             <div  className=' ml-4 my-4'>
                 <ul>

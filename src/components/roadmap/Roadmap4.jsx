@@ -686,8 +686,8 @@ const Roadmap4 = () => {
     
             </canvas> */}
         <div className=' flex flex-row w-full relative justify-between  mt-36  '>
-                <div className=' flex flex-row w-[49%] h-[300px] relative order-2 z-40'>
-                    <img src={require("../../assets/images/6.png")} alt='slide' className=' bg-cover w-auto'/>
+                <div className=' flex flex-row w-[49%] h-[300px] relative order-2 z-40 justify-center'>
+                    <img src={require("../../assets/images/s6.png")} alt='slide' className=' absolute  w-[350px] h-[350px]'/>
                   
                  
                 </div>

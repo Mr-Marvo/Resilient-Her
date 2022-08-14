@@ -7,7 +7,8 @@ const NFTLicence = () => {
     <div className=' w-full h-screen flex flex-col relative'>
     <Navbar/>
     <div className=' w-full h-auto flex flex-col container mx-auto mt-10 pb-20'>
-        <h3 className='mb-10'>When you (Purchaser, you) purchase Resilient Her non-fungible tokens (NFTs) from Resilient Her Ltd you must agree to the terms and conditions set out in this document (NFT Terms) and the licence set out in the Annexure to these NFT Terms (Licence), which apply to you and any subsequent person to whom you sell the NFT(s) you purchased from us in the first instance.</h3>
+        <h2 className=' text-xl font-bold w-full text-center uppercase'>NFT LICENSE</h2>
+        <h3 className='mb-10 mt-10'>When you (Purchaser, you) purchase Resilient Her non-fungible tokens (NFTs) from Resilient Her Ltd you must agree to the terms and conditions set out in this document (NFT Terms) and the licence set out in the Annexure to these NFT Terms (Licence), which apply to you and any subsequent person to whom you sell the NFT(s) you purchased from us in the first instance.</h3>
         <h2  className=' font-custome mb-10'>OPERATIVE CLAUSES</h2>
         <strong>1.Applicability of NFT Terms</strong>
         <div  className=' ml-4 my-4'>

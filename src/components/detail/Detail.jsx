@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import demo from "../../assets/images/1.svg"
+// import demo from "../../assets/images/1.svg"
 import Faq from '../faq/Faq'
 import Footer from '../footer/Footer'
 import Roadmap from '../roadmap/Roadmap'
