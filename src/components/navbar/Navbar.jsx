@@ -3,7 +3,7 @@ import {FiTwitter} from "react-icons/fi"
 import {AiOutlineInstagram} from "react-icons/ai"
 import {TbBrandDiscord} from "react-icons/tb"
 import "./Navbar.css"
-import {FaBars} from  "react-icons/fa"
+import {AiOutlineMail} from  "react-icons/ai"
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -692,14 +692,14 @@ const Navbar = () => {
          {/* <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas> */}
-        <nav className=' flex flex-row  w-full h-[99px] mt-6  container mx-auto bg-dark_1  justify-between items-center'>
+        <nav className=' flex flex-row  w-[82%] h-[99px] mt-6  container ml-3  bg-dark_1  justify-between items-center'>
             <div className='flex flex-wrap w-1/5 justify-start items-start   '>
                 <img src={require("../../assets/images/logo.png")} alt='logo' className=' bg-cover cursor-pointer  w-fit z-40'/>
             
             </div>
-            <div className=' flex flex-row  w-4/5   h-auto  justify-between mx-4 items-center   '>
+            <div className=' flex flex-row  w-4/5   h-auto  justify-between mx-16   items-center   '>
        
-                    <ul className=' flex flex-row flex-wrap  font-custome font-bold text-base pl-40'>
+                    <ul className=' flex flex-row flex-wrap  font-custome font-bold text-base pl-4 '>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/" >Home</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/about">About us</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/aboutNFT">About the NFT</Link></li>
@@ -708,9 +708,10 @@ const Navbar = () => {
                         <li className=' cursor-pointer uppercase px-5 py-2  relative z-40'><Link to="/team" >Team</Link></li>
                     </ul>
                     <div className=' flex-row flex flex-wrap justify-center items-center text-xl'>
-                        <FiTwitter className=' mx-2 cursor-pointer nav-icon z-40'/>
-                        <AiOutlineInstagram className=' mx-2 cursor-pointer nav-icon z-40'/>
-                        <TbBrandDiscord className=' mx-2 cursor-pointer nav-icon z-40'/>
+                       <a href='https://twitter.com/Resilient_her?s=20&t=BuBvFVvzcEoadls1LcW9Pw'target="_blank"><FiTwitter className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://www.instagram.com/resilient.her.nft/?igshid=YmMyMTA2M2Y%3D'target="_blank"> <AiOutlineInstagram className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://instagram.com/resilient.her.nft?igshid=YmMyMTA2M2Y='target="_blank"><TbBrandDiscord className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href = "mailto:resilient.her.nft@gmail.com"><AiOutlineMail className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                     </div>
            
             </div>

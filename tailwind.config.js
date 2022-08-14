@@ -6,9 +6,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        sourceCode :["Source Code Pro", "monospace"],
-        righteous:["Righteous", "cursive"],
-        chakra:['Chakra Petch', "sans-serif"],
         custome: ["NeueKabelW01","Regular"]
       },
       colors:{

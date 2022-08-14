@@ -4,6 +4,8 @@ import {TbBrandDiscord} from "react-icons/tb"
 import {AiOutlineInstagram} from "react-icons/ai"
 import  {FiTwitter} from "react-icons/fi"
 import "./Footer.css"
+import { Link } from 'react-router-dom'
+import Tearm from '../tearm&Condition/Tearm'
 
 const Footer = () => {
 //     const ref = useRef(null);
@@ -719,10 +721,11 @@ const Footer = () => {
             </div>
  
         </div> */}
-        <div className=' flex flex-row w-full h-auto container mx-auto bg-dark_1 py-4   text-white text-sm justify-end px-4 items-end mb-4 z-40 '>
+        <div className=' flex flex-row w-[82%] h-auto  container ml-44 bg-dark_1 py-4   text-white text-sm justify-end px-4 items-end mb-4 z-40 '>
                 <p className='z-40'>© 2022 Resilient Her</p>
-                <a href='/' className='z-40 hover:underline'>/ NFT LICENSE /</a>
-                <a  href='/' className='z-40 hover:underline'>TERMS & CONDITIONS</a>
+                <Link to ="/policy" className=' uppercase z-40 hover:underline'> / Privacy Policy / </Link>
+                <Link to='/term' className='z-40 hover:underline'>TERMS &  CONDITIONS /</Link>
+                <Link to='/nft' className='z-40 hover:underline'>NFT LICENSE</Link>
                
         </div>
     </div>
