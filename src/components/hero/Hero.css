@@ -1,50 +1,17 @@
 .hero{
   
-    /* background: rgb(187,27,115);
-    background: linear-gradient(78deg, rgba(89,6,80,1) 4%, rgba(160,40,167,1) 23%, rgba(173,25,169,1) 34%, rgba(189,44,184,1) 78%, rgba(98,9,94,1) 95%);  */
+  
     background: url("../../assets/images/bg.jpg") no-repeat ;
     background-size: cover;
     background-position: 100%;
 }
 
-.hero_title{
-
-background: linear-gradient(to top, #ffffff 30%, #ffffff 100%);
--webkit-background-clip: text;
-
-}
-
-.btn-main:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    
-    box-shadow: inset 2px 2px 28px 23px rgba(99, 4, 86, 0.815);
-
-}
-.btn-main:hover:before{
-   z-index: 0;
-  
-    
-}
-.btn-main:hover{
-    border-color: transparent;
-    font-weight: bold;
-}
 
 .hero-img{
     opacity: 100%;
     
 }
-/* .hero-img:hover{
-    opacity: 1;
-   filter: brightness(200%);
-    z-index: 20;
-} */
+
 
 canvas{
     opacity:40%;

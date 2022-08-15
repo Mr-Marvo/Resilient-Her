@@ -1,8 +1,0 @@
-
-li::marker {
-    @apply   text-blue-500 text-4xl
-  }
-
-  .li-iteam:hover{
-    transform: scale(1.02);
-  }

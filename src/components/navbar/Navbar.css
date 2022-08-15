@@ -49,3 +49,36 @@
     color: tomato;
     transform: scale(2);
 }
+
+/*NAV BAR*/
+
+.navbar{
+    position: absolute;
+    top: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 51px;
+    width: 100%;
+    height: auto;
+    right: -231px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  
+    animation: anim .7s alternate;
+}
+
+@keyframes anim {
+    0%{
+        transform: translateX(100%);
+        filter: blur(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.nav_item{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
