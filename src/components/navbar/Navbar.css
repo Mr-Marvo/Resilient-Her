@@ -1,4 +1,4 @@
-.nav-item:before{
+/* .nav-item:before{
     content: "";
     bottom: 0;
     left: 0;
@@ -37,7 +37,7 @@
     transition: height 0.2s linear,
                 width 0.2s linear 0.2s;
             
-}
+} */
 /* .nav-item:hover{
     
     transform: translateY(-12px);
@@ -77,8 +77,6 @@
     }
 }
 
-.nav_item{
-    display: flex;
-    flex-direction: column;
-    text-align: end;
+.nav-item:hover{
+  color: #ff6348;
 }

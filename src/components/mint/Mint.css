@@ -7,3 +7,15 @@
     box-shadow: -1px 46px 54px 20px rgba(0,0,0,0.68);
    
 }
+
+.mint-btn:hover{
+    background-color: transparent;
+    border-width: 1px;
+    border-color: white;
+}
+
+.plus:hover,.minus:hover{
+    background-color:transparent;
+    border-width: 1px;
+    border-color: white;
+}

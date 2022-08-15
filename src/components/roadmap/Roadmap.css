@@ -1,5 +1,9 @@
 
-
+.rd-bg{
+    background: url("../../assets/images/2.jpg");
+    background-size: cover;
+    background-position: 100%;
+}
 .spring{
     animation: spring 1s linear infinite;
     transition: all ease-in-out
@@ -14,3 +18,8 @@
     }
 }
 
+.btn-rd:hover{
+    background-color: rgb(102, 51, 153);
+     border-width: 2px;
+     border-color: rgb(102, 51, 153);
+}
