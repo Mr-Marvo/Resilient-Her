@@ -22,18 +22,18 @@ const [expand,setExpand] = useState(false);
             <div className={`${expand?"navbar  ":"flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex"} `}>
        
                     <ul className={`${expand?"flex flex-col items-center":" flex flex-row"}   font-custome font-bold xl:text-sm 2xl:text-base pl-4 ` }>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item  relative z-40'><Link to="/" onClick={()=>{setExpand(!expand)}} >Home</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item  relative z-40'><Link to="/about"  onClick={()=>{setExpand(!expand)}}>About us</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/aboutNFT"  onClick={()=>{setExpand(!expand)}}>About the NFT</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/roadmap" onClick={()=>{setExpand(!expand)}} >Roadmap</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/mint" onClick={()=>{setExpand(!expand)}} >Mint</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/ask"  onClick={()=>{setExpand(!expand)}}>FAQ</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/team" onClick={()=>{setExpand(!expand)}} >Team</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item  relative z-40'><Link to="/" onClick={()=>{setExpand(false)}} >Home</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item  relative z-40'><Link to="/about"  onClick={()=>{setExpand(false)}}>About us</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/aboutNFT"  onClick={()=>{setExpand(false)}}>About the NFT</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/roadmap" onClick={()=>{setExpand(false)}} >Roadmap</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/mint" onClick={()=>{setExpand(false)}} >Mint</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/ask"  onClick={()=>{setExpand(false)}}>FAQ</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/team" onClick={()=>{setExpand(false)}} >Team</Link></li>
                     </ul>
                     <div className=' flex-row flex flex-wrap justify-center items-center text-xl'>
-                       <a href='https://twitter.com/Resilient_her?s=20&t=BuBvFVvzcEoadls1LcW9Pw'target="_blank"><FiTwitter  onClick={()=>{setExpand(!expand)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
-                       <a href='https://www.instagram.com/resilient.her.nft/?igshid=YmMyMTA2M2Y%3D'target="_blank"> <AiOutlineInstagram  onClick={()=>{setExpand(!expand)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
-                       <a href='https://instagram.com/resilient.her.nft?igshid=YmMyMTA2M2Y='target="_blank"><TbBrandDiscord  onClick={()=>{setExpand(!expand)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://twitter.com/Resilient_her?s=20&t=BuBvFVvzcEoadls1LcW9Pw'target="_blank"><FiTwitter  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://www.instagram.com/resilient.her.nft/?igshid=YmMyMTA2M2Y%3D'target="_blank"> <AiOutlineInstagram  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://instagram.com/resilient.her.nft?igshid=YmMyMTA2M2Y='target="_blank"><TbBrandDiscord  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                        <a href = "mailto:resilient.her.nft@gmail.com"><AiOutlineMail className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                     </div>
                 
