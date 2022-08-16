@@ -681,7 +681,7 @@ const Roadmap4 = () => {
       
         }, []);
   return (
-    <div className=' flex flex-col w-full h-auto   overflow-x-hidden overflow-hidden  '>
+    <div className=' flex flex-col w-full h-auto   overflow-x-hidden overflow-hidden  justify-center items-center relative  '>
             <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
             </canvas>
@@ -703,7 +703,7 @@ const Roadmap4 = () => {
                     </div>
                 </div>
             </div>
-            <div className=' flex xxs:flex-col sm:flex-row  w-full relative justify-between  xxs:mt-10 sm:mt-36  '>
+            <div className=' flex xxs:flex-col sm:flex-row  w-full relative justify-between  xxs:mt-10 sm:mt-36 xxs:mb-10 xl:mb-28 '>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0'>
                     <img src={require("../../assets/images/s6.png")} alt='slide' className=' absolute xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
                   

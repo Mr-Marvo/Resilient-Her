@@ -684,7 +684,7 @@ const Roadmap2 = () => {
         }, []);
   return (
     <>
-    <div className=' flex flex-col w-full  h-fit  relative  overflow-x-hidden  overflow-hidden'>
+    <div className=' flex flex-col w-full  h-auto  relative  overflow-x-hidden  overflow-hidden'>
     <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
     </canvas>
