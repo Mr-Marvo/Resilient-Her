@@ -685,7 +685,7 @@ pointers[j].down = false;
   
     }, []);
   return (
-    <div className='  w-full  h-auto relative flex flex-col   overflow-auto z-0 hero pb-20'>
+    <div className='  w-full  h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero pb-20'>
        <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
       </canvas>

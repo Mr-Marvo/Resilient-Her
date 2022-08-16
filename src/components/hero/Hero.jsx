@@ -688,7 +688,7 @@ const Hero = () => {
         }, []);
         
   return (
-    <div className='  flex flex-col w-full  h-screen  overflow-hidden  relative  hero justify-center items-center  z-0'>
+    <div className='  flex flex-col w-full  h-screen   overflow-y-scroll overflow-x-hidden  relative  hero justify-center items-center  z-0'>
          <canvas className=' w-full h-full  absolute z-30 ' ref={ref}>
     
         </canvas>

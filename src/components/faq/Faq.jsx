@@ -685,7 +685,7 @@ window.addEventListener('touchend', e => {
     
       }, []);
   return (
-    <div className=' flex flex-col  w-full  h-screen relative  hero  z-0 hero overflow-x-hidden'>
+    <div className=' flex flex-col  w-full  h-screen relative  hero  z-0 hero overflow-y-scroll overflow-x-hidden'>
         <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
         </canvas>
