@@ -683,7 +683,7 @@ window.addEventListener('touchend', e => {
     
       }, []);
   return (
-    <div className=' w-full h-screen  xxs:overflow-y-scroll flex flex-col  relative hero  xxs:pb-[55px] '>
+    <div className='flex flex-col   w-full h-screen   relative hero   overflow-y-scroll xxs:pb-[55px] z-0'>
             <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
             </canvas>
@@ -697,7 +697,7 @@ window.addEventListener('touchend', e => {
                         <p className=' xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[430px] sm:w-[85%]  font-custome z-40 text-center'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
                             This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.
                             At the same time, we have developed a financial model by means of an NFT whereby an Investor can get superb value for money. By being a Resilient-Her NFT holder, VIP access will be granted to members and various regular perks will be offered which will be constantly refreshed and updated to keep up with current trends.</p>
-                        <div className=' flex flex-col w-full h-full justify-center items-center mt-10'>
+                        <div className=' flex flex-col w-full h-full justify-center items-center mt-10 mb-10'>
                             <button className=' border-[2px] border-white  py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40'>Buy a  Boss Resilient Her</button>
                         </div>
                     </div>    

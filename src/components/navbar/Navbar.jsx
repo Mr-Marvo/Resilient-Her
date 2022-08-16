@@ -15,9 +15,9 @@ const [expand,setExpand] = useState(false);
     <div className=' flex flex-col  relative  z-[999]  w-full h-auto  justify-center items-center  text-white'>
 
         <nav className=' flex flex-row  w-full h-[99px] mt-6  md:container md:mx-auto  bg-dark_1  justify-between items-center'>
-            <div className='flex flex-wrap md:w-1/5 justify-start items-start   '>
-                <img src={require("../../assets/images/logo.png")} alt='logo' className='  relative xxs:-left-12 sm:left-0  bg-cover cursor-pointer  w-[200px]  z-40'/>
-            
+            <div className='flex flex-wrap md:w-1/5 justify-end items-end    '>
+                <img src={require("../../assets/images/logo-1.png")} alt='logo' className='  relative xxs:-left-12 sm:left-0 top-1  bg-cover cursor-pointer  w-[200px]  h-[85px] z-40'/>
+             
             </div>
             <div className={`${expand?"navbar  ":"flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex"} `}>
        
