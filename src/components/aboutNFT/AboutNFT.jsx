@@ -683,18 +683,18 @@ window.addEventListener('touchend', e => {
     
       }, []);
   return (
-    <div className=' w-full h-screen xxs:overflow-scroll xl:overflow-hidden flex flex-col  xxs:pb-[65px] relative hero'>
+    <div className=' w-full h-[100vh] xxs:overflow-scroll xl:overflow-hidden flex flex-col  relative hero  xxs:pb-[55px] '>
             <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
     
             </canvas>
         <Navbar/>
-        <div className=' w-full h-auto flex flex-col container mx-auto justify-center items-center'>
+        <div className=' w-full h-full flex flex-col container mx-auto justify-center items-center'>
             <div className=' flex flex-wrap flex-col w-full h-auto  justify-center items-center '>
                 <div className=' flex flex-col  w-full h-auto justify-center items-center mt-10  '>
                     <h2 className='xxs:text-[27px] xxs:tracking-tighter xs:text-[40px] sm:text-[60px] sm:tracking-tighter lg:text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40'>Resilient Her</h2>
                     <h2 className='xxs:text-xl xxs:top-4  xs:text-[35px] sm:text-4xl sm:top-4 lg:text-6xl mx-2   font-custome relative text-white z-40'> Project Focus</h2>
                     <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
-                        <p className=' xxs:text-base xs:text-xl text-white  xxs:w-[300px] xs:w-[430px] sm:w-[85%]  font-custome z-40 text-center'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
+                        <p className=' xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[430px] sm:w-[85%]  font-custome z-40 text-center'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
                             This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.
                             At the same time, we have developed a financial model by means of an NFT whereby an Investor can get superb value for money. By being a Resilient-Her NFT holder, VIP access will be granted to members and various regular perks will be offered which will be constantly refreshed and updated to keep up with current trends.</p>
                         <div className=' flex flex-col w-full h-full justify-center items-center mt-10'>
@@ -704,7 +704,9 @@ window.addEventListener('touchend', e => {
                 </div>
             </div>
         </div>
-        <Footer/>
+        <div className=' flex flex-col   absolute bottom-0  w-full left-0'>
+            <Footer/>
+        </div>
     </div>
   )
 }
