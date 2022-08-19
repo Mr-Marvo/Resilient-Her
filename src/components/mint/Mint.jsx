@@ -686,8 +686,8 @@ window.addEventListener('touchend', e => {
     
       }, []);
   return (
-    <div className=' w-full h-screen overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero  pb-40'>
-           <canvas className=' w-full h-full  absolute z-30 opacity-60' ref={ref}>
+    <div className=' w-full h-screen overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero  '>
+           <canvas className=' w-full   min-h-screen  absolute z-30 opacity-60' ref={ref}>
     
             </canvas>
         <Navbar/>

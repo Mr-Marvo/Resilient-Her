@@ -688,12 +688,12 @@ const Hero = () => {
         }, []);
         
   return (
-    <div className='  flex flex-col w-full  h-screen  overflow-y-hidden overflow-x-hidden   relative  hero justify-center items-center  z-0'>
-         <canvas className=' w-full h-full  absolute z-30   ' ref={ref}>
+    <div className='  flex flex-col w-full  h-screen  overflow-x-hidden overflow-y-hidden   relative  hero justify-center items-center  z-0'>
+         <canvas className=' w-full min-h-screen  absolute z-30   ' ref={ref}>
     
         </canvas>
         <Navbar/>
-        <div className=' flex flex-row  w-full  h-full  container mx-auto justify-center items-center '>
+        <div className=' flex flex-row  w-full  h-full   container mx-auto justify-center items-center '>
             
             <div className=' flex flex-col w-full h-full justify-center items-center hero-img  absolute xxs:top-0  sm:top-28 left-0  '>
                 <img src ={require("../../assets/images/logo-bg.png")} className=' bg-cover  top-0 left-0 ' alt="hero"/>

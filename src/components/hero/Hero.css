@@ -2,8 +2,9 @@
   
   
     background: url("../../assets/images/bg.jpg") no-repeat ;
-    background-size: cover;
+    background-size:cover;
     background-position: 100%;
+    
 }
 
 
@@ -17,3 +18,4 @@ canvas{
     opacity:40%;
    
 }
+
