@@ -695,33 +695,33 @@ const Roadmap2 = () => {
             </div>
             <div className=' flex xxs:flex-col sm:flex-row w-full relative justify-between  mt-10'>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative z-40  justify-center xxs:order-2 sm:order-1 xxs:mt-4 sm:mt-0'>
-                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' absolute  xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                    <img src={require("../../assets/images/s1.png")} alt='slide' className=' absolute  xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                    
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] right-2  top-44 absolute spring z-40'/>
                 </div>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto border-t-[2px] border-l-[2px] pl-10 pt-4 xxs:order-1 sm:order-2'>
-                    <div className='flex flex-col w-full h-auto justify-center items-start  '>
+                    <div className='flex flex-col w-full h-auto justify-center items-start mt-10 '>
                         <div className=' flex flex-row w-full  leading-[0] justify-start items-center'>
-                            <h2 className='xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-white mr-8 z-40 '>10%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/>
+                            <h2 className='xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-white mr-8 z-40 mb-20 '>10%</h2>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/> */}
                         </div>
                         <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>LFG !!!</h4>
                         <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>20% of mint + 20% of all future royalties will be added to the community wallet and used for project growth and expansion</h4>
-                        <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
+                        {/* <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button> */}
                     </div>
                 </div>
             </div>
             <div className=' flex xxs:flex-col sm:flex-row w-full relative justify-between  xxs:mt-10 sm:mt-36  pb-20'>
                 <div className=' flex flex-row xxs:w-full sm:w-[49%] h-[300px]  relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0'>
-                    <img src={require("../../assets/images/s2.png")} alt='slide' className=' absolute  xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                    <img src={require("../../assets/images/s2.png")} alt='slide' className=' absolute  xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                  
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] z-[999]  xxs:h-[130px] sm:w-[150px] sm:h-[200px] left-2  top-44 absolute spring'/>
                 </div>
                 <div className=' flex flex-row xxs:w-full sm:w-[49%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-4'>
                     <div className='flex flex-col w-full h-auto justify-center items-end   '>
                         <div className=' flex flex-row w-full  leading-[1]  justify-end items-center'>
-                            <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white ml-8 order-2 text-end z-40'>20%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/>
+                            <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white ml-8 order-2 text-end mb-7  z-40'>20%</h2>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/> */}
                         </div>
                         <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>The Safehouse</h4>
                         <h4 className=' text-white text-[18px] font-custome  leading-[1] mt-2 text-end z-40'>Various clubhouses will be acquired in the meta-verse (Eg Sandbox, decentraland) where our members can debrief and discuss tactics</h4>

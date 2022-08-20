@@ -687,35 +687,44 @@ const Roadmap4 = () => {
             </canvas>
         <div className=' flex  xxs:flex-col sm:flex-row w-full  relative justify-between xxs:mt-10 sm:mt-28  '>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%]  h-[300px] relative z-40 justify-center xxs:mt-4 sm:mt-0 xxs:order-2 sm:order-1'>
-                    <img src={require("../../assets/images/s5.png")} alt='slide' className=' absolute xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                    <img src={require("../../assets/images/s5.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                  
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className='  bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] right-2  top-44 absolute spring'/>
                 </div>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto border-t-[2px] border-l-[2px] pl-10 xxs:order-1 sm:order-2 '>
                     <div className='flex flex-col w-full h-auto justify-center items-start  '>
-                        <div className=' flex flex-row w-full  leading-[0] justify-start items-center pt-4'>
-                            <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white mr-8 z-40'>80%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/>
+                        <div className=' flex flex-row w-full  leading-[0] justify-start items-center pt-20'>
+                            <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white mr-8 z-40 mb-20'>80%</h2>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/> */}
                         </div>
                         <h4 className=' text-white xxs:text-[30px] sm:text-[40px]  font-custome leading-[1] z-40'>Collabs</h4>
-                        <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>Attempt to collab with other ambitious projects targeting global outreach programmes.EG: -WOW –World of Women -Women Ride -Psychadelics Anonymous -Etc</h4>
-                        <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
+                        <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>Attempt to collab with other ambitious projects targeting global outreach programmes. </h4>
+                        <ul className=' text-white font-custome text-[18px] z-40 mt-4'>
+                          <p>EG:</p>
+                          <li>-WOW –World of Women</li>
+                          <li>-Women Ride</li>
+                          <li>-Psychadelics Anonymous</li>
+                          <li>-Etc</li>
+                        
+                        </ul>
+
+                        {/* <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button> */}
                     </div>
                 </div>
             </div>
             <div className=' flex xxs:flex-col sm:flex-row  w-full relative justify-between  xxs:mt-10 sm:mt-36 xxs:mb-10 xl:mb-28 '>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0'>
-                    <img src={require("../../assets/images/s6.png")} alt='slide' className=' absolute xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                    <img src={require("../../assets/images/s6.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                   
-                 
+               
                 </div>
-                <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-4'>
+                <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-20'>
                     <div className='flex flex-col w-full h-auto justify-center items-end   '>
                         <div className=' flex flex-row w-full  leading-[0] justify-end items-center'>
-                            <h2 className=' xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-purple-600 ml-8 order-2'>100%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1'/>
+                            <h2 className=' xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-purple-600 ml-8 order-2 mb-20 '>100%</h2>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1'/> */}
                         </div>
-                        <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>The metaverse</h4>
+                        <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome  flex-wrap leading-[1] z-40'>The Metaverse</h4>
                         <h4 className=' text-white text-[18px] font-custome  leading-[1] text-end mt-2 z-40'>Expansion into the metaverse with the ambitious goal to create a virtual reality platform for people in need to attend virtual therapy sessions anywhere in the world with our trained professionals</h4>
                     </div>
                 </div>

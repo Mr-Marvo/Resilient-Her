@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Navbar from '../navbar/Navbar'
 import Footer from "../footer/Footer"
 import "./Desc.css"
+import {Link} from "react-router-dom"
 const Desc = () => {
     const ref = useRef(null);
 
@@ -694,7 +695,7 @@ window.addEventListener('touchend', e => {
                 <h2 className=' xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] mx-1 text-transparent  font-extrabold font-custome desc-title1  uppercase z-40'>About Us</h2>
                 <h2 className='xxs:text-xl xxs:top-0  xs:text-[35px] sm:text-4xl sm:top-1  lg:text-6xl mx-2  relative  font-custome text-white z-40 '>Resilient Her</h2>
                 <div className=' flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10'>
-                    <p className=' xxs:text-base xs:text-xl text-white   xxs:w-[300px] xs:w-[400px] sm:w-[70%] font-custome  z-40 text-center'>
+                    <p className=' xxs:text-base xs:text-xl text-white   xxs:w-[300px] xs:w-[350px] sm:w-[70%] font-custome  z-40 text-center'>
                         We are a group of four strong independent activists with an ambitious goal to
                         improve the future for females around the world through tackling every day
                         problems that women face.
@@ -702,9 +703,9 @@ window.addEventListener('touchend', e => {
                         supporting and creating an environment in which females can feel safe and heard.
                         We are positive that together as a community we can make a difference.
                         We stand together with one heart and one fight.</p>
-                        <strong className=' text-white uppercase text-xl z-40'>THE FUTURE IS FEMALE!</strong>
+                        <strong className=' text-white uppercase text-xl z-40 font-custome'>THE FUTURE IS FEMALE!</strong>
                     <div className=' flex flex-col w-full h-full justify-center items-center   mt-10 '>
-                        <button className=' py-4 px-4 text-white  border-white border-[2px] uppercase font-custome xxs:text-sm lg:text-xl  relative  about-btn-1 z-40'>Buy a Resilient Her</button>
+                    < Link to="/mint">     <button className=' py-4 px-4 text-white  border-white border-[2px] uppercase font-custome xxs:text-sm lg:text-xl  relative  about-btn-1 z-40'>Buy a Resilient Her</button></Link>
                     </div>
                 </div>    
             </div>

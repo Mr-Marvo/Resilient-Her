@@ -689,33 +689,40 @@ const Roadmap3 = () => {
         <div className=' flex flex-col w-full relative justify-between   mt-[10px] '>
         <div className=' flex xxs:flex-col sm:flex-row w-full relative justify-between xxs:mt-10 sm:mt-36   '>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative z-40 justify-center xxs:mt-4 sm:mt-0 xxs:order-2 sm:order-1'>
-                    <img src={require("../../assets/images/s3.png")} alt='slide' className=' absolute xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                    <img src={require("../../assets/images/s3.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                    
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] right-2  top-44 absolute spring'/>
                 </div>
-                <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto border-t-[2px] border-l-[2px] pl-10 pt-4 xxs:order-1 sm:order-2'>
+                <div className=' flex flex-row xxs:w-full sm:w-[48%]  h-auto  border-t-[2px]  border-l-[2px] pl-10 pt-20 xxs:order-1 sm:order-2'>
                     <div className='flex flex-col w-full h-auto justify-center items-start  '>
-                        <div className=' flex flex-row w-full  leading-[0] justify-start items-center'>
+                        <div className=' flex flex-row w-full  leading-[0] justify-start items-center mb-10'>
                             <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white mr-8 z-40'>40%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/> */}
                         </div>
-                        <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>Community Enrichment</h4>
-                        <h4 className=' text-white text-[18px]  leading-[1]  mt-2 z-40'>The project will begin its ambitious plan of attempting to destroy unjust issues that affect women globally.EG. - Sanitation products affecting poverty sticken countries - Domestic Violence - Gender-based violence - Etc</h4>
-                        <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button>
+                        <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40 mt-10'>Community Enrichment</h4>
+                        <h4 className=' text-white text-[18px]  leading-[1] font-custome  mt-2 z-40'>The project will begin its ambitious plan of attempting to destroy unjust issues that affect women globally.  </h4>
+                        <ul className=' text-white font-custome z-40 mt-4'>
+                          <p className=' text-white text-[18px] z-40'>EG:</p>
+                          <li>- Sanitation products affecting poverty sticken countries</li>
+                          <li>- Domestic Violence </li>
+                          <li> - Gender-based violence</li>
+                          <li>- Etc</li>
+                        </ul>
+                        {/* <button className=' text-white font-custome xxs:text-base sm:text-xl border-[2px] btn-rd rounded-full px-6 py-3 mt-10 z-40'>Buy on Opensea</button> */}
                     </div>
                 </div>
             </div>
             <div className=' flex  xxs:flex-col sm:flex-row w-full relative justify-between  xxs:mt-10 sm:mt-36  '>
                 <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0 '>
-                     <img src={require("../../assets/images/s4.png")} alt='slide' className=' absolute xxs:w-[220px] xxs:h-[200px] sm:w-[350px] sm:h-[350px]'/>
+                     <img src={require("../../assets/images/s4.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]'/>
                    
                     <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] left-2  top-44 absolute spring'/>
                 </div>
-                <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-4'>
+                <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-20'>
                     <div className='flex flex-col w-full h-auto justify-center items-end   '>
-                        <div className=' flex flex-row w-full  leading-[0] justify-end items-center'>
-                            <h2 className=' xxs:text-[60px] sm:text-[100px] font-mono font-bold text-white ml-8 order-2 z-40'>60%</h2>
-                            <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/>
+                        <div className=' flex flex-row w-full  leading-[0] justify-end items-center '>
+                            <h2 className=' xxs:text-[60px] sm:text-[100px] font-mono font-bold text-white ml-8 order-2 z-40 mb-20 '>60%</h2>
+                            {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/> */}
                         </div>
                         <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>Boot Camp</h4>
                         <h4 className=' text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40'>Members of HER will have access to individual one-on-one virtual therapy sessions with trained professionals to get the help they need and deserve.</h4>

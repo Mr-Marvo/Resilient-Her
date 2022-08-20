@@ -76,6 +76,6 @@
   
 }
 .about-btn-2:hover{
-    border: transparent;
+    border-color: transparent;
     background-color: transparent;
 }

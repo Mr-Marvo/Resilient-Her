@@ -699,7 +699,7 @@ window.addEventListener('touchend', e => {
                 </div>
                 <div  className=' w-full h-auto flex flex-row text-white mt-10 justify-between'>
                     <h3  className='xxs:text-sm sm:text-xl z-40'>Price</h3>
-                    <strong className='xxs:text-sm sm:text-xl z-40'>0.001ETH</strong>
+                    <strong className='xxs:text-sm sm:text-xl z-40'>0.1ETH</strong>
                 </div>
                 <div  className=' w-full h-auto flex flex-row text-white justify-between mt-10 items-center'>
                     <h3  className=' xxs:text-sm sm:text-xl z-40'> Quantity</h3>

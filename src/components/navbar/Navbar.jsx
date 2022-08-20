@@ -3,7 +3,8 @@ import {FiTwitter} from "react-icons/fi"
 import {AiOutlineInstagram} from "react-icons/ai"
 import {TbBrandDiscord} from "react-icons/tb"
 import "./Navbar.css"
-import {AiOutlineMail} from  "react-icons/ai"
+import {AiOutlineMail,AiOutlineClose} from  "react-icons/ai"
+
 import { Link } from 'react-router-dom'
 import {GoThreeBars} from "react-icons/go"
 import { useState } from 'react'
@@ -16,7 +17,7 @@ const [expand,setExpand] = useState(false);
 
         <nav className=' flex flex-row  w-full h-[99px] mt-6  md:container md:mx-auto  bg-dark_1  justify-between items-center'>
             <div className='flex flex-wrap md:w-1/5 justify-end items-end    '>
-                <img src={require("../../assets/images/logo-1.png")} alt='logo' className='  relative xxs:-left-12 sm:left-0 top-1  bg-cover cursor-pointer  w-[200px]  h-[85px] z-40'/>
+                <img src={require("../../assets/images/logo-1.png")} alt='logo' className='  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40'/>
              
             </div>
             <div className={`${expand?"navbar  ":"flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex"} `}>
@@ -40,8 +41,10 @@ const [expand,setExpand] = useState(false);
                       
            
             </div>
-            <div className='flex flex-row   w-auto h-auto cursor-pointer text-3xl  justify-between xxs:mx-4 sm:mx-16   items-center xxs:flex xl:hidden' >
-                          <GoThreeBars onClick={()=>{setExpand(!expand)}}/>
+            <div className='flex flex-row   w-auto h-auto cursor-pointer text-3xl  justify-between xxs:mx-4 sm:mx-16 relative xxs:right-5  sm:left-0  items-center xxs:flex xl:hidden' >
+                         {
+                           expand?<AiOutlineClose onClick={()=>{setExpand(!expand)}}/>: <GoThreeBars onClick={()=>{setExpand(!expand)}}/>
+                         }
             </div>
         
         </nav>

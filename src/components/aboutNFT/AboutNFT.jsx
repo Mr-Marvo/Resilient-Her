@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import Navbar from "../navbar/Navbar"
 import Footer from "../footer/Footer"
+import {Link} from 'react-router-dom';
 const AboutNFT = () => {
     const ref = useRef(null);
+    
+
 
     useEffect(() => {
       // 'use strict';
@@ -682,23 +685,25 @@ window.addEventListener('touchend', e => {
 });
     
       }, []);
+
+    
   return (
-    <div className='flex flex-col   w-full h-screen   relative hero   overflow-y-scroll  z-0'>
+    <div className='flex flex-col   w-full h-screen    hero   overflow-y-scroll  overflow-x-hidden z-0'>
             <canvas className=' w-full min-h-screen  absolute z-30 opacity-60   ' ref={ref}>
     
             </canvas>
         <Navbar/>
-        <div className=' w-full h-full flex flex-col  container mx-auto justify-center items-center'>
+        <div className=' w-full h-full flex flex-col  container mx-auto justify-center items-center mb-32 mt-10'>
             <div className=' flex flex-wrap flex-col w-full h-auto  justify-center items-center '>
                 <div className=' flex flex-col  w-full h-auto justify-center items-center relative sm:-top-20     '>
                     <h2 className='xxs:text-[27px] xxs:tracking-tighter xs:text-[40px] sm:text-[60px] sm:tracking-tighter lg:text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40'>Resilient Her</h2>
-                    <h2 className='xxs:text-xl xxs:top-4  xs:text-[35px] sm:text-4xl sm:top-4 lg:text-6xl mx-2   font-custome relative text-white z-40'> Project Focus</h2>
-                    <div className=' flex flex-col mx-4 relative   w-fit h-fit  justify-center items-center mt-10'>
-                        <p className=' xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[400px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields. 
-                            This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.
+                    <h2 className='xxs:text-xl xxs:top-4   xs:text-[35px] sm:text-4xl sm:top-4 lg:text-6xl mx-2   font-custome relative text-white z-40'> Project Focus</h2>
+                    <div className=' flex flex-col  relative     w-fit   h-fit justify-center items-center mt-10'>
+                        <p className=' xxs:text-sm xs:text-xl text-white   xxs:w-[200px] xs:w-[350px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center'>Resilient Her is a real-life use project, which focuses on various aspects around the world that affects under-privileged and abused women worldwide.Our team consists of experienced, all rounded individuals with more than 20 years experience in their individual specialized fields.</p>
+                        <p className=' xxs:text-sm xs:text-xl text-white  xxs:w-[200px] xs:w-[350px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center mt-4'>This project defines itself as a one-of-a-kind, long term project and aims to improve the lives of millions of women across the world who suffer from inter-alia Gender-based violence, depression, social problems, financial problems etc.
                             At the same time, we have developed a financial model by means of an NFT whereby an Investor can get superb value for money. By being a Resilient-Her NFT holder, VIP access will be granted to members and various regular perks will be offered which will be constantly refreshed and updated to keep up with current trends.</p>
-                        <div className=' flex flex-col w-full   h-full justify-center mt-4 items-center  mb-16'>
-                            <button className=' border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40'>Buy a  Boss Resilient Her</button>
+                        <div className=' flex flex-col w-full   h-full justify-center mt-4 items-center   '>
+                       < Link to="/mint">   <button className=' border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40'>Buy a  Boss Resilient Her</button></Link>
                         </div>
                     </div>    
                 </div>
