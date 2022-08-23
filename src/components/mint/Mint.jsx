@@ -712,7 +712,7 @@ window.addEventListener('touchend', e => {
                             <AiOutlinePlus/>
                         </div>
                     </div>
-                    <strong className='xxs:text-sm sm:text-xl z-40'>0.001ETH</strong>
+                    <strong className='xxs:text-sm sm:text-xl z-40'>0.1ETH</strong>
                 </div>
                 <div  className=' w-full mt-10 h-auto flex flex-row text-white justify-center items-center' >
                     <button className='z-40 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent'>Mint Now</button>
