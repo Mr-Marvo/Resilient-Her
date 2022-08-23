@@ -16,7 +16,7 @@ module.exports = {
      },
     extend: {
       fontFamily:{
-        custome: ["NeueKabelW01","Regular"]
+        custome: ["NeueKabelW01","Aquatico","Regular"]
       },
       colors:{
           puprpule_1:"rgb(213, 184, 255)",
