@@ -890,15 +890,15 @@ const Mint = () => {
   }, []);
   return (
     <div
-      className={`w-full h-screen overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero`}
+      className={`w-full h-screen  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero`}
     >
       <canvas
-        className=" w-full   min-h-screen  absolute z-30 opacity-60"
+        className=" w-full   min-h-[110%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div
-        className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold `}
+        className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold   `}
       >
         <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-[400px] flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
           <div className=" w-full h-auto flex flex-row text-white justify-between">
@@ -922,8 +922,8 @@ const Mint = () => {
             </div>
             <strong className="xxs:text-sm sm:text-xl z-40">0.1ETH</strong>
           </div>
-          <div className=" w-full mt-10 h-auto flex flex-row text-white justify-center items-center">
-            <button className="z-40 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent">
+          <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center">
+            <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent">
               Mint Now
             </button>
           </div>
