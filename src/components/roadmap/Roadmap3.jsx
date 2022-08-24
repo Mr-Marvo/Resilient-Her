@@ -703,7 +703,7 @@ const Roadmap3 = () => {
                         <h4 className=' text-white text-[18px]  leading-[1] font-custome  mt-2 z-40'>The project will begin its ambitious plan of attempting to destroy unjust issues that affect women globally.  </h4>
                         <ul className=' text-white font-custome z-40 mt-4'>
                           <p className=' text-white text-[18px] z-40'>EG:</p>
-                          <li>- Sanitation products affecting poverty sticken countries</li>
+                          <li>- Lack of sanitary products affecting poverty sticken countries</li>
                           <li>- Domestic Violence </li>
                           <li> - Gender-based violence</li>
                           <li>- Etc</li>
@@ -725,7 +725,7 @@ const Roadmap3 = () => {
                             {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/> */}
                         </div>
                         <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>Boot Camp</h4>
-                        <h4 className=' text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40'>Members of HER will have access to individual one-on-one virtual therapy sessions with trained professionals to get the help they need and deserve.</h4>
+                        <h4 className=' text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40'>Members of her will have access to individual one-on-one online therapy sessions, either in private discord channels on our server or by alternative means, to get the help they need and deserve from our trained professionals.</h4>
                     </div>
                 </div>
             </div>

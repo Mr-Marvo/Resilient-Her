@@ -696,10 +696,10 @@ window.addEventListener('touchend', e => {
             </div>
             <div className=' flex flex-col w-full h-auto relative justify-center items-center mt-6 '>
                 <FaqItem question="How can I buy a Resilient Her?" answer="After sales start you can buy on the mint page."/>
-                <FaqItem question="How do the rarities work?" answer="Resilient Her NFT's rarity will be revealed after the opensea listing. Resilient Her's are drawn by hand, and are carefully detailed.The rarer the Her is, the more she will be worth"/>
-                <FaqItem question="What is a Super-Rare Her?" answer="A Super-Rare Her is very scarce (Only 50 max) and only a selected few will be able to get their hands on these. There are some nifty perks that come with owning one of these"/>
-                <FaqItem question="What is the mint price?" answer="0,10 ETH Pre-sale.0.15 ETH Public Sale"/>
-                <FaqItem question="How many can I mint?" answer="Max 3 per person"/>
+                <FaqItem question="How do the rarities work?" answer="Resilient Her NFT's rarity will be revealed after the opensea listing. Resilient Her's are drawn by hand, and are carefully detailed.The rarer the Her is, the more she will be worth."/>
+                <FaqItem question="What is a Super-Rare Her?" answer="An NFT with rare traits is very scarce and only a selected few will be able to get their hands on this type of NFT."/>
+                <FaqItem question="What is the mint price?" answer="0,10 ETH Pre-sale.0.15 ETH Public Sale."/>
+                <FaqItem question="How many can I mint?" answer="Max 3 per person."/>
                 <FaqItem question="When will the Resilient-Her's be revealed?" answer="After 10 days from mint."/>
                 <FaqItem question="What are the Royalties?" answer="We charge 3.5% royalties, and opensea charges another 2.5% commission on all sales, tallying 6% commission in total."/>
                 

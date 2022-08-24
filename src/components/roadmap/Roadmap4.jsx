@@ -701,9 +701,9 @@ const Roadmap4 = () => {
                         <h4 className=' text-white text-[18px] font-custome leading-[1] mt-2 z-40'>Attempt to collab with other ambitious projects targeting global outreach programmes. </h4>
                         <ul className=' text-white font-custome text-[18px] z-40 mt-4'>
                           <p>EG:</p>
-                          <li>-WOW –World of Women</li>
-                          <li>-Women Ride</li>
-                          <li>-Psychadelics Anonymous</li>
+                          <li>-WOW -World of Women</li>
+                          <li>-Women Rise</li>
+                          <li>-Psychedelics anonymous</li>
                           <li>-Etc</li>
                         
                         </ul>
