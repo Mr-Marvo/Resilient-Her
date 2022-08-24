@@ -34,7 +34,7 @@ const [expand,setExpand] = useState(false);
                     <div className=' flex-row flex flex-wrap justify-center items-center text-xl'>
                        <a href='https://twitter.com/Resilient_her?s=20&t=BuBvFVvzcEoadls1LcW9Pw'target="_blank"><FiTwitter  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                        <a href='https://www.instagram.com/resilient.her.nft/?igshid=YmMyMTA2M2Y%3D'target="_blank"> <AiOutlineInstagram  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
-                       <a href='https://instagram.com/resilient.her.nft?igshid=YmMyMTA2M2Y='target="_blank"><TbBrandDiscord  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
+                       <a href='https://discord.gg/ResilientHerNft'target="_blank"><TbBrandDiscord  onClick={()=>{setExpand(false)}} className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                        <a href = "mailto:resilient.her.nft@gmail.com"><AiOutlineMail className=' mx-2 cursor-pointer nav-icon z-40'/></a>
                     </div>
                 
