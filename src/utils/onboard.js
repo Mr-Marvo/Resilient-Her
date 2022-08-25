@@ -4,7 +4,7 @@ import walletConnectModule from '@web3-onboard/walletconnect'
 import coinbaseModule from '@web3-onboard/coinbase'
 import fortmaticModule from '@web3-onboard/fortmatic'
 
-import ApeIcon from './Ape'
+import Icon from './icon'
 
 const RPC_URL = 'https://eth-rinkeby.alchemyapi.io/v2/-IiYyhvOUnLLMDhLX8K7Vaq73BGL8Cco'
 
@@ -46,7 +46,7 @@ const initOnboard = init({
     ],
     appMetadata: {
         name: 'Re-Silent Her',
-        icon: ApeIcon,
+        icon: Icon,
         description: 'Re-Silent Her',
         recommendedInjectedWallets: [
             { name: 'MetaMask', url: 'https://metamask.io' },
