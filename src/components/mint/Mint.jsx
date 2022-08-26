@@ -7,15 +7,37 @@ import './Mint.css';
 import { BsInfoCircle } from 'react-icons/bs';
 import { useState } from 'react';
 
+import {
+  getTotalMinted,
+  getMaxSupply,
+  isPausedState,
+  isPublicSaleState,
+  isPreSaleState,
+  presaleMint,
+  publicMint
+} from '../../utils/interact'
+import ReactPlayer from 'react-player/lazy'
 import { initOnboard } from '../../utils/onboard';
 import { useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react'
+import { config } from '../../utils/config';
 
 const Mint = () => {
 
-  const [onboard, setOnboard] = useState(null);
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
   const [{ chains, connectedChain, settingChain }, setChain] = useSetChain();
   const connectedWallets = useWallets();
+
+  const [maxSupply, setMaxSupply] = useState(0);
+  const [totalMinted, setTotalMinted] = useState(0);
+  const [maxMintAmount, setMaxMintAmount] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [isPublicSale, setIsPublicSale] = useState(false);
+  const [isPreSale, setIsPreSale] = useState(false);
+
+  const [status, setStatus] = useState(null);
+  const [mintAmount, setMintAmount] = useState(1);
+  const [isMinting, setIsMinting] = useState(false);
+  const [onboard, setOnboard] = useState(null);
 
   const ref = useRef(null);
   const [expand, setExpand] = useState(false);
@@ -59,6 +81,49 @@ const Mint = () => {
       setWalletFromLocalStorage()
     }
   }, [onboard, connect])
+
+  useEffect(() => {
+    const init = async () => {
+      setMaxSupply(await getMaxSupply())
+      setTotalMinted(await getTotalMinted())
+
+      setPaused(await isPausedState())
+      setIsPublicSale(await isPublicSaleState())
+      const isPreSale = await isPreSaleState()
+      setIsPreSale(isPreSale)
+
+      setMaxMintAmount(
+        isPreSale ? config.presaleMaxMintAmount : config.maxMintAmount
+      )
+    }
+
+    init()
+  }, [])
+
+  const presaleMintHandler = async () => {
+    setIsMinting(true)
+
+    const { success, status } = await presaleMint(mintAmount)
+
+    setStatus({
+      success,
+      message: status
+    })
+
+    setIsMinting(false)
+  }
+  const publicMintHandler = async () => {
+    setIsMinting(true)
+
+    const { success, status } = await publicMint(mintAmount)
+
+    setStatus({
+      success,
+      message: status
+    })
+
+    setIsMinting(false)
+  }
 
   //   useEffect(() => {
   //     // 'use strict';
@@ -951,8 +1016,7 @@ const Mint = () => {
         <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-[400px] flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
 
           <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
-            {/* <h2>{paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}</h2> */}
-            <h2 className="xxs:text-sm sm:text-2xl z-40">Public Sale</h2>
+            <h2 className="xxs:text-sm sm:text-2xl z-40">{paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}</h2>
           </div>
           <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
             <span>
@@ -966,7 +1030,7 @@ const Mint = () => {
 
           <div className=" w-full h-auto flex flex-row text-white justify-between">
             <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
-            <strong className="xxs:text-sm sm:text-xl z-40">4566/10000</strong>
+            <strong className="xxs:text-sm sm:text-xl z-40">{totalMinted}/{maxSupply}</strong>
           </div>
           <div className=" w-full h-auto flex flex-row text-white mt-10 justify-between">
             <h3 className="xxs:text-sm sm:text-xl z-40">Price</h3>
@@ -977,20 +1041,20 @@ const Mint = () => {
             <h3 className=" xxs:text-sm sm:text-xl z-40"> Quantity</h3>
             <div className=" w-full h-auto flex flex-row text-white justify-around items-center z-40">
               <div className=" xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
-                <BiMinus />
+                <BiMinus onClick={() => { if (mintAmount > 1) { setMintAmount(mintAmount - 1) } }} />
               </div>
-              <input className=" border-[1px] px-4 py-4 font-custome font-bold w-[60px] border-none outline-none text-black" />
+              <span className=" border-[1px] px-4 py-4 font-custome font-bold w-[60px] border-none outline-none text-white">{mintAmount}</span>
               <div className="xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
-                <AiOutlinePlus />
+                <AiOutlinePlus onClick={() => { if (mintAmount < maxMintAmount) { setMintAmount(mintAmount + 1) } }} />
               </div>
             </div>
-            <strong className="xxs:text-sm sm:text-xl z-40">0.1ETH</strong>
+            <strong className="xxs:text-sm sm:text-xl z-40"> <span>{Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}</span> ETH + GAS</strong>
           </div>
 
           <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center">
             {wallet ? (
-              <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent">
-                {connecting ? 'Connecting...' : 'Mint Now'}
+              <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent" onClick={isPreSale ? presaleMintHandler : publicMintHandler} disabled={paused || isMinting}>
+                {connecting ? 'Connecting...' : isMinting ? 'Minting...' : 'Mint Now'}
               </button>
             ) : (
               <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent" onClick={() => connect()}>
@@ -998,7 +1062,20 @@ const Mint = () => {
               </button>
             )}
           </div>
+        </div>
+        <div className=" w-full h-auto flex flex-row text-white justify-center items-center mt-3">
+          <a href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`} target='_blank' className="xxs:text-sm sm:text-sm z-40">View Contract on Etherscan</a>
 
+          {status && (
+            <div
+              className={`border ${status.success ? 'border-green-500' : 'border-brand-pink-400 '
+                } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
+            >
+              <p className=" text-white text-sm md:text-base break-words ...">
+                {status.message}
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
