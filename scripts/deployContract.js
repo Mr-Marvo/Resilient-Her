@@ -6,9 +6,9 @@
  const hre = require('hardhat')
  const { MerkleTree } = require('merkletreejs')
  const keccak256 = require('keccak256')
- const whitelist = require('../src/utils/whitelist.js')
+ const whitelist = require('./whitelist.js')
  
- const BASE_URI = 'ipfs://QmUPobVyN3nNMd1BbmYUx6hzfaroPzJsVhkYiSFjCkL8gL/'
+ const BASE_URI = 'ipfs://QmVBcPkfBD1k8sp4gSc72mWpVzCzzWuA3z8E4NJ39RLc1S/'
  const proxyRegistryAddressRinkeby = '0xf57b2c51ded3a29e6891aba85459d600256cf317'
  const proxyRegistryAddressMainnet = '0xa5409ec958c83c3f309868babaca7c86dcb077c1'
  
