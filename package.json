@@ -1,22 +1,40 @@
 {
-  "name": "laidapp",
+  "name": "resilent-her",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@alch/alchemy-web3": "^1.4.4",
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.7.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@web3-onboard/coinbase": "^2.1.1",
+    "@web3-onboard/core": "^2.8.1",
+    "@web3-onboard/fortmatic": "^2.0.12",
+    "@web3-onboard/injected-wallets": "^2.2.0",
+    "@web3-onboard/react": "^2.3.1",
+    "@web3-onboard/walletconnect": "^2.1.1",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.1",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.7.0",
+    "hardhat": "^2.9.9",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-player": "^2.10.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -38,8 +56,20 @@
     ]
   },
   "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.7"
+    "tailwindcss": "^3.1.7",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "customize-cra": "^1.0.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "react-app-rewired": "^2.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }
