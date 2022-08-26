@@ -14,15 +14,14 @@ import {
   isPublicSaleState,
   isPreSaleState,
   presaleMint,
-  publicMint
-} from '../../utils/interact'
-import ReactPlayer from 'react-player/lazy'
+  publicMint,
+} from '../../utils/interact';
+import ReactPlayer from 'react-player/lazy';
 import { initOnboard } from '../../utils/onboard';
-import { useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react'
+import { useConnectWallet, useSetChain, useWallets } from '@web3-onboard/react';
 import { config } from '../../utils/config';
 
 const Mint = () => {
-
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
   const [{ chains, connectedChain, settingChain }, setChain] = useSetChain();
   const connectedWallets = useWallets();
@@ -44,86 +43,86 @@ const Mint = () => {
 
   //wallet connect
   useEffect(() => {
-    setOnboard(initOnboard)
-  }, [])
+    setOnboard(initOnboard);
+  }, []);
 
   //store in localstorage
   useEffect(() => {
-    if (!connectedWallets.length) return
+    if (!connectedWallets.length) return;
 
     const connectedWalletsLabelArray = connectedWallets.map(
       ({ label }) => label
-    )
+    );
     window.localStorage.setItem(
       'connectedWallets',
       JSON.stringify(connectedWalletsLabelArray)
-    )
-  }, [connectedWallets])
+    );
+  }, [connectedWallets]);
 
   //get from localstorage
   useEffect(() => {
-    if (!onboard) return
+    if (!onboard) return;
 
     const previouslyConnectedWallets = JSON.parse(
       window.localStorage.getItem('connectedWallets')
-    )
+    );
 
     if (previouslyConnectedWallets?.length) {
       async function setWalletFromLocalStorage() {
         await connect({
           autoSelect: {
             label: previouslyConnectedWallets[0],
-            disableModals: true
-          }
-        })
+            disableModals: true,
+          },
+        });
       }
 
-      setWalletFromLocalStorage()
+      setWalletFromLocalStorage();
     }
-  }, [onboard, connect])
+  }, [onboard, connect]);
 
   useEffect(() => {
     const init = async () => {
-      setMaxSupply(await getMaxSupply())
-      setTotalMinted(await getTotalMinted())
+      setMaxSupply(await getMaxSupply());
+      setTotalMinted(await getTotalMinted());
 
-      setPaused(await isPausedState())
-      setIsPublicSale(await isPublicSaleState())
-      const isPreSale = await isPreSaleState()
-      setIsPreSale(isPreSale)
+      setPaused(await isPausedState());
+      setIsPublicSale(await isPublicSaleState());
+      const isPreSale = await isPreSaleState();
+      setIsPreSale(isPreSale);
 
       setMaxMintAmount(
         isPreSale ? config.presaleMaxMintAmount : config.maxMintAmount
-      )
-    }
+      );
+    };
 
-    init()
-  }, [])
+    init();
+  }, []);
 
   const presaleMintHandler = async () => {
-    setIsMinting(true)
+    setIsMinting(true);
 
-    const { success, status } = await presaleMint(mintAmount)
+    const { success, status } = await presaleMint(mintAmount);
 
     setStatus({
       success,
-      message: status
-    })
+      message: status,
+    });
 
-    setIsMinting(false)
-  }
+    setIsMinting(false);
+  };
   const publicMintHandler = async () => {
-    setIsMinting(true)
+    setIsMinting(true);
 
-    const { success, status } = await publicMint(mintAmount)
+    const { success, status } = await publicMint(mintAmount);
 
     setStatus({
       success,
-      message: status
-    })
+      message: status,
+    });
 
-    setIsMinting(false)
-  }
+    setIsMinting(false);
+  };
 
   //   useEffect(() => {
   //     // 'use strict';
@@ -1007,30 +1006,40 @@ const Mint = () => {
   //   }, []);
 
   return (
-    <div className={`w-full h-screen  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero`}>
-      <canvas className=" w-full   min-h-[110%]  absolute z-30 opacity-60" ref={ref}></canvas>
+    <div
+      className={`w-full h-screen  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero`}
+    >
+      <canvas
+        className=" w-full   min-h-[110%]  absolute z-30 opacity-60"
+        ref={ref}
+      ></canvas>
 
       <Navbar />
 
-      <div className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold`}>
-        <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-[400px] flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
-
+      <div
+        className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold`}
+      >
+        <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
           <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
-            <h2 className="xxs:text-sm sm:text-2xl z-40">{paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}</h2>
+            <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  z-40">
+              {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
+            </h2>
           </div>
-          <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
+          <div className="  h-auto flex flex-row text-blue-700   w-[50%] justify-center items-center">
             <span>
               {wallet?.accounts[0].address
                 ? wallet?.accounts[0].address.slice(0, 8) +
-                "..." +
-                wallet?.accounts[0]?.address.slice(-4)
+                  '...' +
+                  wallet?.accounts[0]?.address.slice(-4)
                 : ''}
             </span>
           </div>
 
           <div className=" w-full h-auto flex flex-row text-white justify-between">
             <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
-            <strong className="xxs:text-sm sm:text-xl z-40">{totalMinted}/{maxSupply}</strong>
+            <strong className="xxs:text-sm sm:text-xl z-40">
+              {totalMinted}/{maxSupply}
+            </strong>
           </div>
           <div className=" w-full h-auto flex flex-row text-white mt-10 justify-between">
             <h3 className="xxs:text-sm sm:text-xl z-40">Price</h3>
@@ -1038,38 +1047,77 @@ const Mint = () => {
           </div>
 
           <div className=" w-full h-auto flex flex-row text-white justify-between mt-10 items-center">
-            <h3 className=" xxs:text-sm sm:text-xl z-40"> Quantity</h3>
-            <div className=" w-full h-auto flex flex-row text-white justify-around items-center z-40">
-              <div className=" xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
-                <BiMinus onClick={() => { if (mintAmount > 1) { setMintAmount(mintAmount - 1) } }} />
+            <h3 className=" xxs:text-sm sm:text-xl  z-40"> Quantity</h3>
+            <div className=" w-full h-auto flex flex-row text-white  sm:px-10 xxs:justify-around items-center z-40">
+              <div className=" sm:mr-4 xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
+                <BiMinus
+                  onClick={() => {
+                    if (mintAmount > 1) {
+                      setMintAmount(mintAmount - 1);
+                    }
+                  }}
+                />
               </div>
-              <span className=" border-[1px] px-4 py-4 font-custome font-bold w-[60px] border-none outline-none text-white">{mintAmount}</span>
-              <div className="xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
-                <AiOutlinePlus onClick={() => { if (mintAmount < maxMintAmount) { setMintAmount(mintAmount + 1) } }} />
+              <span className=" border-[1px] px-4 py-4 justify-center items-center flex font-custome font-bold  w-[60px] border-none outline-none text-white">
+                {mintAmount}
+              </span>
+              <div className=" sm:ml-4 xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
+                <AiOutlinePlus
+                  onClick={() => {
+                    if (mintAmount < maxMintAmount) {
+                      setMintAmount(mintAmount + 1);
+                    }
+                  }}
+                />
               </div>
             </div>
-            <strong className="xxs:text-sm sm:text-xl z-40"> <span>{Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}</span> ETH + GAS</strong>
+            <strong className="xxs:text-sm sm:text-xl z-40   sm:w-[200px]">
+              <div className=" flex flex-col  w-full justify-start items-end">
+                <span>
+                  {Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}
+                </span>{' '}
+                <span className=" text-sm">ETH + GAS</span>
+              </div>
+            </strong>
           </div>
 
           <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center">
             {wallet ? (
-              <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent" onClick={isPreSale ? presaleMintHandler : publicMintHandler} disabled={paused || isMinting}>
-                {connecting ? 'Connecting...' : isMinting ? 'Minting...' : 'Mint Now'}
+              <button
+                className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent"
+                onClick={isPreSale ? presaleMintHandler : publicMintHandler}
+                disabled={paused || isMinting}
+              >
+                {connecting
+                  ? 'Connecting...'
+                  : isMinting
+                  ? 'Minting...'
+                  : 'Mint Now'}
               </button>
             ) : (
-              <button className="z-40 ml-6 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent" onClick={() => connect()}>
+              <button
+                className="z-40 ml-6 mb-3 uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer px-4 py-4 mint-btn border-[1px] border-transparent"
+                onClick={() => connect()}
+              >
                 Wallet Connect
               </button>
             )}
           </div>
         </div>
-        <div className=" w-full h-auto flex flex-row text-white justify-center items-center mt-3">
-          <a href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`} target='_blank' className="xxs:text-sm sm:text-sm z-40">View Contract on Etherscan</a>
+        <div className=" w-full h-auto flex flex-col text-white justify-center items-center mt-3 ">
+          <a
+            href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`}
+            target="_blank"
+            className="xxs:text-sm sm:text-sm z-40 order-2"
+          >
+            View Contract on Etherscan
+          </a>
 
           {status && (
             <div
-              className={`border ${status.success ? 'border-green-500' : 'border-brand-pink-400 '
-                } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
+              className={`border order-1 ${
+                status.success ? 'border-green-500' : 'border-brand-pink-400 '
+              } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
             >
               <p className=" text-white text-sm md:text-base break-words ...">
                 {status.message}
@@ -1080,9 +1128,12 @@ const Mint = () => {
       </div>
 
       <div className="  flex flex-col container mx-auto  relative -top-40 w-full h-auto  justify-items-end items-end px-4">
-        <div className={`text-white xxs:px-2 xs:px-10 sm:py-10  absolute xxs:top-1 sm:-top-[270px] right-7 z-40 
-            ${expand ? 'flex' : 'hidden'} flex-col justify-center items-start xxs:step-bg sm:bg-gray-800 lg:step-bg`}>
-
+        <div
+          className={`text-white xxs:px-2 xs:px-10 sm:py-10  absolute xxs:top-1 sm:-top-[270px] right-7 z-40 
+            ${
+              expand ? 'flex' : 'hidden'
+            } flex-col justify-center items-start xxs:step-bg sm:bg-gray-800 lg:step-bg`}
+        >
           <div className="flex flex-row justify-center items-center">
             <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
               1
@@ -1118,18 +1169,19 @@ const Mint = () => {
               Mint NFT
             </h4>
           </div>
-
         </div>
 
         <div className=" w-fit text-3xl z-40 xxs:top-[100px] xs:top-20 relative  sm:top-0  text-white cursor-pointer btn-shadow rounded-full  bg-gray-800 px-4 py-4">
           <BsInfoCircle
-            onClick={() => { setExpand(!expand); }} />
+            onClick={() => {
+              setExpand(!expand);
+            }}
+          />
         </div>
-
       </div>
 
       <Footer />
-    </div >
+    </div>
   );
 };
 
