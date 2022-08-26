@@ -888,7 +888,7 @@ const Desc = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[100%] xs:min-h-[120%]  absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[100%] xs:min-h-[135%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />

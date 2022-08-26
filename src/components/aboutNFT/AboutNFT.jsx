@@ -888,7 +888,7 @@ const AboutNFT = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[120%] xs:min-h-[160%]   absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[150%] xs:min-h-[190%]   absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
@@ -921,7 +921,7 @@ const AboutNFT = () => {
             </p>
             <div className=" flex flex-col w-full h-full justify-center items-center   mt-10 ">
               <Link to="/mint">
-                <button className=" border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40 ">
+                <button className=" mb-28 border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40 ">
                   Buy a Boss Resilient Her
                 </button>
               </Link>
