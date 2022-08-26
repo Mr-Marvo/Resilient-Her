@@ -28,7 +28,7 @@ const [expand,setExpand] = useState(false);
                         <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/aboutNFT"  onClick={()=>{setExpand(false)}}>About the NFT</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/roadmap" onClick={()=>{setExpand(false)}} >Roadmap</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/mint" onClick={()=>{setExpand(false)}} >Mint</Link></li>
-                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/ask"  onClick={()=>{setExpand(false)}}>FAQ</Link></li>
+                        <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/faq"  onClick={()=>{setExpand(false)}}>FAQ</Link></li>
                         <li className=' cursor-pointer uppercase px-5 py-2 nav-item relative z-40'><Link to="/team" onClick={()=>{setExpand(false)}} >Team</Link></li>
                     </ul>
                     <div className=' flex-row flex flex-wrap justify-center items-center text-xl'>
