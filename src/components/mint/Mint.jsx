@@ -1025,14 +1025,17 @@ const Mint = () => {
               {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
             </h2>
           </div>
-          <div className="  h-auto flex flex-row text-blue-700   w-[50%] justify-center items-center">
-            <span>
-              {wallet?.accounts[0].address
-                ? wallet?.accounts[0].address.slice(0, 8) +
-                  '...' +
-                  wallet?.accounts[0]?.address.slice(-4)
-                : ''}
-            </span>
+          <div className="  h-auto flex flex-row    w-full justify-center items-center">
+            <div className=" flex flex-row  justify-around items-center  bg-neutral-700  min-w-[100px] w-auto py-1 rounded-full">
+              <div className=" w-[7px] h-[7px] mint-status mr-3 rounded-full bg-blue-700"></div>
+              <span className=" text-white">
+                {wallet?.accounts[0].address
+                  ? wallet?.accounts[0].address.slice(0, 8) +
+                    '...' +
+                    wallet?.accounts[0]?.address.slice(-4)
+                  : ''}
+              </span>
+            </div>
           </div>
 
           <div className=" w-full h-auto flex flex-row text-white justify-between">
