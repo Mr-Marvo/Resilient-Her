@@ -28,3 +28,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   transition: all 1s ease-in-out;
 }
+
+.mint-status {
+  box-shadow: 0px 0px 20px 9px rgba(8, 43, 240, 0.952);
+}

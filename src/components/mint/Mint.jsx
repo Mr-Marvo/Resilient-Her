@@ -1025,14 +1025,17 @@ const Mint = () => {
               {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
             </h2>
           </div>
-          <div className="  h-auto flex flex-row text-blue-700   w-[50%] justify-center items-center">
-            <span>
-              {wallet?.accounts[0].address
-                ? wallet?.accounts[0].address.slice(0, 8) +
-                  '...' +
-                  wallet?.accounts[0]?.address.slice(-4)
-                : ''}
-            </span>
+          <div className="  h-auto flex flex-row    w-full justify-center items-center">
+            <div className=" flex flex-row  justify-around items-center  bg-neutral-700  min-w-[100px] w-auto py-1 rounded-full">
+              <div className=" w-[7px] h-[7px] mint-status mr-3 rounded-full bg-blue-700"></div>
+              <span className=" text-white">
+                {wallet?.accounts[0].address
+                  ? wallet?.accounts[0].address.slice(0, 8) +
+                    '...' +
+                    wallet?.accounts[0]?.address.slice(-4)
+                  : ''}
+              </span>
+            </div>
           </div>
 
           <div className=" w-full h-auto flex flex-row text-white justify-between">
@@ -1127,12 +1130,12 @@ const Mint = () => {
         </div>
       </div>
 
-      <div className="  flex flex-col container mx-auto  relative -top-40 w-full h-auto  justify-items-end items-end px-4">
+      <div className="  flex flex-col container mx-auto  z-40  absolute bottom-0 mb-32 right-0   w-full h-auto  justify-items-end items-end px-4 py-20">
         <div
-          className={`text-white xxs:px-2 xs:px-10 sm:py-10  absolute xxs:top-1 sm:-top-[270px] right-7 z-40 
+          className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xl:mr-28 right-7 z-40 
             ${
               expand ? 'flex' : 'hidden'
-            } flex-col justify-center items-start xxs:step-bg sm:bg-gray-800 lg:step-bg`}
+            } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg`}
         >
           <div className="flex flex-row justify-center items-center">
             <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
@@ -1170,17 +1173,16 @@ const Mint = () => {
             </h4>
           </div>
         </div>
-
-        <div className=" w-fit text-3xl z-40 xxs:top-[100px] xs:top-20 relative  sm:top-0  text-white cursor-pointer btn-shadow rounded-full  bg-gray-800 px-4 py-4">
-          <BsInfoCircle
-            onClick={() => {
-              setExpand(!expand);
-            }}
-          />
-        </div>
       </div>
 
       <Footer />
+      <div className=" w-fit text-3xl  z-[999] right-0 mr-4 mb-20  bottom-0  fixed    xl:mr-44  text-white cursor-pointer btn-shadow rounded-full  bg-gray-800 px-4 py-4">
+        <BsInfoCircle
+          onClick={() => {
+            setExpand(!expand);
+          }}
+        />
+      </div>
     </div>
   );
 };

@@ -13,8 +13,8 @@ module.exports = {
       '3xl': '2500px',
     },
     extend: {
-      fontFamily:{
-        custome: ["NeueKabelW01","Aquatico","Regular"]
+      fontFamily: {
+        custome: ['NeueKabelW01', 'Aquatico', 'Regular'],
       },
       colors: {
         puprpule_1: 'rgb(213, 184, 255)',
