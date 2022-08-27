@@ -1132,7 +1132,7 @@ const Mint = () => {
 
       <div className="  flex flex-col container mx-auto  z-40  absolute bottom-0 mb-32 right-0   w-full h-auto  justify-items-end items-end px-4 py-20">
         <div
-          className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xs:mr-28 right-7 z-40 
+          className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xl:mr-28 right-7 z-40 
             ${
               expand ? 'flex' : 'hidden'
             } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg`}
