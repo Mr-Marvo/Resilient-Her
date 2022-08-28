@@ -1017,6 +1017,9 @@ const Mint = () => {
       <Navbar />
 
       <div
+        onClick={() => {
+          setExpand(false);
+        }}
         className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold`}
       >
         <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
