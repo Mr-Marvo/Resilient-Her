@@ -937,6 +937,19 @@ const Team = () => {
           />
         </div>
       </div>
+      <div className="text-white xxs:ml-4 sm:ml-0  flex flex-row  justify-center items-center">
+        <figure>
+          <blockquote cite="">
+            <p className="  font-medium   italic text-xl text-center">
+              <strong className=" text-5xl">"</strong>Some women fear the fire
+              some women simply become it"
+            </p>
+          </blockquote>
+          <figcaption className="text-center">
+            -r.h. <cite>sin</cite>
+          </figcaption>
+        </figure>
+      </div>
       <Footer />
     </div>
   );
