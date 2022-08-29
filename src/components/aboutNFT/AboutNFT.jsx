@@ -888,11 +888,11 @@ const AboutNFT = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[150%] xs:min-h-[190%]   absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[150%] xs:min-h-[195%]  sm:min-h-[150%] md:min-h-[120%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
-      <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-4  mb-28 ">
+      <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-4   ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
           <h2 className="xxs:text-[27px] xxs:tracking-tighter xs:text-[40px] sm:text-[60px] sm:tracking-tighter lg:text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
             Resilient Her
@@ -921,10 +921,23 @@ const AboutNFT = () => {
             </p>
             <div className=" flex flex-col w-full h-full justify-center items-center   mt-10 ">
               <Link to="/mint">
-                <button className=" mb-28 border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40 ">
+                <button className=" mb-10 border-[2px] border-white  uppercases py-4 px-10 text-white xxs:text-sm lg:text-xl font-custome text-xl about-btn-2 relative z-40 ">
                   Buy a Resilient Her
                 </button>
               </Link>
+              <div className="text-white  flex flex-row   justify-center items-center  z-40">
+                <figure>
+                  <blockquote cite="">
+                    <p className="  font-medium   italic text-xl text-center">
+                      <strong className=" text-5xl">"</strong>In a world that
+                      wants women to whisper,Ichoose to yell"
+                    </p>
+                  </blockquote>
+                  <figcaption className="text-center">
+                    -LUVVIE <cite>AJAYI</cite>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </div>

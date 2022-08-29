@@ -937,7 +937,7 @@ const Team = () => {
           />
         </div>
       </div>
-      <div className="text-white xxs:ml-4 sm:ml-0  flex flex-row  justify-center items-center">
+      <div className="text-white xxs:ml-4 sm:ml-0  flex flex-row  z-40 justify-center items-center">
         <figure>
           <blockquote cite="">
             <p className="  font-medium   italic text-xl text-center">
