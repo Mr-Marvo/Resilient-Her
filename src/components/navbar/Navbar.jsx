@@ -27,8 +27,9 @@ const Navbar = () => {
             } `}
         >
           <ul
-            className={`${expand ? 'flex flex-col items-center' : ' flex flex-row'
-              }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
+            className={` xxs:border-b-[1px] mb-4 ${
+              expand ? 'flex flex-col items-center' : ' flex flex-row'
+            }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
           >
             <li className=" cursor-pointer uppercase px-5 py-2 nav-item  relative z-40">
               <Link
