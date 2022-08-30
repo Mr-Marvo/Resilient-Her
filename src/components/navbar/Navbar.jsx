@@ -83,7 +83,7 @@ const Navbar = () => {
             </li>
             <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
               <Link
-                to="/ask"
+                to="/faq"
                 onClick={() => {
                   setExpand(false);
                 }}
