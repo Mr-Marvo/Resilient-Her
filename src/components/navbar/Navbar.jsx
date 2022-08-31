@@ -21,14 +21,16 @@ const Navbar = () => {
           />
         </div>
         <div
-          className={`${expand
+          className={`${
+            expand
               ? 'navbar  '
               : 'flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex'
-            } `}
+          } `}
         >
           <ul
-            className={`${expand ? 'flex flex-col items-center' : ' flex flex-row'
-              }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
+            className={` xxs:border-b-[1px] xl:border-none mb-4 ${
+              expand ? 'flex flex-col items-center' : ' flex flex-row'
+            }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
           >
             <li className=" cursor-pointer uppercase px-5 py-2 nav-item  relative z-40">
               <Link
@@ -82,7 +84,7 @@ const Navbar = () => {
             </li>
             <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
               <Link
-                to="/ask"
+                to="/faq"
                 onClick={() => {
                   setExpand(false);
                 }}

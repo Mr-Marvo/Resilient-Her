@@ -888,11 +888,11 @@ const Desc = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[100%] xs:min-h-[170%]  absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[110%] xs:min-h-[160%]    sm:min-h-[150%] md:min-h-[120%] absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
-      <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-10  mb-28 ">
+      <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-10 ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
           <h2 className=" xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] mx-1 text-transparent  font-extrabold font-custome desc-title1  uppercase z-40">
             About Us
@@ -917,40 +917,29 @@ const Desc = () => {
             <div className=" flex flex-col w-full h-full justify-center items-center   mt-10 ">
               <Link to="/mint">
                 {' '}
-                <button className=" py-4 px-4 text-white  border-white border-[2px] uppercase font-custome xxs:text-sm lg:text-xl  relative  about-btn-1 z-40">
+                <button className=" mb-10 py-4 px-4 text-white  border-white border-[2px] uppercase font-custome xxs:text-sm lg:text-xl  relative  about-btn-1 z-40">
                   Buy a Resilient Her
                 </button>
               </Link>
+              <div className="text-white  flex flex-row  justify-center items-center z-40 ">
+                <figure>
+                  <blockquote cite="">
+                    <p className="  font-medium  tracking-tighter text-center  italic text-xl">
+                      <strong className=" text-5xl tracking-tighter">"</strong>A
+                      really strong women accepts the war she went through and
+                      is ennobled by her scars"
+                    </p>
+                  </blockquote>
+                  <figcaption className="text-center">
+                    -CARY SIMON, <cite>MUSICAL ARTIST</cite>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-white  flex flex-row  justify-center items-center ">
-        <figure>
-          <blockquote cite="">
-            <p className="  font-medium  text-center  italic text-xl">
-              <strong className=" text-5xl">"</strong>A really strong women
-              accepts the war she went through and is ennobled by her scars"
-            </p>
-          </blockquote>
-          <figcaption className="text-center">
-            -CARY SIMON, <cite>MUSICAL ARTIST</cite>
-          </figcaption>
-        </figure>
-      </div>
-      <div className="text-white  flex flex-row  justify-center items-center mb-28">
-        <figure>
-          <blockquote cite="">
-            <p className="  font-medium   italic text-xl text-center">
-              <strong className=" text-5xl">"</strong>In a world that wants
-              women to whisper,Ichoose to yell"
-            </p>
-          </blockquote>
-          <figcaption className="text-center">
-            -LUVVIE <cite>AJAYI</cite>
-          </figcaption>
-        </figure>
-      </div>
+
       <div className=" flex flex-col   absolute bottom-0  w-full left-0">
         <Footer />
       </div>
