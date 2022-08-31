@@ -21,13 +21,14 @@ const Navbar = () => {
           />
         </div>
         <div
-          className={`${expand
+          className={`${
+            expand
               ? 'navbar  '
               : 'flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex'
-            } `}
+          } `}
         >
           <ul
-            className={` xxs:border-b-[1px] mb-4 ${
+            className={` xxs:border-b-[1px] xl:border-none mb-4 ${
               expand ? 'flex flex-col items-center' : ' flex flex-row'
             }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
           >

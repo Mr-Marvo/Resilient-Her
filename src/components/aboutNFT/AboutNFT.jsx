@@ -888,7 +888,7 @@ const AboutNFT = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[150%] xs:min-h-[195%]  sm:min-h-[150%] md:min-h-[120%]  absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[160%] xs:min-h-[205%]  sm:min-h-[150%] md:min-h-[120%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
@@ -928,9 +928,9 @@ const AboutNFT = () => {
               <div className="text-white  flex flex-row   justify-center items-center  z-40">
                 <figure>
                   <blockquote cite="">
-                    <p className="  font-medium   italic text-xl text-center">
-                      <strong className=" text-5xl">"</strong>In a world that
-                      wants women to whisper,Ichoose to yell"
+                    <p className="  font-medium tracking-tighter   italic text-xl text-center">
+                      <strong className=" text-5xl tracking-tighter">"</strong>
+                      In a world that wants women to whisper,Ichoose to yell"
                     </p>
                   </blockquote>
                   <figcaption className="text-center">
