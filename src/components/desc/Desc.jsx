@@ -927,7 +927,7 @@ const Desc = () => {
                     <p className="  font-medium  tracking-tighter text-center  italic text-xl">
                       <strong className=" text-5xl tracking-tighter">"</strong>A
                       really strong women accepts the war she went through and
-                      is ennobled by her scars"
+                      is ennobled by her scars."
                     </p>
                   </blockquote>
                   <figcaption className="text-center">
@@ -939,7 +939,6 @@ const Desc = () => {
           </div>
         </div>
       </div>
-
       <div className=" flex flex-col   absolute bottom-0  w-full left-0">
         <Footer />
       </div>
