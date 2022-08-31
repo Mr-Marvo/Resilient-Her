@@ -930,27 +930,15 @@ const Desc = () => {
           <blockquote cite="">
             <p className="  font-medium  text-center  italic text-xl">
               <strong className=" text-5xl">"</strong>A really strong women
-              accepts the war she went through and is ennobled by her scars"
+              accepts the war she went through and is ennobled by her scars."
             </p>
           </blockquote>
           <figcaption className="text-center">
-            -CARY SIMON, <cite>MUSICAL ARTIST</cite>
+            -CARLY SIMON, <cite>MUSICAL ARTIST</cite>
           </figcaption>
         </figure>
       </div>
-      <div className="text-white  flex flex-row  justify-center items-center mb-28">
-        <figure>
-          <blockquote cite="">
-            <p className="  font-medium   italic text-xl text-center">
-              <strong className=" text-5xl">"</strong>In a world that wants
-              women to whisper,Ichoose to yell"
-            </p>
-          </blockquote>
-          <figcaption className="text-center">
-            -LUVVIE <cite>AJAYI</cite>
-          </figcaption>
-        </figure>
-      </div>
+      
       <div className=" flex flex-col   absolute bottom-0  w-full left-0">
         <Footer />
       </div>

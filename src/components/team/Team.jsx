@@ -942,7 +942,7 @@ const Team = () => {
           <blockquote cite="">
             <p className="  font-medium   italic text-xl text-center">
               <strong className=" text-5xl">"</strong>Some women fear the fire
-              some women simply become it"
+              some women simply become it..."
             </p>
           </blockquote>
           <figcaption className="text-center">
