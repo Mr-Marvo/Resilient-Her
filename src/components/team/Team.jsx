@@ -886,9 +886,9 @@ const Team = () => {
     });
   }, []);
   return (
-    <div className="  w-full  h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero pb-20">
+    <div className="  w-full  h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero ">
       <canvas
-        className=" w-full h-full  absolute z-30 opacity-60"
+        className=" w-full xxs:min-h-[110%] xl:min-h-[130%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
@@ -937,7 +937,7 @@ const Team = () => {
           />
         </div>
       </div>
-      <div className="text-white xxs:ml-4 sm:ml-0  flex flex-row  justify-center items-center">
+      <div className="text-white xxs:ml-4 sm:ml-0  flex flex-row  z-40 justify-center items-center">
         <figure>
           <blockquote cite="">
             <p className="  font-medium   italic text-xl text-center">
