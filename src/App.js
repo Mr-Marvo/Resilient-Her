@@ -24,7 +24,7 @@ function App() {
       <Route exact path ="/aboutNFT" element={<AboutNFT/>} />
       <Route exact path ="/roadmap" element={<Roadmap/>} />
       <Route exact path ="/mint" element={<Mint/>} />
-      <Route exact path ="/ask" element={<Faq/>} />
+      <Route exact path ="/faq" element={<Faq/>} />
       <Route exact path ="/team" element={<Team/>} />
       <Route exact path ="/policy" element={<Policy/>} /> 
       <Route exact path ="/term" element={<Tearm/>} />
