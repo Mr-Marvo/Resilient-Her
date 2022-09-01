@@ -929,7 +929,7 @@ const AboutNFT = () => {
                 <figure>
                   <blockquote cite="">
                     <p className="  font-medium tracking-tighter   italic text-xl text-center">
-                      <strong className=" text-5xl tracking-tighter">"</strong>
+                      <strong className=" text-xl tracking-tighter">"</strong>
                       In a world that wants women to whisper,Ichoose to yell"
                     </p>
                   </blockquote>
