@@ -12,7 +12,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 // @author devNishan
 // @contact aknpremakumara@gmail.com
 
-contract ReSilentHer is 
+contract ResilientHer is 
     ERC721, 
     Ownable, 
     ReentrancyGuard, 
@@ -25,15 +25,15 @@ contract ReSilentHer is
     
     address proxyRegistryAddress;
 
-    uint256 public maxSupply = 41;
+    uint256 public maxSupply = 10;
 
-    string public baseURI = "ipfs://QmUPobVyN3nNMd1BbmYUx6hzfaroPzJsVhkYiSFjCkL8gL/"; 
+    string public baseURI = "ipfs://QmVBcPkfBD1k8sp4gSc72mWpVzCzzWuA3z8E4NJ39RLc1S/"; 
     string public notRevealedUri;
     string public baseExtension = ".json";
 
     bool public paused = false;
     bool public revealed = true;
-    bool public presaleM = false;
+    bool public presaleM = true;
     bool public publicM = false;
 
     uint256 presaleAmountLimit = 2;

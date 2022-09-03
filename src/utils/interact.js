@@ -7,8 +7,8 @@ const whitelist = require('./whitelist.js')
 
 const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/-IiYyhvOUnLLMDhLX8K7Vaq73BGL8Cco')
 
-const contract = require('./ReSilentHer.json')
-const nftContract = new web3.eth.Contract(contract.abi, '0xc3cDdC6269Df953A7f8830894b793b4dbD5DE104')
+const contract = require('./ResilientHer.json')
+const nftContract = new web3.eth.Contract(contract.abi, '0x777e18062121E0792AF99D3606b9D56EE0E59f0c')
 
 // Calculate merkle root from the whitelist array
 const leafNodes = whitelist.map((addr) => keccak256(addr))

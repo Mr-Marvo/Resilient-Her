@@ -925,7 +925,7 @@ const Desc = () => {
                 <figure>
                   <blockquote cite="">
                     <p className="  font-medium  tracking-tighter text-center  italic text-xl">
-                      <strong className=" text-5xl tracking-tighter">"</strong>A
+                      <strong className=" text-xl tracking-tighter">"</strong>A
                       really strong women accepts the war she went through and
                       is ennobled by her scars."
                     </p>

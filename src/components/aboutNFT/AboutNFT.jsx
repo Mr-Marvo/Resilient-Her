@@ -928,9 +928,9 @@ const AboutNFT = () => {
               <div className="text-white  flex flex-row   justify-center items-center  z-40">
                 <figure>
                   <blockquote cite="">
-                    <p className="  font-medium tracking-tighter   italic text-xl text-center">
-                      <strong className=" text-5xl tracking-tighter">"</strong>
-                      In a world that wants women to whisper,Ichoose to yell"
+                    <p className="font-medium tracking-tighter italic text-xl text-center">
+                      <strong className="text-xl tracking-tighter">"</strong>
+                      In a world that wants women to whisper, I choose to yell."
                     </p>
                   </blockquote>
                   <figcaption className="text-center">
@@ -941,19 +941,6 @@ const AboutNFT = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="text-white  flex flex-row  justify-center items-center mb-28">
-        <figure>
-          <blockquote cite="">
-            <p className="  font-medium   italic text-xl text-center">
-              <strong className=" text-5xl">"</strong>In a world that wants
-              women to whisper, I choose to yell."
-            </p>
-          </blockquote>
-          <figcaption className="text-center">
-            -LUVVIE <cite>AJAYI</cite>
-          </figcaption>
-        </figure>
       </div>
       <div className=" flex flex-col   absolute bottom-0  w-full left-0">
         <Footer />
