@@ -33,7 +33,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build && react-compress",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -57,19 +57,29 @@
   },
   "devDependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.0",
-    "autoprefixer": "^10.4.8",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.7",
+    "@squoosh/lib": "^0.4.0",
     "assert": "^2.0.0",
+    "autoprefixer": "^10.4.8",
     "buffer": "^6.0.3",
+    "compression-webpack-plugin": "^10.0.0",
     "crypto-browserify": "^3.12.0",
     "customize-cra": "^1.0.0",
     "https-browserify": "^1.0.0",
+    "image-minimizer-webpack-plugin": "^3.3.1",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "img-optimize-loader": "^1.0.7",
     "os-browserify": "^0.3.0",
+    "postcss": "^8.4.14",
     "process": "^0.11.10",
     "react-app-rewired": "^2.2.1",
+    "react-compress": "^3.6.4",
     "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
+    "tailwindcss": "^3.1.7",
     "url": "^0.11.0"
   }
 }

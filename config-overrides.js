@@ -1,4 +1,6 @@
 const webpack = require('webpack');
+const CompressionPlugin = require("compression-webpack-plugin");
+// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = function override(config) {
     const fallback = config.resolve.fallback || {};
@@ -12,10 +14,26 @@ module.exports = function override(config) {
         "url": require.resolve("url")
     })
     config.resolve.fallback = fallback;
+    // config.optimization.minimizer = (config.optimization.minimizer || []).concat([
+    //     new ImageMinimizerPlugin({
+    //         minimizer: {
+    //             implementation: ImageMinimizerPlugin.imageminMinify,
+    //             options: {
+    //                 plugins: [
+    //                     ["mozjpeg", { progressive: true }],
+    //                     ["pngquant", { optimizationLevel: 5 }],
+    //                 ],
+    //             },
+    //         },
+    //     }),
+    // ])
     config.plugins = (config.plugins || []).concat([
         new webpack.ProvidePlugin({
             process: 'process/browser',
             Buffer: ['buffer', 'Buffer']
+        }),
+        new CompressionPlugin({
+            include: /\/assets/,
         })
     ])
     return config;
