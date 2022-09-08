@@ -691,7 +691,7 @@ const Footer = () => {
     
          </canvas>
         */}
-      <div className=" xxs:text-[8px] xs:text-[9px] flex flex-row w-full h-auto  container mx-auto bg-dark_1  py-4   text-white sm:text-sm xxs:justify-center sm:justify-end xxs:px-2 px-2 xxs:items-center sm:items-end mb-4 z-40 ">
+      <div className=" xxs:text-[8px] xs:text-[9px] flex flex-row w-full h-auto  container mx-auto bg-dark_1  py-4   text-white sm:text-sm xxs:justify-center sm:justify-end xxs:px-2 px-2 xxs:items-center sm:items-end mb-0 z-40 ">
         <p className="z-40">© 2022 Resilient Her</p>
         <Link to="/policy" className=" uppercase z-40 hover:underline">
           {' '}

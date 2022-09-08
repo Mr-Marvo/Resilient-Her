@@ -12,27 +12,27 @@ const Navbar = () => {
   const [expand, setExpand] = useState(false);
   return (
     <div className=" flex flex-col  relative  z-[999]  w-full h-auto  justify-center items-center  text-white">
-      <nav className=" flex flex-row  w-full h-[99px] mt-6  md:container md:mx-auto bg-dark_1  justify-between items-center">
-        <div className="flex flex-wrap md:w-1/5 justify-end items-end    ">
+      <nav className=" flex flex-row  w-full h-[99px] mt-0  md:container md:mx-auto bg-dark_1  justify-between items-center">
+        <div className="flex flex-wrap md:w-1/5 justify-center items-end    ">
           <img
             src={require('../../assets/images/logo-1.png')}
             alt="logo"
-            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40"
+            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40 object-contain"
           />
         </div>
         <div
           className={`${
             expand
               ? 'navbar  '
-              : 'flex-row   w-4/5   h-auto  justify-between mx-16   items-center xxs:hidden xl:flex'
+              : 'flex-row   w-4/5   h-auto  justify-around   items-center xxs:hidden xl:flex'
           } `}
         >
           <ul
             className={` xxs:border-b-[1px] xl:border-none mb-4 ${
               expand ? 'flex flex-col items-center' : ' flex flex-row'
-            }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 `}
+            }   font-custome font-bold xl:text-sm 2xl:text-base pl-4 xl:mb-0 `}
           >
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item  relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item  relative z-40">
               <Link
                 to="/"
                 onClick={() => {
@@ -42,7 +42,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item  relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item  relative z-40">
               <Link
                 to="/about"
                 onClick={() => {
@@ -52,7 +52,7 @@ const Navbar = () => {
                 About us
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
               <Link
                 to="/aboutNFT"
                 onClick={() => {
@@ -62,7 +62,17 @@ const Navbar = () => {
                 About the NFT
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
+              <Link
+                to="/future"
+                onClick={() => {
+                  setExpand(false);
+                }}
+              >
+                The Future is Female
+              </Link>
+            </li>
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
               <Link
                 to="/roadmap"
                 onClick={() => {
@@ -72,7 +82,7 @@ const Navbar = () => {
                 Roadmap
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
               <Link
                 to="/mint"
                 onClick={() => {
@@ -82,7 +92,7 @@ const Navbar = () => {
                 Mint
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
               <Link
                 to="/faq"
                 onClick={() => {
@@ -92,7 +102,7 @@ const Navbar = () => {
                 FAQ
               </Link>
             </li>
-            <li className=" cursor-pointer uppercase px-5 py-2 nav-item relative z-40">
+            <li className=" cursor-pointer uppercase px-4 py-2 nav-item relative z-40">
               <Link
                 to="/team"
                 onClick={() => {
