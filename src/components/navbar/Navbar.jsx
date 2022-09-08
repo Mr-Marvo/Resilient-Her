@@ -12,12 +12,12 @@ const Navbar = () => {
   const [expand, setExpand] = useState(false);
   return (
     <div className=" flex flex-col  relative  z-[999]  w-full h-auto  justify-center items-center  text-white">
-      <nav className=" flex flex-row  w-full h-[99px] mt-6  md:container md:mx-auto bg-dark_1  justify-between items-center">
+      <nav className=" flex flex-row  w-full h-[99px] mt-0  md:container md:mx-auto bg-dark_1  justify-between items-center">
         <div className="flex flex-wrap md:w-1/5 justify-center items-end    ">
           <img
             src={require('../../assets/images/logo-1.png')}
             alt="logo"
-            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40"
+            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40 object-contain"
           />
         </div>
         <div
