@@ -1,7 +1,7 @@
 const config = {
-    title: 'RESILENT HER',
+    title: 'RESILIENT HER',
     description: 'A collection of 9880 iron-willed females with one heart and one fight. The future is female.',
-    contractAddress: '0x777e18062121E0792AF99D3606b9D56EE0E59f0c',
+    contractAddress: '0xbc64FAa5e039C2c0808a31ADdb6F83ADEDA438a5',
     maxMintAmount: 1,
     presaleMaxMintAmount: 2,
     price: 0.01

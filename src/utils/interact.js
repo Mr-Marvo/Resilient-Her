@@ -8,7 +8,7 @@ const whitelist = require('./whitelist.js')
 const web3 = createAlchemyWeb3('https://eth-rinkeby.alchemyapi.io/v2/-IiYyhvOUnLLMDhLX8K7Vaq73BGL8Cco')
 
 const contract = require('./ResilientHer.json')
-const nftContract = new web3.eth.Contract(contract.abi, '0x777e18062121E0792AF99D3606b9D56EE0E59f0c')
+const nftContract = new web3.eth.Contract(contract.abi, '0xbc64FAa5e039C2c0808a31ADdb6F83ADEDA438a5')
 
 // Calculate merkle root from the whitelist array
 const leafNodes = whitelist.map((addr) => keccak256(addr))
@@ -74,7 +74,7 @@ export const presaleMint = async (mintAmount) => {
   // Set up our Ethereum transaction
   const tx = {
     to: config.contractAddress,
-    gas: String(300000 * mintAmount),
+    gas: String(21000 * mintAmount),
     from: window.ethereum.selectedAddress,
     value: parseInt(
       web3.utils.toWei(String(0.01 * mintAmount), 'ether')
@@ -124,7 +124,7 @@ export const publicMint = async (mintAmount) => {
   // Set up our Ethereum transaction
   const tx = {
     to: config.contractAddress,
-    gas: String(300000 * mintAmount),
+    gas: String(21000 * mintAmount),
     from: window.ethereum.selectedAddress,
     value: parseInt(
       web3.utils.toWei(String(0.01 * mintAmount), 'ether')
