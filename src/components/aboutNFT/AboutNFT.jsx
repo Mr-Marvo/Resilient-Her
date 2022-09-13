@@ -888,13 +888,13 @@ const AboutNFT = () => {
   return (
     <div className=" flex flex-col   w-full   h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll   ">
       <canvas
-        className=" w-full  xxs:min-h-[160%] xs:min-h-[205%]  sm:min-h-[150%] md:min-h-[120%]  absolute z-30 opacity-60"
+        className=" w-full  xxs:min-h-[160%] xs:min-h-[200%]  sm:min-h-[150%] md:min-h-[200%] lg:min-h-[170%]  xl:min-h-[140%]   absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-4   ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
-          <h2 className="xxs:text-[27px] xxs:tracking-tighter xs:text-[40px] sm:text-[60px] sm:tracking-tighter lg:text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
+          <h2 className="xxs:text-[27px] xxs:tracking-tighter xs:text-[40px] sm:text-[60px] text-purple-600 sm:tracking-tighter lg:text-[100px] mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
             Resilient Her
           </h2>
           <h2 className="xxs:text-xl xxs:top-4   xs:text-[35px] sm:text-4xl sm:top-4 lg:text-6xl mx-2   font-custome relative text-white z-40">
@@ -904,20 +904,21 @@ const AboutNFT = () => {
             <p className=" xxs:text-sm xs:text-xl text-white   xxs:w-[300px] xs:w-[350px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center">
               Resilient Her is a real-life use project, which focuses on various
               aspects around the world that affects under-privileged and abused
-              women worldwide.Our team consists of experienced, all rounded
-              individuals with more than 20 years experience in their individual
-              specialized fields.
+              women worldwide. Our team consists of experienced, all rounded
+              with more than 20 years experience in their specialized fields.
             </p>
             <p className=" xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[350px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center mt-4">
               This project defines itself as a one-of-a-kind, long term project
               and aims to improve the lives of millions of women across the
-              world who suffer from inter-alia Gender-based violence,
-              depression, social problems, financial problems etc. At the same
-              time, we have developed a financial model by means of an NFT
-              whereby an Investor can get superb value for money. By being a
-              Resilient-Her NFT holder, VIP access will be granted to members
-              and various regular perks will be offered which will be constantly
-              refreshed and updated to keep up with current trends.
+              world who suffer from <p className=" italic">inter-ali</p>a
+              Gender-based violence, depression, social problems, financial
+              problems etc.
+              <br /> At the same time, we have developed a financial model by
+              means of an NFT whereby an Investor can get superb value for
+              money. By being a Resilient-Her NFT holder, VIP access will be
+              granted to members and various regular perks will be offered which
+              will be constantly refreshed and updated to keep up with current
+              trends.
             </p>
             <div className=" flex flex-col w-full h-full justify-center items-center   mt-10 ">
               <Link to="/mint">
@@ -934,7 +935,7 @@ const AboutNFT = () => {
                     </p>
                   </blockquote>
                   <figcaption className="text-center">
-                    -LUVVIE <cite>AJAYI</cite>
+                    - Harriet Tubman <cite>Social activist</cite>
                   </figcaption>
                 </figure>
               </div>
