@@ -886,15 +886,15 @@ const Team = () => {
     });
   }, []);
   return (
-    <div className="  w-full  h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero ">
+    <div className="  w-full  h-screen relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero ">
       <canvas
-        className=" w-full xxs:min-h-[110%] xl:min-h-[130%]  absolute z-30 opacity-60"
+        className=" w-full xxs:min-h-[110%]  xl:min-h-[170%]  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-col flex-wrap w-full h-auto  mt-16  container mx-auto justify-center items-center">
         <div className=" flex flex-col w-full h-auto justify-center items-center">
-          <h2 className=" uppercase text-white xxs:text-4xl text-center sm:text-6xl   font-custome z-40">
+          <h2 className=" uppercase text-purple-600 xxs:text-4xl text-center sm:text-6xl   font-custome z-40">
             Resilient Her TEAM
           </h2>
         </div>
@@ -941,8 +941,8 @@ const Team = () => {
         <figure>
           <blockquote cite="">
             <p className="text-xl font-medium tracking-tighter italic text-center">
-              <strong className=" text-xl tracking-tighter">"</strong>Some women fear the fire
-              some women simply become it..."
+              <strong className=" text-xl tracking-tighter">"</strong>Some women
+              fear the fire, some women simply become it..."
             </p>
           </blockquote>
           <figcaption className="text-center">

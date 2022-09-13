@@ -894,7 +894,7 @@ const Faq = () => {
       <Navbar />
       <div className=" w-full h-auto flex flex-col pt-16  mb-32">
         <div className=" flex flex-col w-full h-auto justify-center items-center">
-          <h2 className=" uppercase text-white xxs:text-4xl sm:text-6xl  font-custome z-40">
+          <h2 className=" uppercase text-purple-600 xxs:text-4xl sm:text-6xl  font-custome z-40">
             FAQ
           </h2>
         </div>
@@ -922,11 +922,11 @@ const Faq = () => {
           />
           <FaqItem
             question="What are the Royalties?"
-            answer="We charge 3.5% royalties, and opensea charges another 2.5% commission on all sales, tallying 6% commission in total."
+            answer="We charge 5% royalties, and opensea charges another 2.5% commission on all sales, tallying 7.5% commission in total."
           />
           <FaqItem
             question="How many Resilient-Her’s are there ? "
-            answer="We will count and give you the final total. Once uploaded"
+            answer="9880"
           />
         </div>
       </div>

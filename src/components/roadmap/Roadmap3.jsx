@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
 // import Roadmap4 from './Roadmap4'
 
 const Roadmap3 = () => {
-
   const ref = useRef(null);
   useEffect(() => {
     // 'use strict';
@@ -20,9 +19,8 @@ const Roadmap3 = () => {
       PRESSURE_DISSIPATION: 0.8,
       PRESSURE_ITERATIONS: 25,
       CURL: 28,
-      SPLAT_RADIUS: 0.004
+      SPLAT_RADIUS: 0.004,
     };
-
 
     let pointers = [];
     let splatStack = [];
@@ -30,12 +28,19 @@ const Roadmap3 = () => {
     const { gl, ext } = getWebGLContext(canvas);
 
     function getWebGLContext(canvas) {
-      const params = { alpha: false, depth: false, stencil: false, antialias: false };
+      const params = {
+        alpha: false,
+        depth: false,
+        stencil: false,
+        antialias: false,
+      };
 
       let gl = canvas.getContext('webgl2', params);
       const isWebGL2 = !!gl;
       if (!isWebGL2)
-        gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+        gl =
+          canvas.getContext('webgl', params) ||
+          canvas.getContext('experimental-webgl', params);
 
       let halfFloat;
       let supportLinearFiltering;
@@ -44,18 +49,27 @@ const Roadmap3 = () => {
         supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
       } else {
         halfFloat = gl.getExtension('OES_texture_half_float');
-        supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
+        supportLinearFiltering = gl.getExtension(
+          'OES_texture_half_float_linear'
+        );
       }
 
       gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
-      const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
+      const halfFloatTexType = isWebGL2
+        ? gl.HALF_FLOAT
+        : halfFloat.HALF_FLOAT_OES;
       let formatRGBA;
       let formatRG;
       let formatR;
 
       if (isWebGL2) {
-        formatRGBA = getSupportedFormat(gl, gl.RGBA16F, gl.RGBA, halfFloatTexType);
+        formatRGBA = getSupportedFormat(
+          gl,
+          gl.RGBA16F,
+          gl.RGBA,
+          halfFloatTexType
+        );
         formatRG = getSupportedFormat(gl, gl.RG16F, gl.RG, halfFloatTexType);
         formatR = getSupportedFormat(gl, gl.R16F, gl.RED, halfFloatTexType);
       } else {
@@ -71,17 +85,14 @@ const Roadmap3 = () => {
           formatRG,
           formatR,
           halfFloatTexType,
-          supportLinearFiltering
-        }
+          supportLinearFiltering,
+        },
       };
-
-
     }
 
     function getSupportedFormat(gl, internalFormat, format, type) {
       if (!supportRenderTextureFormat(gl, internalFormat, format, type)) {
         switch (internalFormat) {
-
           case gl.R16F:
             return getSupportedFormat(gl, gl.RG16F, gl.RG, type);
           case gl.RG16F:
@@ -89,14 +100,12 @@ const Roadmap3 = () => {
           default:
             return null;
         }
-
       }
 
       return {
         internalFormat,
-        format
+        format,
       };
-
     }
 
     function supportRenderTextureFormat(gl, internalFormat, format, type) {
@@ -106,15 +115,30 @@ const Roadmap3 = () => {
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, 4, 4, 0, format, type, null);
+      gl.texImage2D(
+        gl.TEXTURE_2D,
+        0,
+        internalFormat,
+        4,
+        4,
+        0,
+        format,
+        type,
+        null
+      );
 
       let fbo = gl.createFramebuffer();
       gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
-      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+      gl.framebufferTexture2D(
+        gl.FRAMEBUFFER,
+        gl.COLOR_ATTACHMENT0,
+        gl.TEXTURE_2D,
+        texture,
+        0
+      );
 
       const status = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
-      if (status != gl.FRAMEBUFFER_COMPLETE)
-        return false;
+      if (status != gl.FRAMEBUFFER_COMPLETE) return false;
       return true;
     }
 
@@ -143,10 +167,16 @@ const Roadmap3 = () => {
         if (!gl.getProgramParameter(this.program, gl.LINK_STATUS))
           throw gl.getProgramInfoLog(this.program);
 
-        const uniformCount = gl.getProgramParameter(this.program, gl.ACTIVE_UNIFORMS);
+        const uniformCount = gl.getProgramParameter(
+          this.program,
+          gl.ACTIVE_UNIFORMS
+        );
         for (let i = 0; i < uniformCount; i++) {
           const uniformName = gl.getActiveUniform(this.program, i).name;
-          this.uniforms[uniformName] = gl.getUniformLocation(this.program, uniformName);
+          this.uniforms[uniformName] = gl.getUniformLocation(
+            this.program,
+            uniformName
+          );
         }
       }
 
@@ -154,7 +184,6 @@ const Roadmap3 = () => {
         gl.useProgram(this.program);
       }
     }
-
 
     function compileShader(type, source) {
       const shader = gl.createShader(type);
@@ -165,9 +194,11 @@ const Roadmap3 = () => {
         throw gl.getShaderInfoLog(shader);
 
       return shader;
-    };
+    }
 
-    const baseVertexShader = compileShader(gl.VERTEX_SHADER, `
+    const baseVertexShader = compileShader(
+      gl.VERTEX_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -187,9 +218,12 @@ const Roadmap3 = () => {
           vB = vUv - vec2(0.0, texelSize.y);
           gl_Position = vec4(aPosition, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
-    const clearShader = compileShader(gl.FRAGMENT_SHADER, `
+    const clearShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -200,9 +234,12 @@ const Roadmap3 = () => {
       void main () {
           gl_FragColor = value * texture2D(uTexture, vUv);
       }
-  `);
+  `
+    );
 
-    const displayShader = compileShader(gl.FRAGMENT_SHADER, `
+    const displayShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -212,9 +249,12 @@ const Roadmap3 = () => {
       void main () {
           gl_FragColor = texture2D(uTexture, vUv);
       }
-  `);
+  `
+    );
 
-    const splatShader = compileShader(gl.FRAGMENT_SHADER, `
+    const splatShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -232,9 +272,12 @@ const Roadmap3 = () => {
           vec3 base = texture2D(uTarget, vUv).xyz;
           gl_FragColor = vec4(base + splat, 1.0);
       }
-  `);
+  `
+    );
 
-    const advectionManualFilteringShader = compileShader(gl.FRAGMENT_SHADER, `
+    const advectionManualFilteringShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -263,9 +306,12 @@ const Roadmap3 = () => {
           gl_FragColor = dissipation * bilerp(uSource, coord);
           gl_FragColor.a = 1.0;
       }
-  `);
+  `
+    );
 
-    const advectionShader = compileShader(gl.FRAGMENT_SHADER, `
+    const advectionShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -281,9 +327,12 @@ const Roadmap3 = () => {
           gl_FragColor = dissipation * texture2D(uSource, coord);
           gl_FragColor.a = 1.0;
       }
-  `);
+  `
+    );
 
-    const divergenceShader = compileShader(gl.FRAGMENT_SHADER, `
+    const divergenceShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -311,9 +360,12 @@ const Roadmap3 = () => {
           float div = 0.5 * (R - L + T - B);
           gl_FragColor = vec4(div, 0.0, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
-    const curlShader = compileShader(gl.FRAGMENT_SHADER, `
+    const curlShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -332,9 +384,12 @@ const Roadmap3 = () => {
           float vorticity = R - L - T + B;
           gl_FragColor = vec4(vorticity, 0.0, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
-    const vorticityShader = compileShader(gl.FRAGMENT_SHADER, `
+    const vorticityShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -355,9 +410,12 @@ const Roadmap3 = () => {
           vec2 vel = texture2D(uVelocity, vUv).xy;
           gl_FragColor = vec4(vel + force * dt, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
-    const pressureShader = compileShader(gl.FRAGMENT_SHADER, `
+    const pressureShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -384,9 +442,12 @@ const Roadmap3 = () => {
           float pressure = (L + R + B + T - divergence) * 0.25;
           gl_FragColor = vec4(pressure, 0.0, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
-    const gradientSubtractShader = compileShader(gl.FRAGMENT_SHADER, `
+    const gradientSubtractShader = compileShader(
+      gl.FRAGMENT_SHADER,
+      `
       precision highp float;
       precision mediump sampler2D;
   
@@ -412,7 +473,8 @@ const Roadmap3 = () => {
           velocity.xy -= vec2(R - L, T - B);
           gl_FragColor = vec4(velocity, 0.0, 1.0);
       }
-  `);
+  `
+    );
 
     let textureWidth;
     let textureHeight;
@@ -426,12 +488,20 @@ const Roadmap3 = () => {
     const clearProgram = new GLProgram(baseVertexShader, clearShader);
     const displayProgram = new GLProgram(baseVertexShader, displayShader);
     const splatProgram = new GLProgram(baseVertexShader, splatShader);
-    const advectionProgram = new GLProgram(baseVertexShader, ext.supportLinearFiltering ? advectionShader : advectionManualFilteringShader);
+    const advectionProgram = new GLProgram(
+      baseVertexShader,
+      ext.supportLinearFiltering
+        ? advectionShader
+        : advectionManualFilteringShader
+    );
     const divergenceProgram = new GLProgram(baseVertexShader, divergenceShader);
     const curlProgram = new GLProgram(baseVertexShader, curlShader);
     const vorticityProgram = new GLProgram(baseVertexShader, vorticityShader);
     const pressureProgram = new GLProgram(baseVertexShader, pressureShader);
-    const gradienSubtractProgram = new GLProgram(baseVertexShader, gradientSubtractShader);
+    const gradienSubtractProgram = new GLProgram(
+      baseVertexShader,
+      gradientSubtractShader
+    );
 
     function initFramebuffers() {
       textureWidth = gl.drawingBufferWidth >> config.TEXTURE_DOWNSAMPLE;
@@ -442,11 +512,51 @@ const Roadmap3 = () => {
       const rg = ext.formatRG;
       const r = ext.formatR;
 
-      density = createDoubleFBO(2, textureWidth, textureHeight, rgba.internalFormat, rgba.format, texType, ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST);
-      velocity = createDoubleFBO(0, textureWidth, textureHeight, rg.internalFormat, rg.format, texType, ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST);
-      divergence = createFBO(4, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
-      curl = createFBO(5, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
-      pressure = createDoubleFBO(6, textureWidth, textureHeight, r.internalFormat, r.format, texType, gl.NEAREST);
+      density = createDoubleFBO(
+        2,
+        textureWidth,
+        textureHeight,
+        rgba.internalFormat,
+        rgba.format,
+        texType,
+        ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST
+      );
+      velocity = createDoubleFBO(
+        0,
+        textureWidth,
+        textureHeight,
+        rg.internalFormat,
+        rg.format,
+        texType,
+        ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST
+      );
+      divergence = createFBO(
+        4,
+        textureWidth,
+        textureHeight,
+        r.internalFormat,
+        r.format,
+        texType,
+        gl.NEAREST
+      );
+      curl = createFBO(
+        5,
+        textureWidth,
+        textureHeight,
+        r.internalFormat,
+        r.format,
+        texType,
+        gl.NEAREST
+      );
+      pressure = createDoubleFBO(
+        6,
+        textureWidth,
+        textureHeight,
+        r.internalFormat,
+        r.format,
+        texType,
+        gl.NEAREST
+      );
     }
 
     function createFBO(texId, w, h, internalFormat, format, type, param) {
@@ -457,11 +567,27 @@ const Roadmap3 = () => {
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, param);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texImage2D(gl.TEXTURE_2D, 0, internalFormat, w, h, 0, format, type, null);
+      gl.texImage2D(
+        gl.TEXTURE_2D,
+        0,
+        internalFormat,
+        w,
+        h,
+        0,
+        format,
+        type,
+        null
+      );
 
       let fbo = gl.createFramebuffer();
       gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
-      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+      gl.framebufferTexture2D(
+        gl.FRAMEBUFFER,
+        gl.COLOR_ATTACHMENT0,
+        gl.TEXTURE_2D,
+        texture,
+        0
+      );
       gl.viewport(0, 0, w, h);
       gl.clear(gl.COLOR_BUFFER_BIT);
 
@@ -470,7 +596,15 @@ const Roadmap3 = () => {
 
     function createDoubleFBO(texId, w, h, internalFormat, format, type, param) {
       let fbo1 = createFBO(texId, w, h, internalFormat, format, type, param);
-      let fbo2 = createFBO(texId + 1, w, h, internalFormat, format, type, param);
+      let fbo2 = createFBO(
+        texId + 1,
+        w,
+        h,
+        internalFormat,
+        format,
+        type,
+        param
+      );
 
       return {
         get read() {
@@ -483,20 +617,27 @@ const Roadmap3 = () => {
           let temp = fbo1;
           fbo1 = fbo2;
           fbo2 = temp;
-        }
+        },
       };
-
     }
 
     const blit = (() => {
       gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, -1, 1, 1, 1, 1, -1]), gl.STATIC_DRAW);
+      gl.bufferData(
+        gl.ARRAY_BUFFER,
+        new Float32Array([-1, -1, -1, 1, 1, 1, 1, -1]),
+        gl.STATIC_DRAW
+      );
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
-      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array([0, 1, 2, 0, 2, 3]), gl.STATIC_DRAW);
+      gl.bufferData(
+        gl.ELEMENT_ARRAY_BUFFER,
+        new Uint16Array([0, 1, 2, 0, 2, 3]),
+        gl.STATIC_DRAW
+      );
       gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
       gl.enableVertexAttribArray(0);
 
-      return destination => {
+      return (destination) => {
         gl.bindFramebuffer(gl.FRAMEBUFFER, destination);
         gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0);
       };
@@ -514,21 +655,30 @@ const Roadmap3 = () => {
 
       gl.viewport(0, 0, textureWidth, textureHeight);
 
-      if (splatStack.length > 0)
-        multipleSplats(splatStack.pop());
+      if (splatStack.length > 0) multipleSplats(splatStack.pop());
 
       advectionProgram.bind();
-      gl.uniform2f(advectionProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        advectionProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(advectionProgram.uniforms.uVelocity, velocity.read[2]);
       gl.uniform1i(advectionProgram.uniforms.uSource, velocity.read[2]);
       gl.uniform1f(advectionProgram.uniforms.dt, dt);
-      gl.uniform1f(advectionProgram.uniforms.dissipation, config.VELOCITY_DISSIPATION);
+      gl.uniform1f(
+        advectionProgram.uniforms.dissipation,
+        config.VELOCITY_DISSIPATION
+      );
       blit(velocity.write[1]);
       velocity.swap();
 
       gl.uniform1i(advectionProgram.uniforms.uVelocity, velocity.read[2]);
       gl.uniform1i(advectionProgram.uniforms.uSource, density.read[2]);
-      gl.uniform1f(advectionProgram.uniforms.dissipation, config.DENSITY_DISSIPATION);
+      gl.uniform1f(
+        advectionProgram.uniforms.dissipation,
+        config.DENSITY_DISSIPATION
+      );
       blit(density.write[1]);
       density.swap();
 
@@ -541,12 +691,20 @@ const Roadmap3 = () => {
       }
 
       curlProgram.bind();
-      gl.uniform2f(curlProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        curlProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(curlProgram.uniforms.uVelocity, velocity.read[2]);
       blit(curl[1]);
 
       vorticityProgram.bind();
-      gl.uniform2f(vorticityProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        vorticityProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(vorticityProgram.uniforms.uVelocity, velocity.read[2]);
       gl.uniform1i(vorticityProgram.uniforms.uCurl, curl[2]);
       gl.uniform1f(vorticityProgram.uniforms.curl, config.CURL);
@@ -555,7 +713,11 @@ const Roadmap3 = () => {
       velocity.swap();
 
       divergenceProgram.bind();
-      gl.uniform2f(divergenceProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        divergenceProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(divergenceProgram.uniforms.uVelocity, velocity.read[2]);
       blit(divergence[1]);
 
@@ -569,7 +731,11 @@ const Roadmap3 = () => {
       pressure.swap();
 
       pressureProgram.bind();
-      gl.uniform2f(pressureProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        pressureProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(pressureProgram.uniforms.uDivergence, divergence[2]);
       pressureTexId = pressure.read[2];
       gl.uniform1i(pressureProgram.uniforms.uPressure, pressureTexId);
@@ -581,7 +747,11 @@ const Roadmap3 = () => {
       }
 
       gradienSubtractProgram.bind();
-      gl.uniform2f(gradienSubtractProgram.uniforms.texelSize, 1.0 / textureWidth, 1.0 / textureHeight);
+      gl.uniform2f(
+        gradienSubtractProgram.uniforms.texelSize,
+        1.0 / textureWidth,
+        1.0 / textureHeight
+      );
       gl.uniform1i(gradienSubtractProgram.uniforms.uPressure, pressure.read[2]);
       gl.uniform1i(gradienSubtractProgram.uniforms.uVelocity, velocity.read[2]);
       blit(velocity.write[1]);
@@ -598,22 +768,38 @@ const Roadmap3 = () => {
     function splat(x, y, dx, dy, color) {
       splatProgram.bind();
       gl.uniform1i(splatProgram.uniforms.uTarget, velocity.read[2]);
-      gl.uniform1f(splatProgram.uniforms.aspectRatio, canvas.width / canvas.height);
-      gl.uniform2f(splatProgram.uniforms.point, x / canvas.width, 1.0 - y / canvas.height);
+      gl.uniform1f(
+        splatProgram.uniforms.aspectRatio,
+        canvas.width / canvas.height
+      );
+      gl.uniform2f(
+        splatProgram.uniforms.point,
+        x / canvas.width,
+        1.0 - y / canvas.height
+      );
       gl.uniform3f(splatProgram.uniforms.color, dx, -dy, 1.0);
       gl.uniform1f(splatProgram.uniforms.radius, config.SPLAT_RADIUS);
       blit(velocity.write[1]);
       velocity.swap();
 
       gl.uniform1i(splatProgram.uniforms.uTarget, density.read[2]);
-      gl.uniform3f(splatProgram.uniforms.color, color[0] * 0.3, color[1] * 0.3, color[2] * 0.3);
+      gl.uniform3f(
+        splatProgram.uniforms.color,
+        color[0] * 0.3,
+        color[1] * 0.3,
+        color[2] * 0.3
+      );
       blit(density.write[1]);
       density.swap();
     }
 
     function multipleSplats(amount) {
       for (let i = 0; i < amount; i++) {
-        const color = [Math.random() * 10, Math.random() * 10, Math.random() * 10];
+        const color = [
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+        ];
         const x = canvas.width * Math.random();
         const y = canvas.height * Math.random();
         const dx = 1000 * (Math.random() - 0.5);
@@ -623,14 +809,17 @@ const Roadmap3 = () => {
     }
 
     function resizeCanvas() {
-      if (canvas.width != canvas.clientWidth || canvas.height != canvas.clientHeight) {
+      if (
+        canvas.width != canvas.clientWidth ||
+        canvas.height != canvas.clientHeight
+      ) {
         canvas.width = canvas.clientWidth;
         canvas.height = canvas.clientHeight;
         initFramebuffers();
       }
     }
 
-    canvas.addEventListener('mousemove', e => {
+    canvas.addEventListener('mousemove', (e) => {
       pointers[0].moved = pointers[0].down;
       pointers[0].dx = (e.offsetX - pointers[0].x) * 10.0;
       pointers[0].dy = (e.offsetY - pointers[0].y) * 10.0;
@@ -638,36 +827,47 @@ const Roadmap3 = () => {
       pointers[0].y = e.offsetY;
     });
 
-    canvas.addEventListener('touchmove', e => {
-      e.preventDefault();
-      const touches = e.targetTouches;
-      for (let i = 0; i < touches.length; i++) {
-        let pointer = pointers[i];
-        pointer.moved = pointer.down;
-        pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
-        pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
-        pointer.x = touches[i].pageX;
-        pointer.y = touches[i].pageY;
-      }
-    }, false);
+    canvas.addEventListener(
+      'touchmove',
+      (e) => {
+        e.preventDefault();
+        const touches = e.targetTouches;
+        for (let i = 0; i < touches.length; i++) {
+          let pointer = pointers[i];
+          pointer.moved = pointer.down;
+          pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
+          pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
+          pointer.x = touches[i].pageX;
+          pointer.y = touches[i].pageY;
+        }
+      },
+      false
+    );
 
     canvas.addEventListener('mousemove', () => {
       pointers[0].down = true;
-      pointers[0].color = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+      pointers[0].color = [
+        Math.random() + 0.2,
+        Math.random() + 0.2,
+        Math.random() + 0.2,
+      ];
     });
 
-    canvas.addEventListener('touchstart', e => {
+    canvas.addEventListener('touchstart', (e) => {
       e.preventDefault();
       const touches = e.targetTouches;
       for (let i = 0; i < touches.length; i++) {
-        if (i >= pointers.length)
-          pointers.push(new pointerPrototype());
+        if (i >= pointers.length) pointers.push(new pointerPrototype());
 
         pointers[i].id = touches[i].identifier;
         pointers[i].down = true;
         pointers[i].x = touches[i].pageX;
         pointers[i].y = touches[i].pageY;
-        pointers[i].color = [Math.random() + 0.2, Math.random() + 0.2, Math.random() + 0.2];
+        pointers[i].color = [
+          Math.random() + 0.2,
+          Math.random() + 0.2,
+          Math.random() + 0.2,
+        ];
       }
     });
 
@@ -675,39 +875,56 @@ const Roadmap3 = () => {
       pointers[0].down = false;
     });
 
-    window.addEventListener('touchend', e => {
+    window.addEventListener('touchend', (e) => {
       const touches = e.changedTouches;
       for (let i = 0; i < touches.length; i++)
         for (let j = 0; j < pointers.length; j++)
-          if (touches[i].identifier == pointers[j].id)
-            pointers[j].down = false;
+          if (touches[i].identifier == pointers[j].id) pointers[j].down = false;
     });
-
   }, []);
 
   return (
-    <div className='w-full h-auto flex flex-col relative'>
-      <canvas className='w-full h-full  absolute z-30 opacity-60' ref={ref}>
+    <div className="w-full h-auto flex flex-col relative">
+      <canvas
+        className="w-full h-full  absolute z-30 opacity-60"
+        ref={ref}
+      ></canvas>
+      <div className=" flex flex-col w-full relative justify-between mt-[10px] ">
+        <div className=" flex xxs:flex-col sm:flex-row w-full relative justify-between xxs:mt-10 sm:mt-36   ">
+          <div className=" flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative z-40 justify-center xxs:mt-4 sm:mt-0 xxs:order-2 sm:order-1">
+            <img
+              src={require('../../assets/images/s3r.png')}
+              alt="slide"
+              className=" absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]"
+            />
 
-      </canvas>
-      <div className=' flex flex-col w-full relative justify-between mt-[10px] '>
-        <div className=' flex xxs:flex-col sm:flex-row w-full relative justify-between xxs:mt-10 sm:mt-36   '>
-          <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative z-40 justify-center xxs:mt-4 sm:mt-0 xxs:order-2 sm:order-1'>
-            <img src={require("../../assets/images/s3r.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]' />
-
-            <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] right-2  top-44 absolute spring' />
+            <img
+              src={require('../../assets/images/down arrow.png')}
+              alt="slide"
+              className=" bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] right-2  top-44 absolute spring"
+            />
           </div>
-          <div className=' flex flex-row xxs:w-full sm:w-[48%]  h-auto  border-t-[2px]  border-l-[2px] pl-10 pt-20 xxs:order-1 sm:order-2'>
-            <div className='flex flex-col w-full h-auto justify-center items-start  '>
-              <div className=' flex flex-row w-full  leading-[0] justify-start items-center mb-10'>
-                <h2 className=' xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-white mr-8 z-40'>40%</h2>
+          <div className=" flex flex-row xxs:w-full sm:w-[48%]  h-auto  border-t-[2px]  border-l-[2px] pl-10 pt-20 xxs:order-1 sm:order-2">
+            <div className="flex flex-col w-full h-auto justify-center items-start  ">
+              <div className=" flex flex-row w-full  leading-[0] justify-start items-center mb-10">
+                <h2 className=" xxs:text-[60px] sm:text-[100px]  font-mono font-bold text-purple-600 mr-8 z-40">
+                  40%
+                </h2>
                 {/* <img src={require("../../assets/images/tik.png")} alt='tik' className=' xxs:h-[60px] sm:w-[100px] xs:h-[100px] z-40'/> */}
               </div>
-              <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40 mt-10'>Community Enrichment</h4>
-              <h4 className=' text-white text-[18px]  leading-[1] font-custome  mt-2 z-40'>The project will begin its ambitious plan of attempting to destroy unjust issues that affect women globally.  </h4>
-              <ul className=' text-white font-custome z-40 mt-4'>
-                <p className=' text-white text-[18px] z-40'>EG:</p>
-                <li>- Lack of sanitary products affecting poverty sticken countries</li>
+              <h4 className=" text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40 mt-10">
+                Community Enrichment
+              </h4>
+              <h4 className=" text-white text-[18px]  leading-[1] font-custome  mt-2 z-40">
+                The project will begin its ambitious plan of attempting to
+                destroy unjust issues that affect women globally.{' '}
+              </h4>
+              <ul className=" text-white font-custome z-40 mt-4">
+                <p className=" text-white text-[18px] z-40">EG:</p>
+                <li>
+                  - Lack of sanitary products affecting poverty sticken
+                  countries
+                </li>
                 <li>- Domestic Violence </li>
                 <li> - Gender-based violence</li>
                 <li>- Etc</li>
@@ -716,27 +933,44 @@ const Roadmap3 = () => {
             </div>
           </div>
         </div>
-        <div className=' flex  xxs:flex-col sm:flex-row w-full relative justify-between  xxs:mt-10 sm:mt-36  '>
-          <div className=' flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0 '>
-            <img src={require("../../assets/images/s4r.png")} alt='slide' className=' absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]' />
+        <div className=" flex  xxs:flex-col sm:flex-row w-full relative justify-between  xxs:mt-10 sm:mt-36  ">
+          <div className=" flex flex-row xxs:w-full sm:w-[48%] h-[300px] relative order-2 z-40 justify-center xxs:mt-4 sm:mt-0 ">
+            <img
+              src={require('../../assets/images/s4r.png')}
+              alt="slide"
+              className=" absolute xxs:w-[200px] xxs:h-[190px] sm:w-[370px] sm:h-[350px]"
+            />
 
-            <img src={require("../../assets/images/down arrow.png")} alt='slide' className=' bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] left-2  top-44 absolute spring' />
+            <img
+              src={require('../../assets/images/down arrow.png')}
+              alt="slide"
+              className=" bg-cover xxs:w-[100px] xxs:h-[130px] sm:w-[150px] sm:h-[200px] left-2  top-44 absolute spring"
+            />
           </div>
-          <div className=' flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-20'>
-            <div className='flex flex-col w-full h-auto justify-center items-end   '>
-              <div className=' flex flex-row w-full  leading-[0] justify-end items-center '>
-                <h2 className=' xxs:text-[60px] sm:text-[100px] font-mono font-bold text-white ml-8 order-2 z-40 mb-20 '>60%</h2>
+          <div className=" flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-20">
+            <div className="flex flex-col w-full h-auto justify-center items-end   ">
+              <div className=" flex flex-row w-full  leading-[0] justify-end items-center ">
+                <h2 className=" xxs:text-[60px] sm:text-[100px] font-mono font-bold text-purple-600 ml-8 order-2 z-40 mb-20 ">
+                  60%
+                </h2>
                 {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1 z-40'/> */}
               </div>
-              <h4 className=' text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40'>Boot Camp</h4>
-              <h4 className=' text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40'>Members of her will have access to individual one-on-one online therapy sessions, either in private discord channels on our server or by alternative means, to get the help they need and deserve from our trained professionals.</h4>
+              <h4 className=" text-white xxs:text-[30px] sm:text-[40px] font-custome leading-[1] z-40">
+                Boot Camp
+              </h4>
+              <h4 className=" text-white text-[18px] font-custome   leading-[1] mt-2 text-end z-40">
+                Members of her will have access to individual one-on-one online
+                therapy sessions, either in private discord channels on our
+                server or by alternative means, to get the help they need and
+                deserve from our trained professionals.
+              </h4>
             </div>
           </div>
         </div>
       </div>
       {/* <Roadmap4/> */}
     </div>
-  )
-}
+  );
+};
 
-export default Roadmap3
+export default Roadmap3;
