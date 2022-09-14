@@ -886,19 +886,19 @@ const Team = () => {
     });
   }, []);
   return (
-    <div className="  w-full  h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero ">
+    <div className="  w-full  min-h-screen h-auto relative flex flex-col   overflow-y-scroll overflow-x-hidden z-0 hero pb-20 ">
       <canvas
-        className=" w-full xxs:min-h-[110%] xl:min-h-[130%]  absolute z-30 opacity-60"
+        className=" w-full min-h-full    absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-col flex-wrap w-full h-auto  mt-16  container mx-auto justify-center items-center">
         <div className=" flex flex-col w-full h-auto justify-center items-center">
-          <h2 className=" uppercase text-white xxs:text-4xl text-center sm:text-6xl   font-custome z-40">
+          <h2 className=" uppercase text-purple-600  xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] text-center sm:text-6xl   font-custome z-40">
             Resilient Her TEAM
           </h2>
         </div>
-        <div className=" w-auto h-auto mt-16 grid  sm:grid-cols-2 md:grid-cols-3 gap-x-28  gap-y-1   justify-items-center justify-self-center">
+        <div className=" w-full z-30 h-auto mt-16 grid  sm:grid-cols-2 md:grid-cols-3 gap-x-28  gap-y-1   justify-items-center justify-self-center">
           <TeamMember
             className="z-40"
             name="Athena"
@@ -941,8 +941,8 @@ const Team = () => {
         <figure>
           <blockquote cite="">
             <p className="text-xl font-medium tracking-tighter italic text-center">
-              <strong className=" text-xl tracking-tighter">"</strong>Some women fear the fire
-              some women simply become it..."
+              <strong className=" text-xl tracking-tighter">"</strong>Some women
+              fear the fire, some women simply become it..."
             </p>
           </blockquote>
           <figcaption className="text-center">

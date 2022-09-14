@@ -886,15 +886,15 @@ const Faq = () => {
     });
   }, []);
   return (
-    <div className=" flex flex-col  w-full  h-screen relative  hero  z-0 hero overflow-y-scroll overflow-x-hidden ">
+    <div className=" flex flex-col  w-full  min-h-screen h-auto  relative  hero  z-0 hero overflow-y-scroll overflow-x-hidden pb-20 ">
       <canvas
-        className=" w-full xxs:min-h-[150%]  xs:min-h-[160%]    sm:min-h-[140%]  absolute z-30 opacity-60 "
+        className=" w-full  min-h-full  absolute z-30 opacity-60 "
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" w-full h-auto flex flex-col pt-16  mb-32">
         <div className=" flex flex-col w-full h-auto justify-center items-center">
-          <h2 className=" uppercase text-white xxs:text-4xl sm:text-6xl  font-custome z-40">
+          <h2 className=" uppercase text-purple-600 xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px]  font-custome z-40">
             FAQ
           </h2>
         </div>
@@ -922,11 +922,11 @@ const Faq = () => {
           />
           <FaqItem
             question="What are the Royalties?"
-            answer="We charge 3.5% royalties, and opensea charges another 2.5% commission on all sales, tallying 6% commission in total."
+            answer="We charge 5% royalties, and opensea charges another 2.5% commission on all sales, tallying 7.5% commission in total."
           />
           <FaqItem
             question="How many Resilient-Her’s are there ? "
-            answer="We will count and give you the final total. Once uploaded"
+            answer="9880"
           />
         </div>
       </div>

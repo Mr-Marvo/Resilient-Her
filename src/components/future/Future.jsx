@@ -886,29 +886,31 @@ const Future = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col   w-full   h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll   ">
+    <div className=" flex flex-col   w-full   h-auto min-h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll pb-20   ">
       <canvas
-        className=" w-full  xxs:min-h-[300%] xs:min-h-[380%]  sm:min-h-[300%] md:min-h-[250%] lg:min-h-[200%]  absolute z-30 opacity-60"
+        className=" w-full   min-h-full  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-4   ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
-          <h2 className=" xxs:text-[10px] xxs:tracking-tighter xs:text-[10px] sm:text-[30px] text-center  lg:text-[60px] sm:top-4  sm:tracking-tighter  mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
-            Women are resilient, brave, and strong
+          <h2 className="xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px]  text-center text-purple-600   sm:top-4    mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
+            The resilience has begun
           </h2>
           {/* <h2 className="xxs:text-[10px] xxs:top-4   xs:text-[15px] sm:text-xl sm:top-4 lg:text-xl mx-2   font-custome relative text-white z-40">
             “Women are resilient, brave, and strong.”
           </h2> */}
           <div className=" flex flex-col mx-4  w-full h-full  justify-center items-center mt-20">
             <p className=" xxs:text-sm xs:text-xl text-white   xxs:w-[300px] xs:w-[90%]  xxs:px-1 sm:w-[90%]  font-custome z-40 text-center">
-              <strong className=" text-3xl  underline">The Scars</strong>
+              <strong className=" text-3xl  underline text-purple-500">
+                The Scars
+              </strong>
               <br />
               <br />
               Women worldwide have been facing gender-based violence,
               discrimination, trafficking, and other social issues plaguing the
-              community. Every day women are being killed, abused, and exploited
-              and raped.
+              community. Every day women are being killed, abused, exploited and
+              raped.
               <br />
               <br />
               Regardless of how progressive a country is, women around the world
@@ -927,7 +929,7 @@ const Future = () => {
               discrimination against them daily.
             </p>
             <p className=" xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[90%] xxs:px-1 sm:w-[90%]   font-custome z-40 text-center mt-10">
-              <strong className=" text-3xl underline">
+              <strong className=" text-3xl underline text-purple-500">
                 Glimmer of hope . . .
               </strong>{' '}
               <br />
@@ -951,7 +953,7 @@ const Future = () => {
               hope…
             </p>
             <p className=" xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[90%]  xxs:px-1 sm:w-[90%]  font-custome z-40 text-center mt-10">
-              <strong className=" text-3xl underline">
+              <strong className=" text-3xl underline text-purple-500">
                 The Future is Female!
               </strong>{' '}
               <br /> <br />
@@ -975,7 +977,7 @@ const Future = () => {
               <br />
               <br />
               Heaven is what the world will become when abuse against women will
-              no
+              no longer exist.
               <br />
               <br />
               Enter Resilient-Her . . . Our purpose: To make this world a better
@@ -983,7 +985,10 @@ const Future = () => {
               globe!
               <br />
               <br />
-              <strong> The Future is Female!</strong>
+              <strong className="text-purple-500">
+                {' '}
+                The Future is Female!
+              </strong>
             </p>
           </div>
         </div>

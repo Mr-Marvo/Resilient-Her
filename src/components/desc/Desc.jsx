@@ -886,25 +886,25 @@ const Desc = () => {
     });
   }, []);
   return (
-    <div className=" flex flex-col   w-full   h-screen   relative hero  z-0   overflow-y-scroll   ">
+    <div className=" flex flex-col   w-full   min-h-screen h-auto    relative hero  z-0   overflow-y-scroll  pb-20  ">
       <canvas
-        className=" w-full  xxs:min-h-[110%] xs:min-h-[160%]    sm:min-h-[150%] md:min-h-[120%] absolute z-30 opacity-60"
+        className=" w-full  min-h-full absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-10 ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
-          <h2 className=" xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] mx-1 text-transparent  font-extrabold font-custome desc-title1  uppercase z-40">
+          <h2 className=" xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] mx-1 text-purple-600 text-transparent  font-extrabold font-custome desc-title1  uppercase z-40">
             About Us
           </h2>
-          <h2 className="xxs:text-xl xxs:top-0  xs:text-[35px] sm:text-4xl sm:top-1  lg:text-6xl mx-2  relative  font-custome text-white z-40 ">
+          <h2 className="xxs:text-xl xxs:top-0  xs:text-[35px] sm:text-4xl sm:top-1  lg:text-6xl mx-2  relative  font-custome text-purple-600 z-40 ">
             Resilient Her
           </h2>
           <div className=" flex flex-col mx-4  w-fit h-full  justify-center items-center mt-10">
             <p className=" xxs:text-base xs:text-xl text-white   xxs:w-[300px] xs:w-[350px] sm:w-[70%] font-custome  z-40 text-center">
-              We are a group of four strong independent activists with an
+              We are a group of six strong independent activists with an
               ambitious goal to improve the future for females around the world
-              through tackling every day problems that women face. We are
+              through tackling everyday problems that woman face. We are
               passionate and determined to make a difference by uniting,
               empowering, supporting and creating an environment in which
               females can feel safe and heard. We are positive that together as
@@ -926,12 +926,12 @@ const Desc = () => {
                   <blockquote cite="">
                     <p className="  font-medium  tracking-tighter text-center  italic text-xl">
                       <strong className=" text-xl tracking-tighter">"</strong>A
-                      really strong women accepts the war she went through and
+                      really strong woman accepts the war she went through and
                       is ennobled by her scars."
                     </p>
                   </blockquote>
                   <figcaption className="text-center">
-                    -CARY SIMON, <cite>MUSICAL ARTIST</cite>
+                    -Cleopatra - , <cite>51 BC</cite>
                   </figcaption>
                 </figure>
               </div>
