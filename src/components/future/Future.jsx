@@ -886,15 +886,15 @@ const Future = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col   w-full   h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll   ">
+    <div className=" flex flex-col   w-full   h-auto min-h-screen   relative hero  z-0 overflow-x-hidden   overflow-y-scroll pb-20   ">
       <canvas
-        className=" w-full  xxs:min-h-[420%] xs:min-h-[480%]  lg:min-h-[320%]  xl:min-h-[200%]   absolute z-30 opacity-60"
+        className=" w-full   min-h-full  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
       <Navbar />
       <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-4   ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
-          <h2 className=" xxs:text-[20px] xxs:tracking-tighter xs:text-[20px] sm:text-[30px] text-center text-purple-600  lg:text-[60px] sm:top-4  sm:tracking-tighter  mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
+          <h2 className="xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px]  text-center text-purple-600   sm:top-4    mx-1  mt-10 tracking-tighter text-transparent leading-[1]  xs:font-extrabold font-custome desc-title1 uppercase z-40">
             The resilience has begun
           </h2>
           {/* <h2 className="xxs:text-[10px] xxs:top-4   xs:text-[15px] sm:text-xl sm:top-4 lg:text-xl mx-2   font-custome relative text-white z-40">

@@ -894,7 +894,7 @@ const Roadmap2 = () => {
         <Navbar />
         <div className="flex flex-col  mx-auto w-full  h-auto  ">
           <div className=" flex flex-col w-full h-auto justify-center items-center mt-20 xxs:mb-0 sm:mb-20">
-            <h2 className=" uppercase text-purple-600 xxs:text-xl sm:text-4xl text-center md:text-6xl   font-custome z-40">
+            <h2 className=" uppercase text-purple-600  text-center xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px]   font-custome z-40">
               Resilient Her ROADMAP
             </h2>
           </div>
