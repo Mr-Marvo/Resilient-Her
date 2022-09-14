@@ -58,3 +58,9 @@
     width: 0%;
   }
 }
+@media screen and (max-width: 425px) {
+  .loader {
+    width: 200px;
+    height: 10px;
+  }
+}
