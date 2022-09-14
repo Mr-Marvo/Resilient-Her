@@ -1006,10 +1006,10 @@ const Mint = () => {
 
   return (
     <div
-      className={`w-full h-screen  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero`}
+      className={`w-full min-h-screen h-auto  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero pb-20   `}
     >
       <canvas
-        className=" w-full   min-h-[110%]  absolute z-30 opacity-60"
+        className=" w-full   min-h-full  absolute z-30 opacity-60"
         ref={ref}
       ></canvas>
 
@@ -1021,158 +1021,160 @@ const Mint = () => {
         }}
         className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold`}
       >
-        <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
-          <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
-            <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  z-40">
-              {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
-            </h2>
-          </div>
-          <div className="  h-auto flex flex-row    w-full justify-center items-center">
-            <div className=" flex flex-row  justify-around items-center  bg-neutral-700  min-w-[100px] w-auto py-1 rounded-full">
-              <div className=" w-[7px] h-[7px] mint-status mr-3 rounded-full bg-blue-700"></div>
-              <span className=" text-white">
-                {wallet?.accounts[0].address
-                  ? wallet?.accounts[0].address.slice(0, 8) +
-                    '...' +
-                    wallet?.accounts[0]?.address.slice(-4)
-                  : ''}
-              </span>
+        <div className="w-full h-screen flex flex-col justify-center items-center  ">
+          <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
+            <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
+              <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  z-40">
+                {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
+              </h2>
             </div>
-          </div>
-
-          <div className=" w-full h-auto flex flex-row text-white justify-between">
-            <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
-            <strong className="xxs:text-sm sm:text-xl z-40">
-              {totalMinted}/{maxSupply}
-            </strong>
-          </div>
-          <div className=" w-full h-auto flex flex-row text-white mt-10 justify-between">
-            <h3 className="xxs:text-sm sm:text-xl z-40">Price</h3>
-            <strong className="xxs:text-sm sm:text-xl z-40">0.1ETH</strong>
-          </div>
-
-          <div className=" w-full h-auto flex flex-row text-white justify-between mt-10 items-center">
-            <h3 className=" xxs:text-sm sm:text-xl  z-40"> Quantity</h3>
-            <div className=" w-full h-auto flex flex-row text-white  sm:px-10 xxs:justify-around items-center z-40">
-              <div className=" sm:mr-4 xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
-                <BiMinus
-                  onClick={() => {
-                    if (mintAmount > 1) {
-                      setMintAmount(mintAmount - 1);
-                    }
-                  }}
-                />
-              </div>
-              <span className=" border-[1px] px-4 py-4 justify-center items-center flex font-custome font-bold  w-[60px] border-none outline-none text-white">
-                {mintAmount}
-              </span>
-              <div className=" sm:ml-4 xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
-                <AiOutlinePlus
-                  onClick={() => {
-                    if (mintAmount < maxMintAmount) {
-                      setMintAmount(mintAmount + 1);
-                    }
-                  }}
-                />
+            <div className="  h-auto flex flex-row    w-full justify-center items-center">
+              <div className=" flex flex-row  justify-around items-center  bg-neutral-700  min-w-[100px] w-auto py-1 rounded-full">
+                <div className=" w-[7px] h-[7px] mint-status mr-3 rounded-full bg-blue-700"></div>
+                <span className=" text-white">
+                  {wallet?.accounts[0].address
+                    ? wallet?.accounts[0].address.slice(0, 8) +
+                      '...' +
+                      wallet?.accounts[0]?.address.slice(-4)
+                    : ''}
+                </span>
               </div>
             </div>
-            <strong className="xxs:text-sm sm:text-xl z-40   sm:w-[200px]">
-              <div className=" flex flex-col  w-full justify-start items-end">
-                <span>
-                  {Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}
-                </span>{' '}
-                <span className=" text-sm">ETH + GAS</span>
-              </div>
-            </strong>
-          </div>
 
-          <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center ">
-            {wallet ? (
-              <button
-                className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4  mint-btn border-[1px] border-transparent"
-                onClick={isPreSale ? presaleMintHandler : publicMintHandler}
-                disabled={paused || isMinting}
+            <div className=" w-full h-auto flex flex-row text-white justify-between">
+              <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
+              <strong className="xxs:text-sm sm:text-xl z-40">
+                {totalMinted}/{maxSupply}
+              </strong>
+            </div>
+            <div className=" w-full h-auto flex flex-row text-white mt-10 justify-between">
+              <h3 className="xxs:text-sm sm:text-xl z-40">Price</h3>
+              <strong className="xxs:text-sm sm:text-xl z-40">0.1ETH</strong>
+            </div>
+
+            <div className=" w-full h-auto flex flex-row text-white justify-between mt-10 items-center">
+              <h3 className=" xxs:text-sm sm:text-xl  z-40"> Quantity</h3>
+              <div className=" w-full h-auto flex flex-row text-white  sm:px-10 xxs:justify-around items-center z-40">
+                <div className=" sm:mr-4 xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
+                  <BiMinus
+                    onClick={() => {
+                      if (mintAmount > 1) {
+                        setMintAmount(mintAmount - 1);
+                      }
+                    }}
+                  />
+                </div>
+                <span className=" border-[1px] px-4 py-4 justify-center items-center flex font-custome font-bold  w-[60px] border-none outline-none text-white">
+                  {mintAmount}
+                </span>
+                <div className=" sm:ml-4 xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
+                  <AiOutlinePlus
+                    onClick={() => {
+                      if (mintAmount < maxMintAmount) {
+                        setMintAmount(mintAmount + 1);
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+              <strong className="xxs:text-sm sm:text-xl z-40   sm:w-[200px]">
+                <div className=" flex flex-col  w-full justify-start items-end">
+                  <span>
+                    {Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}
+                  </span>{' '}
+                  <span className=" text-sm">ETH + GAS</span>
+                </div>
+              </strong>
+            </div>
+
+            <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center ">
+              {wallet ? (
+                <button
+                  className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4  mint-btn border-[1px] border-transparent"
+                  onClick={isPreSale ? presaleMintHandler : publicMintHandler}
+                  disabled={paused || isMinting}
+                >
+                  {connecting
+                    ? 'Connecting...'
+                    : isMinting
+                    ? 'Minting...'
+                    : 'Mint Now'}
+                </button>
+              ) : (
+                <button
+                  className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent"
+                  onClick={() => connect()}
+                >
+                  Wallet Connect
+                </button>
+              )}
+            </div>
+          </div>
+          <div className=" w-full h-auto flex flex-col text-white justify-center items-center mt-3 ">
+            <a
+              href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`}
+              target="_blank"
+              className="xxs:text-sm sm:text-sm z-50 order-2"
+            >
+              View Contract on Etherscan
+            </a>
+
+            {status && (
+              <div
+                className={`border order-1 ${
+                  status.success ? 'border-green-500' : 'border-brand-pink-400 '
+                } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
               >
-                {connecting
-                  ? 'Connecting...'
-                  : isMinting
-                  ? 'Minting...'
-                  : 'Mint Now'}
-              </button>
-            ) : (
-              <button
-                className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent"
-                onClick={() => connect()}
-              >
-                Wallet Connect
-              </button>
+                <p className=" text-white text-sm md:text-base break-words ...">
+                  {status.message}
+                </p>
+              </div>
             )}
           </div>
         </div>
-        <div className=" w-full h-auto flex flex-col text-white justify-center items-center mt-3 ">
-          <a
-            href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`}
-            target="_blank"
-            className="xxs:text-sm sm:text-sm z-40 order-2"
-          >
-            View Contract on Etherscan
-          </a>
 
-          {status && (
-            <div
-              className={`border order-1 ${
-                status.success ? 'border-green-500' : 'border-brand-pink-400 '
-              } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
-            >
-              <p className=" text-white text-sm md:text-base break-words ...">
-                {status.message}
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="  flex flex-col container mx-auto  z-40  absolute bottom-0 mb-32 right-0   w-full h-auto  justify-items-end items-end px-4 py-20">
-        <div
-          className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xl:mr-28 right-7 z-40 
+        <div className="  flex flex-col container mx-auto  z-40  absolute bottom-0 mb-32 right-0   w-full h-auto  justify-items-end items-end px-4 py-20">
+          <div
+            className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xl:mr-28 right-7 z-40 
             ${
               expand ? 'flex' : 'hidden'
             } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg`}
-        >
-          <div className="flex flex-row justify-center items-center">
-            <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
-              1
+          >
+            <div className="flex flex-row justify-center items-center">
+              <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
+                1
+              </div>
+              <h4 className=" xxs:text-sm sm:text-xl font-custome font-bold ml-4">
+                Connect Etherium Wallet
+              </h4>
             </div>
-            <h4 className=" xxs:text-sm sm:text-xl font-custome font-bold ml-4">
-              Connect Etherium Wallet
-            </h4>
-          </div>
 
-          <div className="flex flex-row justify-center items-center pt-4">
-            <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
-              2
+            <div className="flex flex-row justify-center items-center pt-4">
+              <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
+                2
+              </div>
+              <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
+                Select Mint Amount
+              </h4>
             </div>
-            <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
-              Select Mint Amount
-            </h4>
-          </div>
 
-          <div className="flex flex-row justify-center items-center pt-4">
-            <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
-              3
+            <div className="flex flex-row justify-center items-center pt-4">
+              <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
+                3
+              </div>
+              <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
+                Click Mint Button
+              </h4>
             </div>
-            <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
-              Click Mint Button
-            </h4>
-          </div>
 
-          <div className="flex flex-row justify-center items-center pt-4">
-            <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
-              4
+            <div className="flex flex-row justify-center items-center pt-4">
+              <div className=" xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
+                4
+              </div>
+              <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
+                Mint NFT
+              </h4>
             </div>
-            <h4 className="  xxs:text-sm sm:text-xl font-custome font-bold ml-4">
-              Mint NFT
-            </h4>
           </div>
         </div>
       </div>
