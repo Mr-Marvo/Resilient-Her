@@ -11,6 +11,7 @@ import Policy from './components/tearm&Condition/Policy';
 import NFTLicence from './components/tearm&Condition/NFTLicence';
 import Mint from './components/mint/Mint';
 import { useEffect, useState } from 'react';
+import video from './assets/loader.mp4';
 
 function App() {
   const [spiner, setSpiner] = useState(true);
@@ -24,10 +25,15 @@ function App() {
     <div>
       {spiner ? (
         <div className=" w-full  h-screen bg-black relative flex flex-col justify-center items-center">
-          <video loop muted width={'200px'} height={'300px'}>
-            <source src="../../assets/loader.mp4" type="video/mp4"></source>
+          <video
+            autoPlay
+            loop
+            muted
+            className=" w-[200px] h-[200px] object-cover "
+          >
+            <source src={video} type="video/mp4" />
           </video>
-          <div class="lds-ring">
+          <div className="lds-ring">
             <div></div>
             <div></div>
             <div></div>
