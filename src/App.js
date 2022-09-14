@@ -29,15 +29,12 @@ function App() {
             autoPlay
             loop
             muted
-            className=" w-[200px] h-[200px] object-cover "
+            className=" w-[500px] h-[500px] object-cover "
           >
             <source src={video} type="video/mp4" />
           </video>
-          <div className="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+          <div className="loader ">
+            <div className="loaderBar"></div>
           </div>
         </div>
       ) : (
