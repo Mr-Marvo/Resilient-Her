@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setSpiner(false);
-    }, 2000);
+    }, 2300);
   }, []);
   return (
     <div>
