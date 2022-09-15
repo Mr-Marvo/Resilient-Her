@@ -929,7 +929,7 @@ const Future = () => {
               discrimination against them daily.
             </p>
             <p className=" xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[90%] xxs:px-1 sm:w-[90%]   font-custome z-40 text-center mt-10">
-              <strong className=" text-3xl underline text-purple-500">
+              <strong className=" text-2xl underline text-purple-500">
                 Glimmer of hope . . .
               </strong>{' '}
               <br />
