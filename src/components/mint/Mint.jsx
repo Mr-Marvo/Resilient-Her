@@ -1019,7 +1019,7 @@ const Mint = () => {
         onClick={() => {
           setExpand(false);
         }}
-        className={`w-fit h-[110vh] flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
+        className={`w-fit h-screen flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
       >
         <div className="w-fit h-full flex flex-col justify-center items-center   ">
           <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto    sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
@@ -1087,7 +1087,7 @@ const Mint = () => {
               </strong>
             </div>
 
-            <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center ">
+            <div className=" w-full  mt-10 h-auto flex flex-row text-white justify-center items-center  relative z-10 ">
               {wallet ? (
                 <button
                   className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4  mint-btn border-[1px] border-transparent"
@@ -1102,9 +1102,7 @@ const Mint = () => {
                 </button>
               ) : (
                 <button
-                  className={` ${
-                    wallet ? 'z-0' : 'z-50'
-                  }  relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent`}
+                  className={` relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent`}
                   onClick={() => connect()}
                 >
                   Wallet Connect
@@ -1135,14 +1133,14 @@ const Mint = () => {
           </div>
         </div>
 
-        <div className="  flex flex-col container mx-auto  z-40  absolute    w-full h-full  justify-end pb-20 items-end ">
+        <div className="  flex flex-col container mx-auto  z-40  absolute     w-full h-auto  justify-end pb-20 items-end ">
           <div
-            className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute z-40 
+            className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10   absolute z-40 
             ${
               expand ? 'flex' : 'hidden'
-            } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg`}
+            } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg `}
           >
-            <div className="flex flex-row justify-center items-center">
+            <div className="flex flex-row justify-center items-center ">
               <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
                 1
               </div>
