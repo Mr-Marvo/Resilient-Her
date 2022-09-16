@@ -29,6 +29,7 @@ function App() {
             autoPlay
             loop
             muted
+            playsInline
             className=" w-[500px] h-[500px] object-cover "
           >
             <source src={video} type="video/mp4" />
