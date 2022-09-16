@@ -27,8 +27,21 @@
     -->
     <title>Resilient Her</title>
   </head>
-  <body>
+  <body style="background-color: black">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="loader" class="w-full h-screen bg-black relative flex flex-col justify-center items-center">
+      <video
+        autoPlay
+        loop
+        muted
+        class="w-[500px] h-[500px] object-cover"
+      >
+        <source src="/loader.mp4" type="video/mp4" />
+      </video>
+      <div class="loader ">
+        <div class="loaderBar"></div>
+      </div>
+    </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.

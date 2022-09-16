@@ -45,9 +45,9 @@ const initOnboard = init({
         // }
     ],
     appMetadata: {
-        name: 'Re-Silent Her',
+        name: 'Resilient Her',
         icon: Icon,
-        description: 'Re-Silent Her',
+        description: 'Resilient Her',
         recommendedInjectedWallets: [
             { name: 'MetaMask', url: 'https://metamask.io' },
             { name: 'Coinbase', url: 'https://wallet.coinbase.com/' }

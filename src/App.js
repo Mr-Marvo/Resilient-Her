@@ -11,16 +11,22 @@ import Policy from './components/tearm&Condition/Policy';
 import NFTLicence from './components/tearm&Condition/NFTLicence';
 import Mint from './components/mint/Mint';
 import { useEffect, useState } from 'react';
-import video from './assets/loader.mp4';
+// import video from './assets/loader.mp4';
 
 function App() {
   const [spiner, setSpiner] = useState(true);
 
+  const loaderObject = document.querySelector('#loader')
+
+   const hideLoader = () => loaderObject.classList.add('hidden')
+
   useEffect(() => {
     setTimeout(() => {
-      setSpiner(false);
-    }, 10000);
+    //   // setSpiner(false);
+    hideLoader()
+    }, 3000);
   }, []);
+
   return (
     <div>
       {spiner ? (
@@ -38,21 +44,20 @@ function App() {
             <div className="loaderBar"></div>
           </div>
         </div>
-      ) : (
-        <Routes>
-          <Route exact path="/" element={<Hero />} />
-          <Route exact path="/about" element={<Desc />} />
-          <Route exact path="/aboutNFT" element={<AboutNFT />} />
-          <Route exact path="/future" element={<Future />} />
-          <Route exact path="/roadmap" element={<Roadmap />} />
-          <Route exact path="/mint" element={<Mint />} />
-          <Route exact path="/faq" element={<Faq />} />
-          <Route exact path="/team" element={<Team />} />
-          <Route exact path="/policy" element={<Policy />} />
-          <Route exact path="/term" element={<Tearm />} />
-          <Route exact path="/nft" element={<NFTLicence />} />
-        </Routes>
-      )}
+      </div> */}
+      <Routes className={ (spiner ?'hidden':'')} >
+        <Route exact path="/" element={<Hero />} />
+        <Route exact path="/about" element={<Desc />} />
+        <Route exact path="/aboutNFT" element={<AboutNFT />} />
+        <Route exact path="/future" element={<Future />} />
+        <Route exact path="/roadmap" element={<Roadmap />} />
+        <Route exact path="/mint" element={<Mint />} />
+        <Route exact path="/faq" element={<Faq />} />
+        <Route exact path="/team" element={<Team />} />
+        <Route exact path="/policy" element={<Policy />} />
+        <Route exact path="/term" element={<Tearm />} />
+        <Route exact path="/nft" element={<NFTLicence />} />
+      </Routes>
     </div>
   );
 }
