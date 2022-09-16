@@ -44,20 +44,21 @@ function App() {
             <div className="loaderBar"></div>
           </div>
         </div>
-      </div> */}
-      <Routes className={ (spiner ?'hidden':'')} >
-        <Route exact path="/" element={<Hero />} />
-        <Route exact path="/about" element={<Desc />} />
-        <Route exact path="/aboutNFT" element={<AboutNFT />} />
-        <Route exact path="/future" element={<Future />} />
-        <Route exact path="/roadmap" element={<Roadmap />} />
-        <Route exact path="/mint" element={<Mint />} />
-        <Route exact path="/faq" element={<Faq />} />
-        <Route exact path="/team" element={<Team />} />
-        <Route exact path="/policy" element={<Policy />} />
-        <Route exact path="/term" element={<Tearm />} />
-        <Route exact path="/nft" element={<NFTLicence />} />
-      </Routes>
+      ) : (
+        <Routes>
+          <Route exact path="/" element={<Hero />} />
+          <Route exact path="/about" element={<Desc />} />
+          <Route exact path="/aboutNFT" element={<AboutNFT />} />
+          <Route exact path="/future" element={<Future />} />
+          <Route exact path="/roadmap" element={<Roadmap />} />
+          <Route exact path="/mint" element={<Mint />} />
+          <Route exact path="/faq" element={<Faq />} />
+          <Route exact path="/team" element={<Team />} />
+          <Route exact path="/policy" element={<Policy />} />
+          <Route exact path="/term" element={<Tearm />} />
+          <Route exact path="/nft" element={<NFTLicence />} />
+        </Routes>
+      )}
     </div>
   );
 }
