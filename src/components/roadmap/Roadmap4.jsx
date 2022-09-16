@@ -941,7 +941,7 @@ const Roadmap4 = () => {
         <div className=" flex flex-row xxs:w-full sm:w-[48%] h-auto order-1 border-t-[2px] border-r-[2px]  pr-10 pt-20">
           <div className="flex flex-col w-full h-auto justify-center items-end   ">
             <div className=" flex flex-row w-full  leading-[0] justify-end items-center">
-              <h2 className=" xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-purple-600 ml-8 order-2 mb-20 ">
+              <h2 className=" xxs:text-[60px] sm:text-[100px] font-mono font-bold  text-purple-600 ml-8 order-2 mb-20  z-40">
                 100%
               </h2>
               {/* <img src={require("../../assets/images/tik.png")} alt='tik' className='xxs:h-[60px] sm:w-[100px] xs:h-[100px] order-1'/> */}
