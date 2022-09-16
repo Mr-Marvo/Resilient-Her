@@ -25,15 +25,20 @@ function App() {
     <div>
       {spiner ? (
         <div className=" w-full  h-screen bg-black relative flex flex-col justify-center items-center">
-          <video
+          {/* <video
             autoPlay
             loop
             muted
-            playsInline
+            webkit-playsinline={false}
             className=" w-[500px] h-[500px] object-cover "
           >
             <source src={video} type="video/mp4" />
-          </video>
+          </video> */}
+          <img
+            src={require('./assets/loader.gif')}
+            className="w-[500px] h-[500px]"
+            alt="vi"
+          />
           <div className="loader ">
             <div className="loaderBar"></div>
           </div>
