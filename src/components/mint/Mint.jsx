@@ -1006,7 +1006,7 @@ const Mint = () => {
 
   return (
     <div
-      className={`w-full min-h-screen h-auto  overflow-y-scroll overflow-x-hidden relative z-0 flex flex-col hero pb-20   `}
+      className={`w-full min-h-screen h-auto  overflow-y-scroll overflow-x-hidden relative  flex flex-col hero pb-20   `}
     >
       <canvas
         className=" w-full   min-h-full  absolute z-30 opacity-60"
@@ -1019,19 +1019,19 @@ const Mint = () => {
         onClick={() => {
           setExpand(false);
         }}
-        className={`w-full h-full flex flex-col container mx-auto justify-center items-center font-custome font-bold`}
+        className={`w-fit xxs:h-screen sm:h-auto sm:top-44 flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative z-40  `}
       >
-        <div className="w-full h-screen flex flex-col justify-center items-center  ">
-          <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto  sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
+        <div className="w-fit h-fit flex flex-col justify-center items-center   ">
+          <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto    sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
             <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
-              <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  z-40">
+              <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  ">
                 {paused ? 'Paused' : isPreSale ? 'Pre-Sale' : 'Public Sale'}
               </h2>
             </div>
-            <div className="  h-auto flex flex-row    w-full justify-center items-center">
+            <div className="  h-auto flex flex-row    w-full justify-center items-center ">
               <div className=" flex flex-row  justify-around items-center  bg-neutral-700  min-w-[100px] w-auto py-1 rounded-full">
                 <div className=" w-[7px] h-[7px] mint-status mr-3 rounded-full bg-blue-700"></div>
-                <span className=" text-white">
+                <span className=" text-white z-40">
                   {wallet?.accounts[0].address
                     ? wallet?.accounts[0].address.slice(0, 8) +
                       '...' +
@@ -1043,7 +1043,7 @@ const Mint = () => {
 
             <div className=" w-full h-auto flex flex-row text-white justify-between">
               <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
-              <strong className="xxs:text-sm sm:text-xl z-40">
+              <strong className="xxs:text-sm sm:text-xl">
                 {totalMinted}/{maxSupply}
               </strong>
             </div>
@@ -1077,7 +1077,7 @@ const Mint = () => {
                   />
                 </div>
               </div>
-              <strong className="xxs:text-sm sm:text-xl z-40   sm:w-[200px]">
+              <strong className="xxs:text-sm sm:text-xl    sm:w-[200px]">
                 <div className=" flex flex-col  w-full justify-start items-end">
                   <span>
                     {Number.parseFloat(config.price * mintAmount).toFixed(2)}{' '}
@@ -1114,7 +1114,7 @@ const Mint = () => {
             <a
               href={`https://rinkeby.etherscan.io/address/${config.contractAddress}`}
               target="_blank"
-              className="xxs:text-sm sm:text-sm z-50 order-2"
+              className="xxs:text-sm sm:text-sm  relative z-50 order-2"
             >
               View Contract on Etherscan
             </a>
@@ -1133,9 +1133,9 @@ const Mint = () => {
           </div>
         </div>
 
-        <div className="  flex flex-col container mx-auto  z-40  absolute bottom-0 mb-32 right-0   w-full h-auto  justify-items-end items-end px-4 py-20">
+        <div className="  flex flex-col container mx-auto  z-40  absolute    w-full h-full  justify-end pb-20 items-end ">
           <div
-            className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute xxs:top-32 sm:-top-[20px] xl:mr-28 right-7 z-40 
+            className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10  absolute z-40 
             ${
               expand ? 'flex' : 'hidden'
             } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg`}
