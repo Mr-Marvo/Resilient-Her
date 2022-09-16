@@ -24,7 +24,7 @@ function App() {
     setTimeout(() => {
     //   // setSpiner(false);
     hideLoader()
-    }, 2000);
+    }, 3000);
   }, []);
 
   return (
