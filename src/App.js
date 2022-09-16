@@ -29,17 +29,20 @@ function App() {
 
   return (
     <div>
-      {/* <div className={ (spiner ?'':'hidden') + ' w-full  h-screen bg-black relative flex flex-col justify-center items-center'}>
-        <video
-          autoPlay
-          loop
-          muted
-          className=" w-[500px] h-[500px] object-cover "
-        >
-          <source src={video} type="video/mp4" />
-        </video>
-        <div className="loader ">
-          <div className="loaderBar"></div>
+      {spiner ? (
+        <div className=" w-full  h-screen bg-black relative flex flex-col justify-center items-center">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className=" w-[500px] h-[500px] object-cover "
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+          <div className="loader ">
+            <div className="loaderBar"></div>
+          </div>
         </div>
       </div> */}
       <Routes className={ (spiner ?'hidden':'')} >
