@@ -1009,7 +1009,7 @@ const Mint = () => {
       className={`w-full min-h-screen h-auto  overflow-y-scroll overflow-x-hidden relative  flex flex-col hero pb-20   `}
     >
       <canvas
-        className=" w-full   min-h-full  absolute z-30 opacity-60"
+        className=" w-full   min-h-full  absolute z-0 opacity-60"
         ref={ref}
       ></canvas>
 
@@ -1019,9 +1019,9 @@ const Mint = () => {
         onClick={() => {
           setExpand(false);
         }}
-        className={`w-fit xxs:h-screen sm:h-auto sm:top-44 flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative z-40  `}
+        className={`w-fit h-[110vh] flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
       >
-        <div className="w-fit h-fit flex flex-col justify-center items-center   ">
+        <div className="w-fit h-full flex flex-col justify-center items-center   ">
           <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto    sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
             <div className=" w-full h-auto flex flex-row text-white justify-center items-center">
               <h2 className="xxs:text-sm font-bold bg-clip-text mt-2 tracking-widest text-transparent bg-gradient-to-l from-amber-400 via-white  to-white sm:text-2xl mb-4  ">
@@ -1042,19 +1042,19 @@ const Mint = () => {
             </div>
 
             <div className=" w-full h-auto flex flex-row text-white justify-between">
-              <h3 className="xxs:text-sm sm:text-xl z-40">Remaining</h3>
+              <h3 className="xxs:text-sm sm:text-xl ">Remaining</h3>
               <strong className="xxs:text-sm sm:text-xl">
                 {totalMinted}/{maxSupply}
               </strong>
             </div>
             <div className=" w-full h-auto flex flex-row text-white mt-10 justify-between">
-              <h3 className="xxs:text-sm sm:text-xl z-40">Price</h3>
-              <strong className="xxs:text-sm sm:text-xl z-40">0.1ETH</strong>
+              <h3 className="xxs:text-sm sm:text-xl ">Price</h3>
+              <strong className="xxs:text-sm sm:text-xl ">0.1ETH</strong>
             </div>
 
             <div className=" w-full h-auto flex flex-row text-white justify-between mt-10 items-center">
-              <h3 className=" xxs:text-sm sm:text-xl  z-40"> Quantity</h3>
-              <div className=" w-full h-auto flex flex-row text-white  sm:px-10 xxs:justify-around items-center z-40">
+              <h3 className=" xxs:text-sm sm:text-xl  "> Quantity</h3>
+              <div className=" w-full h-auto flex flex-row text-white  sm:px-10 xxs:justify-around items-center ">
                 <div className=" sm:mr-4 xxs:w-[20px] xxs:h-[20px] minus border-[1px] border-transparent xs:w-[40px] xs:h-[40px]  font-bold cursor-pointer rounded-full bg-red-500 flex justify-center items-center">
                   <BiMinus
                     onClick={() => {
@@ -1064,7 +1064,7 @@ const Mint = () => {
                     }}
                   />
                 </div>
-                <span className=" border-[1px] px-4 py-4 justify-center items-center flex font-custome font-bold  w-[60px] border-none outline-none text-white">
+                <span className=" border-[1px] px-4 py-4 justify-center items-center flex font-custome font-bold   w-[60px] border-none outline-none text-white">
                   {mintAmount}
                 </span>
                 <div className=" sm:ml-4 xxs:w-[20px] xxs:h-[20px] plus border-[1px] border-transparent xs:w-[40px] xs:h-[40px] font-bold cursor-pointer rounded-full  bg-sky-600 flex justify-center items-center">
@@ -1102,7 +1102,9 @@ const Mint = () => {
                 </button>
               ) : (
                 <button
-                  className="z-50 relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent"
+                  className={` ${
+                    wallet ? 'z-0' : 'z-50'
+                  }  relative  uppercase bg-neutral-700 xxs:text-sm sm:text-xl cursor-pointer p-4 mint-btn border-[1px] border-transparent`}
                   onClick={() => connect()}
                 >
                   Wallet Connect
