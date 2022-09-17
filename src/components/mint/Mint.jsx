@@ -1019,7 +1019,7 @@ const Mint = () => {
         onClick={() => {
           setExpand(false);
         }}
-        className={`w-fit h-screen flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
+        className={`w-fit  h-full pt-28 flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
       >
         <div className="w-fit h-full flex flex-col justify-center items-center   ">
           <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto    sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
@@ -1133,7 +1133,7 @@ const Mint = () => {
           </div>
         </div>
 
-        <div className="  flex flex-col container mx-auto  z-40  absolute     w-full h-auto  justify-end pb-20 items-end ">
+        <div className="  flex flex-col container mx-auto  z-40  absolute  mt-40    w-full h-auto  justify-end pb-20 items-end ">
           <div
             className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10   absolute z-40 
             ${
