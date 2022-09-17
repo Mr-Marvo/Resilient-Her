@@ -17,7 +17,7 @@ const Navbar = () => {
           <img
             src={require('../../assets/images/logo-1.png')}
             alt="logo"
-            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40 object-contain"
+            className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40"
           />
         </div>
         <div

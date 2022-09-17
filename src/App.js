@@ -16,14 +16,20 @@ import video from './assets/loader.mp4';
 function App() {
   const [spiner, setSpiner] = useState(true);
 
+  const loaderObject = document.querySelector('#loader')
+
+   const hideLoader = () => loaderObject.classList.add('hidden')
+
   useEffect(() => {
     setTimeout(() => {
-      setSpiner(false);
-    }, 10000);
+    //   // setSpiner(false);
+    hideLoader()
+    }, 6000);
   }, []);
+
   return (
     <div>
-      {spiner ? (
+      {/* {spiner ? (
         <div className=" w-full  h-screen bg-black relative flex flex-col justify-center items-center">
           {/* <video
             autoPlay
@@ -43,7 +49,7 @@ function App() {
             <div className="loaderBar"></div>
           </div>
         </div>
-      ) : (
+      ) : ( */}
         <Routes>
           <Route exact path="/" element={<Hero />} />
           <Route exact path="/about" element={<Desc />} />
@@ -57,7 +63,6 @@ function App() {
           <Route exact path="/term" element={<Tearm />} />
           <Route exact path="/nft" element={<NFTLicence />} />
         </Routes>
-      )}
     </div>
   );
 }
