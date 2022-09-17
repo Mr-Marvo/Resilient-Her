@@ -1131,8 +1131,8 @@ const Mint = () => {
             )}
           </div>
         </div>
-
         <div className="flex flex-col container mx-auto z-40 absolute mt-40 w-full h-auto justify-end pb-20 items-end">
+
           <div
             className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10   absolute z-40 
             ${expand ? 'flex' : 'hidden'
