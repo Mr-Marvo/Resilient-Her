@@ -1019,7 +1019,7 @@ const Mint = () => {
         onClick={() => {
           setExpand(false);
         }}
-        className={`w-fit h-screen flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
+        className={`w-fit h-full pt-28 flex flex-col container mx-auto justify-center  items-center font-custome font-bold   relative  `}
       >
         <div className="w-fit h-full flex flex-col justify-center items-center   ">
           <div className="xxs:p-3 xxs:w-[300px] xxs:h-auto xs:w-[350px] xs:h-auto    sm:w-[500px] sm:h-fit flex flex-col  bg-dark_1  rounded-xl   px-4 justify-center items-center mint">
@@ -1034,8 +1034,8 @@ const Mint = () => {
                 <span className=" text-white z-40">
                   {wallet?.accounts[0].address
                     ? wallet?.accounts[0].address.slice(0, 8) +
-                      '...' +
-                      wallet?.accounts[0]?.address.slice(-4)
+                    '...' +
+                    wallet?.accounts[0]?.address.slice(-4)
                     : ''}
                 </span>
               </div>
@@ -1097,8 +1097,8 @@ const Mint = () => {
                   {connecting
                     ? 'Connecting...'
                     : isMinting
-                    ? 'Minting...'
-                    : 'Mint Now'}
+                      ? 'Minting...'
+                      : 'Mint Now'}
                 </button>
               ) : (
                 <button
@@ -1121,9 +1121,8 @@ const Mint = () => {
 
             {status && (
               <div
-                className={`border order-1 ${
-                  status.success ? 'border-green-500' : 'border-brand-pink-400 '
-                } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
+                className={`border order-1 ${status.success ? 'border-green-500' : 'border-brand-pink-400 '
+                  } rounded-md text-start h-full mx-auto mt-8 md:mt-4"`}
               >
                 <p className=" text-white text-sm md:text-base break-words ...">
                   {status.message}
@@ -1133,12 +1132,11 @@ const Mint = () => {
           </div>
         </div>
 
-        <div className="  flex flex-col container mx-auto  z-40  absolute     w-full h-auto  justify-end pb-20 items-end ">
+        <div className="flex flex-col container mx-auto z-40 absolute mt-40 w-full h-auto justify-end pb-20 items-end">
           <div
             className={`text-white xxs:px-2 xs:px-10 xxs:py-4 sm:py-10   absolute z-40 
-            ${
-              expand ? 'flex' : 'hidden'
-            } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg `}
+            ${expand ? 'flex' : 'hidden'
+              } flex-col justify-center items-start xxs:bg-gray-800 sm:bg-gray-800 lg:step-bg `}
           >
             <div className="flex flex-row justify-center items-center ">
               <div className="xxs:w-[20px] xxs:h-[20px] sm:w-[50px] sm:h-[50px] xxs:text-base sm:text-2xl bg-white text-black justify-center items-center flex flex-col  font-custome font-bold rounded-full">
