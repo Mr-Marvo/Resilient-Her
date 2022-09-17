@@ -11,7 +11,7 @@ import Policy from './components/tearm&Condition/Policy';
 import NFTLicence from './components/tearm&Condition/NFTLicence';
 import Mint from './components/mint/Mint';
 import { useEffect, useState } from 'react';
-// import video from './assets/loader.mp4';
+import video from './assets/loader.mp4';
 
 function App() {
   const [spiner, setSpiner] = useState(true);
@@ -24,12 +24,12 @@ function App() {
     setTimeout(() => {
     //   // setSpiner(false);
     hideLoader()
-    }, 3000);
+    }, 6000);
   }, []);
 
   return (
     <div>
-      {spiner ? (
+      {/* {spiner ? (
         <div className=" w-full  h-screen bg-black relative flex flex-col justify-center items-center">
           <video
             autoPlay
@@ -44,7 +44,7 @@ function App() {
             <div className="loaderBar"></div>
           </div>
         </div>
-      ) : (
+      ) : ( */}
         <Routes>
           <Route exact path="/" element={<Hero />} />
           <Route exact path="/about" element={<Desc />} />
@@ -58,7 +58,6 @@ function App() {
           <Route exact path="/term" element={<Tearm />} />
           <Route exact path="/nft" element={<NFTLicence />} />
         </Routes>
-      )}
     </div>
   );
 }
