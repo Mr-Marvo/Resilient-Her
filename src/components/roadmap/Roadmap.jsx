@@ -895,7 +895,7 @@ const Roadmap = () => {
     <>  
     <div ref={scrollArea} className=' flex flex-col relative h-[100vh]  overflow-x-hidden  rd-bg'>
         <canvas
-          className=" w-[100vh] h-[100vh] z-30 opacity-60 fixed top-0 select-none pointer-events-none "
+          className=" w-[100vw] h-[100vh] z-30 opacity-60 fixed top-0 select-none pointer-events-none "
           ref={ref}
         ></canvas>
         <div className='flex flex-col   mx-auto w-full  h-auto  '>
