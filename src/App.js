@@ -18,7 +18,7 @@ function App() {
 
   const loaderObject = document.querySelector('#loader')
 
-   const hideLoader = () => loaderObject.classList.add('hidden')
+   const hideLoader = () => loaderObject.style.display = 'none'
 
   useEffect(() => {
     setTimeout(() => {
