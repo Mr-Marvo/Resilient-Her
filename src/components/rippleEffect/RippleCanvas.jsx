@@ -883,8 +883,8 @@ const RippleCanvas = ({ children }) => {
     }, []);
 
     return (
-        <div className=' flex flex-col relative h-[100vh]  overflow-x-hidden  rd-bg'>
-            <canvas className=" w-[100vw] h-[100vh] z-30 opacity-60 fixed top-0 select-none pointer-events-none " ref={ref} />
+        <div className='min-h-full min-w-full absolute overflow-x-hidden rd-bg pb-20'>
+            <canvas className=" w-[100vw] h-[100vh] z-0 opacity-60 fixed top-0 select-none pointer-events-none " ref={ref} />
             {children}
         </div>
     )

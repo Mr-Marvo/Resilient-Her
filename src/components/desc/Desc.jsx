@@ -9,7 +9,7 @@ const Desc = () => {
   return (
     <RippleCanvas>
       <Navbar />
-      <div className=" flex flex-wrap flex-col w-full  h-full  items-center  mt-10 ">
+      <div className=" flex flex-wrap flex-col items-center  mt-10 ">
         <div className=" flex flex-col  w-full  h-auto justify-center items-center ">
           <h2 className=" xxs:text-[27px] xxs:tracking-tighter xs:text-[50px] sm:text-[60px]  lg:text-[110px] mx-1 text-purple-600 text-transparent  font-extrabold font-custome desc-title1  uppercase z-40">
             About Us
@@ -56,9 +56,7 @@ const Desc = () => {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col   absolute bottom-0  w-full left-0">
-        <Footer />
-      </div>
+      <Footer />
     </RippleCanvas>
   );
 };
