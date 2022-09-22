@@ -8,8 +8,11 @@ import { AiOutlineMail, AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { GoThreeBars } from 'react-icons/go';
 import { useState } from 'react';
+
 const Navbar = () => {
+
   const [expand, setExpand] = useState(false);
+
   return (
     <div className=" flex flex-col  relative  z-[999]  w-full h-auto  justify-center items-center  text-white">
       <nav className=" flex flex-row  w-full h-[99px] mt-0  md:container md:mx-auto bg-dark_1  justify-between items-center">
