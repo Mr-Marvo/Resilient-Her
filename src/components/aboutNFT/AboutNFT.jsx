@@ -911,7 +911,11 @@ const AboutNFT = () => {
             <p className=" xxs:text-sm xs:text-xl text-white  xxs:w-[300px] xs:w-[350px] xxs:px-1 sm:w-[85%]  font-custome z-40 text-center mt-4">
               This project defines itself as a one-of-a-kind, long term project
               and aims to improve the lives of millions of women across the
+<<<<<<< Updated upstream
               world who suffer from <p className=" italic">inter-ali</p>a
+=======
+              world who suffer from <p className=" italic">inter-alia</p>
+>>>>>>> Stashed changes
               Gender-based violence, depression, social problems, financial
               problems etc.
               <br /> At the same time, we have developed a financial model by
