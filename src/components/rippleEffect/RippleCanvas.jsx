@@ -820,10 +820,10 @@ const RippleCanvas = ({ children }) => {
 
         window.addEventListener('mousemove', (e) => {
             pointers[0].moved = pointers[0].down;
-            pointers[0].dx = (e.pageX - pointers[0].x) * 10.0;
-            pointers[0].dy = (e.pageY - pointers[0].y) * 10.0;
-            pointers[0].x = e.pageX;
-            pointers[0].y = e.pageY;
+            pointers[0].dx = (e.x - pointers[0].x) * 10.0;
+            pointers[0].dy = (e.y - pointers[0].y) * 10.0;
+            pointers[0].x = e.x;
+            pointers[0].y = e.y;
         });
 
         window.addEventListener(
@@ -834,10 +834,10 @@ const RippleCanvas = ({ children }) => {
                 for (let i = 0; i < touches.length; i++) {
                     let pointer = pointers[i];
                     pointer.moved = pointer.down;
-                    pointer.dx = (touches[i].pageX - pointer.x) * 10.0;
-                    pointer.dy = (touches[i].pageY - pointer.y) * 10.0;
-                    pointer.x = touches[i].pageX;
-                    pointer.y = touches[i].pageY;
+                    pointer.dx = (touches[i].clientX - pointer.x) * 10.0;
+                    pointer.dy = (touches[i].clientY - pointer.y) * 10.0;
+                    pointer.x = touches[i].clientX;
+                    pointer.y = touches[i].clientY;
                 }
             },
             false
@@ -860,8 +860,8 @@ const RippleCanvas = ({ children }) => {
 
                 pointers[i].id = touches[i].identifier;
                 pointers[i].down = true;
-                pointers[i].x = touches[i].pageX;
-                pointers[i].y = touches[i].pageY;
+                pointers[i].x = touches[i].clientX;
+                pointers[i].y = touches[i].clientY;
                 pointers[i].color = [
                     Math.random() + 0.2,
                     Math.random() + 0.2,
