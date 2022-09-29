@@ -30,3 +30,15 @@
 .mint-status {
   box-shadow: 0px 0px 20px 9px rgba(8, 43, 240, 0.952);
 }
+
+div.transbox {
+  max-width: 800px;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 4px solid #066fb7;
+  border-left: none;
+  border-right: none;
+}
