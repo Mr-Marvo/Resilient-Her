@@ -14,7 +14,7 @@ const Navbar = () => {
   const [expand, setExpand] = useState(false);
 
   return (
-    <div className=" flex flex-col  relative  z-[999]  w-full h-auto  justify-center items-center  text-white">
+    <div className=" flex flex-col  relative  z-[0]  w-full h-auto  justify-center items-center  text-white">
       <nav className=" flex flex-row  w-full h-[99px] mt-0  md:container md:mx-auto bg-dark_1  justify-between items-center">
         <div className="flex flex-wrap md:w-1/5 justify-center items-end    ">
           <img
