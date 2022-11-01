@@ -23,13 +23,7 @@ const Navbar = () => {
             className="  relative  sm:left-0 top-1  bg-cover cursor-pointer xxs:w-[230px]  sm:w-[200px]  h-[85px] z-40"
           />
         </div>
-        <div
-          className={`${
-            expand
-              ? 'navbar  '
-              : 'flex-row   w-4/5   h-auto  justify-around   items-center xxs:hidden xl:flex'
-          } `}
-        >
+        <div className={`${expand ? 'navbar ' : 'flex-row   w-4/5   h-auto  justify-around   items-center xxs:hidden xl:flex'} `}>
           <ul
             className={` xxs:border-b-[1px] xl:border-none mb-4 ${
               expand ? 'flex flex-col items-center' : ' flex flex-row'
